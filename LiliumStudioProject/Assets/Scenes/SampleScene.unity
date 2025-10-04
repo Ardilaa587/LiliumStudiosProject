@@ -1165,7 +1165,7 @@ GameObject:
   - component: {fileID: 1756760442}
   - component: {fileID: 1756760441}
   m_Layer: 0
-  m_Name: Hola
+  m_Name: Diamante
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
