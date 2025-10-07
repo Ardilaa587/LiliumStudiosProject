@@ -21,17 +21,27 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
     private bool canDoubleJump;
 
+    private bool canDash;
+    private bool isDashing;
+    [SerializeField] private float dashingPower;
+    [SerializeField] private float dashingTime;
+    [SerializeField] private float dashingCooldown;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        canDash = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-        //rb.AddForce(new Vector2(horizontal * speed, 0));
+        if(!isDashing)
+        {
+            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        }
+        
+        
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -69,5 +79,31 @@ public class PlayerController : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
     }
 
-        
+    public void Dash(InputAction.CallbackContext context)
+    {
+        if (context.performed && canDash)
+        {
+            StartCoroutine(Dash());
+        }
+    }
+
+
+    private IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
+
+        float dashDirection = horizontal != 0 ? Mathf.Sign(horizontal) : 1f;
+        rb.velocity = new Vector2(dashDirection * dashingPower, 0f);
+
+        yield return new WaitForSeconds(dashingTime);
+        rb.gravityScale = originalGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashingCooldown);
+        canDash = true;
+    }
+
 }
