@@ -10,7 +10,10 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private float speed;
     public float horizontal;
-    public float jumpingPower = 5f;
+    public float jumpingPower;
+
+    [SerializeField] private float coyoteTime;
+    private float coyoteTimeCounter;
 
     public Transform groundCheck;
     public LayerMask groundLayer;
@@ -32,16 +35,31 @@ public class PlayerController : MonoBehaviour
     private bool isLevitating;
     private Coroutine levitateCoroutine;
 
+    [SerializeField] private float gravity;
+
     // Start is called before the first frame update
     void Start()
     {
+        
+        rb.gravityScale = gravity;
+
         canDash = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!isDashing)
+        if(OnGrounded())
+        {
+            coyoteTimeCounter = coyoteTime;
+        }
+        else
+        {
+            coyoteTimeCounter -= Time.deltaTime;
+        }
+
+
+        if (!isDashing)
         {
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
         }
@@ -60,8 +78,9 @@ public class PlayerController : MonoBehaviour
         // saltar
         if (context.performed)
         {
-            if (OnGrounded()) 
+            if (coyoteTimeCounter > 0f) 
             {
+                
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
                 
                 canDoubleJump = true; 
