@@ -31,6 +31,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Levitate",
+                    "type": "Button",
+                    "id": "955e23ec-42e0-492b-85d9-ae607ce80e0d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -70,7 +79,7 @@
                 {
                     "name": "",
                     "id": "08d8dcfd-4a31-40c9-a294-894df6ddda25",
-                    "path": "<Keyboard>/w",
+                    "path": "<Keyboard>/space",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard",
@@ -86,6 +95,17 @@
                     "processors": "",
                     "groups": ";Keyboard",
                     "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9a1fa83a-048f-4902-a3cb-9c2b21622bec",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard",
+                    "action": "Levitate",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -27,6 +27,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float dashingTime;
     [SerializeField] private float dashingCooldown;
 
+    [SerializeField] private float levitateDuration;
+    [SerializeField] private float gravityLevitate;
+    private bool isLevitating;
+    private Coroutine levitateCoroutine;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,24 +60,28 @@ public class PlayerController : MonoBehaviour
         // saltar
         if (context.performed)
         {
-            if (OnGrounded()) // primer salto normal
+            if (OnGrounded()) 
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-                canDoubleJump = true; // habilitamos doble salto
+                
+                canDoubleJump = true; 
             }
-            else if (canDoubleJump) // segundo salto
+            else if (canDoubleJump) 
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-                canDoubleJump = false; // lo gastamos
+                canDoubleJump = false; 
             }
         }
 
-        // corte de salto si sueltas botón
+        
         if (context.canceled && rb.velocity.y > 0f)
         {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+           rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            
         }
     }
+
+    
 
     public bool OnGrounded()
     {
@@ -86,7 +95,6 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(Dash());
         }
     }
-
 
     private IEnumerator Dash()
     {
@@ -105,5 +113,43 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
     }
+
+    public void Levitate(InputAction.CallbackContext context)
+    {
+        
+        if (context.performed && !OnGrounded() && !isLevitating)
+        {
+            levitateCoroutine = StartCoroutine(LevitateTimer());
+        }
+
+        if (context.canceled)
+        {
+            StopLevitate();
+        }
+    }
+
+    private IEnumerator LevitateTimer()
+    {
+        isLevitating = true;
+        rb.gravityScale = gravityLevitate;//Levitate
+
+        yield return new WaitForSeconds(levitateDuration);
+
+        StopLevitate();
+    }
+    private void StopLevitate()
+    {
+        
+        if (levitateCoroutine != null)
+        {
+            StopCoroutine(levitateCoroutine);
+            levitateCoroutine = null;
+        }
+
+        rb.gravityScale = 1f;
+        isLevitating = false;
+    }
+
+
 
 }
