@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
 
     private bool isGrounded;
     private bool canDoubleJump;
+    private bool isFalling;
 
     private bool canDash;
     private bool isDashing;
@@ -47,7 +48,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(OnGrounded())
         {
@@ -62,6 +63,15 @@ public class PlayerController : MonoBehaviour
         if (!isDashing)
         {
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        }
+
+        if(rb.velocity.y <= 0 && !OnGrounded())
+        {
+            isFalling = true;
+        }
+        else
+        {
+            isFalling = false;
         }
         
         
@@ -120,14 +130,15 @@ public class PlayerController : MonoBehaviour
         canDash = false;
         isDashing = true;
 
-        float originalGravity = rb.gravityScale;
+        //float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
 
         float dashDirection = horizontal != 0 ? Mathf.Sign(horizontal) : 1f;
         rb.velocity = new Vector2(dashDirection * dashingPower, 0f);
 
         yield return new WaitForSeconds(dashingTime);
-        rb.gravityScale = originalGravity;
+        rb.gravityScale = gravity;
+        //rb.gravityScale = originalGravity;
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
@@ -136,7 +147,7 @@ public class PlayerController : MonoBehaviour
     public void Levitate(InputAction.CallbackContext context)
     {
         
-        if (context.performed && !OnGrounded() && !isLevitating)
+        if (context.performed && !OnGrounded() && !isLevitating && isFalling)
         {
             levitateCoroutine = StartCoroutine(LevitateTimer());
         }
@@ -165,7 +176,7 @@ public class PlayerController : MonoBehaviour
             levitateCoroutine = null;
         }
 
-        rb.gravityScale = 1f;
+        rb.gravityScale = gravity;
         isLevitating = false;
     }
 
