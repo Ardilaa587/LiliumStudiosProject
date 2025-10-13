@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
     public float groundRadius;
 
     public float health;
+    [SerializeField] private float maxHealth;
 
     //Variables de Dash
     private bool isFalling;
@@ -48,7 +49,12 @@ public class PlayerController : MonoBehaviour
     private bool isLevitating;
     private Coroutine levitateCoroutine;
 
-    
+    public float hitTime;
+    public float hitForceX;
+    public float hitForceY;
+    private bool hitFromRight;
+
+    [SerializeField] private GameObject pickUp;
 
     // Start is called before the first frame update
     void Start()
@@ -56,40 +62,59 @@ public class PlayerController : MonoBehaviour
         
         rb.gravityScale = gravity;
 
+        health = maxHealth;
+
         canDash = true;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(OnGrounded() && !wasGrounded)
+        if (OnGrounded() && !wasGrounded)
         {
             coyoteTimeCounter = coyoteTime;
             jumpCount = 0f;
         }
-        else if(!OnGrounded())
+        else if (!OnGrounded())
         {
             coyoteTimeCounter -= Time.deltaTime;
-            
+
         }
 
         wasGrounded = OnGrounded();
 
-        if(!OnGrounded() && coyoteTimeCounter>0f)
+        if (!OnGrounded() && coyoteTimeCounter > 0f)
         {
             rb.gravityScale = coyoteGravity;
         }
-        else if(!isLevitating && !isDashing)
+        else if (!isLevitating && !isDashing)
         {
             rb.gravityScale = gravity;
         }
 
         if (!isDashing)
         {
-            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+            
+            if (hitTime <= 0)
+            {
+                rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+
+            }
+            else
+            {
+                if (hitFromRight)
+                {
+                    rb.velocity = new Vector2(hitForceX, hitForceY);
+                }
+                else if (!hitFromRight)
+                {
+                    rb.velocity = new Vector2(-hitForceX, hitForceY);
+                }
+
+            }
         }
 
-        if(rb.velocity.y <= 0 && !OnGrounded())
+        if (rb.velocity.y <= 0 && !OnGrounded())
         {
             isFalling = true;
         }
@@ -97,8 +122,9 @@ public class PlayerController : MonoBehaviour
         {
             isFalling = false;
         }
+
         
-        
+        hitTime -= Time.deltaTime;
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -158,6 +184,8 @@ public class PlayerController : MonoBehaviour
         canDash = false;
         isDashing = true;
 
+        Debug.Log("Dash");
+
         //float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
 
@@ -208,6 +236,41 @@ public class PlayerController : MonoBehaviour
         isLevitating = false;
     }
 
+    public void TakeDamage(float damage)
+    {
+        if(health - damage <= 0)
+        {
+            health = 0;
+        }
+        else
+        {
+            health -= damage;
+        }
+            
+    }
 
+    public void AddHealth(float _health)
+    {
+        if(health + _health > maxHealth)
+        {
+            health = maxHealth;
+        }
+        else
+        {
+            health += _health;
+        }
+    }
 
+    public void PickUp(InputAction.CallbackContext context)
+    {
+        CameraEffects cameraEffects = Camera.main.GetComponent<CameraEffects>();
+
+        if (context.performed)
+        {
+            Debug.Log("Pick Up");
+            pickUp.SetActive(false);
+            cameraEffects.effectActive = false;
+
+        }
+    }
 }
