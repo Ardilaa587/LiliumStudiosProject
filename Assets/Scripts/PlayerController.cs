@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,24 +8,9 @@ public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
 
-    [SerializeField] private float gravity;
-
     [SerializeField] private float speed;
     public float horizontal;
-
-    //Variables de Salto
-    public float jumpingPower;
-
-    [SerializeField]private float jumpCount = 0f;
-    private float maxJumps = 2f;
-    private bool wasGrounded = false;
-
-    [SerializeField] private float coyoteTime;
-    private float coyoteTimeCounter;
-    [SerializeField] private float coyoteGravity;
-
-    private bool isGrounded;
-    
+    public float jumpingPower = 5f;
 
     public Transform groundCheck;
     public LayerMask groundLayer;
@@ -34,68 +18,32 @@ public class PlayerController : MonoBehaviour
 
     public float health;
 
-    //Variables de Dash
-    private bool isFalling;
+    private bool isGrounded;
+    private bool canDoubleJump;
+
     private bool canDash;
     private bool isDashing;
     [SerializeField] private float dashingPower;
     [SerializeField] private float dashingTime;
     [SerializeField] private float dashingCooldown;
 
-    //Variables de Levitate
     [SerializeField] private float levitateDuration;
     [SerializeField] private float gravityLevitate;
     private bool isLevitating;
     private Coroutine levitateCoroutine;
 
-    
-
     // Start is called before the first frame update
     void Start()
     {
-        
-        rb.gravityScale = gravity;
-
         canDash = true;
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        if(OnGrounded() && !wasGrounded)
-        {
-            coyoteTimeCounter = coyoteTime;
-            jumpCount = 0f;
-        }
-        else if(!OnGrounded())
-        {
-            coyoteTimeCounter -= Time.deltaTime;
-            
-        }
-
-        wasGrounded = OnGrounded();
-
-        if(!OnGrounded() && coyoteTimeCounter>0f)
-        {
-            rb.gravityScale = coyoteGravity;
-        }
-        else if(!isLevitating && !isDashing)
-        {
-            rb.gravityScale = gravity;
-        }
-
-        if (!isDashing)
+        if(!isDashing)
         {
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
-        }
-
-        if(rb.velocity.y <= 0 && !OnGrounded())
-        {
-            isFalling = true;
-        }
-        else
-        {
-            isFalling = false;
         }
         
         
@@ -112,22 +60,17 @@ public class PlayerController : MonoBehaviour
         // saltar
         if (context.performed)
         {
-            
-            if ((OnGrounded() || coyoteTimeCounter > 0f)&& jumpCount < maxJumps) 
+            if (OnGrounded()) 
             {
+                rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
                 
-                rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-                coyoteTimeCounter = 0f;
-                jumpCount++;
-
-
+                canDoubleJump = true; 
             }
-            else if (!OnGrounded() && jumpCount < maxJumps)
+            else if (canDoubleJump) 
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-                jumpCount++;
+                canDoubleJump = false; 
             }
-            
         }
 
         
@@ -158,15 +101,14 @@ public class PlayerController : MonoBehaviour
         canDash = false;
         isDashing = true;
 
-        //float originalGravity = rb.gravityScale;
+        float originalGravity = rb.gravityScale;
         rb.gravityScale = 0f;
 
         float dashDirection = horizontal != 0 ? Mathf.Sign(horizontal) : 1f;
         rb.velocity = new Vector2(dashDirection * dashingPower, 0f);
 
         yield return new WaitForSeconds(dashingTime);
-        rb.gravityScale = gravity;
-        //rb.gravityScale = originalGravity;
+        rb.gravityScale = originalGravity;
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
@@ -175,7 +117,7 @@ public class PlayerController : MonoBehaviour
     public void Levitate(InputAction.CallbackContext context)
     {
         
-        if (context.performed && !OnGrounded() && !isLevitating && isFalling)
+        if (context.performed && !OnGrounded() && !isLevitating)
         {
             levitateCoroutine = StartCoroutine(LevitateTimer());
         }
@@ -204,7 +146,7 @@ public class PlayerController : MonoBehaviour
             levitateCoroutine = null;
         }
 
-        rb.gravityScale = gravity;
+        rb.gravityScale = 1f;
         isLevitating = false;
     }
 
