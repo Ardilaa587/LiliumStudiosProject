@@ -164,7 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectDamage: 1
   rb: {fileID: 5370634959220833695}
-  speed: 2
+  speed: 3
   ObjectHitTime: 0.2
   ObjectHitForceX: 2
   ObjectHitForceY: 0

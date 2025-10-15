@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
         rb.gravityScale = gravity;
 
         health = maxHealth;
@@ -203,7 +203,7 @@ public class PlayerController : MonoBehaviour
     public void Levitate(InputAction.CallbackContext context)
     {
         
-        if (context.performed && !OnGrounded() && !isLevitating && isFalling)
+        if (context.performed && !OnGrounded() && !isLevitating)
         {
             levitateCoroutine = StartCoroutine(LevitateTimer());
         }
@@ -216,6 +216,7 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator LevitateTimer()
     {
+        Debug.Log("Levitate Activated");
         isLevitating = true;
         rb.gravityScale = gravityLevitate;//Levitate
 
@@ -261,16 +262,5 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void PickUp(InputAction.CallbackContext context)
-    {
-        CameraEffects cameraEffects = Camera.main.GetComponent<CameraEffects>();
-
-        if (context.performed)
-        {
-            Debug.Log("Pick Up");
-            pickUp.SetActive(false);
-            cameraEffects.effectActive = false;
-
-        }
-    }
+    
 }

@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,28 +11,26 @@ public class CoffeBags : MonoBehaviour
     [SerializeField] private float maxTime = 4f;
     [SerializeField] private int maxBags = 10;
 
+    private bool canSpawn = false;
+
     private int currentBags = 0;
 
-    // Start is called before the first frame update
-    private void Start()
+    public void ActivateSpawn()
     {
-        Spawn();
-        
+        if (!canSpawn)
+        {
+            canSpawn = true;
+            Spawn();
+        }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-
-    }
-
     private void Spawn()
     {
-        if(currentBags >= maxBags)
+        if(!canSpawn && currentBags >= maxBags)
         {
             return;
         }
+
+        Debug.Log("Spawning coffee bag");
 
         Instantiate(coffeeBags, transform.position, Quaternion.identity);
 
