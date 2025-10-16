@@ -48,5 +48,10 @@ public class ObjectsDamage : MonoBehaviour
             }
                         
         }
+
+        if (collision.gameObject.layer == LayerMask.NameToLayer("DestroyCoffeeBags"))
+        {
+            Destroy(gameObject);
+        }
     }
 }

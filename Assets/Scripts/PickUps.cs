@@ -6,13 +6,16 @@ using UnityEngine;
 public class PickUps : MonoBehaviour, InteractableI
 {
     [SerializeField] private GameObject pickUp;
-    
-
     private bool isPickedUp = false;
+
+    [SerializeField] private string itemName;
+    [SerializeField] private Sprite itemSprite;
+
+    private PickUpUI pickUpUI;
 
     void Start()
     {
-        
+        pickUpUI = FindObjectOfType<PickUpUI>();
     }
 
     public bool canInteract()
@@ -28,11 +31,12 @@ public class PickUps : MonoBehaviour, InteractableI
 
         if (pickUp != null)
         {
-            pickUp.SetActive(false);
             cameraEffects.effectActive = false;
-        }
 
-       
+            pickUpUI.ShowPickUp(itemSprite, itemName);
+
+            pickUp.SetActive(false);
+        }       
 
         isPickedUp = true;
         gameObject.SetActive(false);

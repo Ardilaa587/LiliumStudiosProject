@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8751252919663623520}
   - component: {fileID: 908307907392548459}
   m_Layer: 0
-  m_Name: Square
+  m_Name: BusinessCard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

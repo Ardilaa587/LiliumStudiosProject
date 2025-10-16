@@ -6,7 +6,7 @@ TagManager:
   tags:
   - CoffeeBags
   - Stairs
-  - CoffeBags
+  - Weak Point
   layers:
   - Default
   - TransparentFX
@@ -15,7 +15,7 @@ TagManager:
   - Water
   - UI
   - Stairs
-  - 
+  - DestroyCoffeeBags
   - 
   - 
   - 

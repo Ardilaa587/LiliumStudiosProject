@@ -144,4 +144,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pickUp: {fileID: 6768106877581512038}
-  cameraEffects: {fileID: 0}
+  itemName: "Traje t\xEDpico colombiano"
+  itemSprite: {fileID: 7482667652216324306, guid: 1327993453bd17d4d878aae42cab6ce4, type: 3}

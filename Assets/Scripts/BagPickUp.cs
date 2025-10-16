@@ -8,12 +8,10 @@ public class BagPickUp : MonoBehaviour, InteractableI
 
     public GameObject itemPrefab;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-
+        
     }
-
 
     public void Interact()
     {
@@ -28,20 +26,15 @@ public class BagPickUp : MonoBehaviour, InteractableI
 
     private void OpenBag()
     {
-        SetOpened(true);
+        isOpened = true;
 
         if (itemPrefab)
         {
-            GameObject droppedItem = Instantiate(itemPrefab, transform.position + Vector3.right * 2, Quaternion.identity);
+            GameObject droppedItem = Instantiate(itemPrefab, transform.position + Vector3.left * 2, Quaternion.identity);
             
         }
+
+
     }
 
-    public void SetOpened(bool opened)
-    {
-        if (isOpened == opened)
-        {
-            gameObject.SetActive(false);
-        }
-    }
 }

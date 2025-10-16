@@ -8,51 +8,58 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
-
     [SerializeField] private float gravity;
 
+    #region Movement Variables
     [SerializeField] private float speed;
     public float horizontal;
-
-    //Variables de Salto
-    public float jumpingPower;
-
-    [SerializeField]private float jumpCount = 0f;
-    private float maxJumps = 2f;
-    private bool wasGrounded = false;
-
-    [SerializeField] private float coyoteTime;
-    private float coyoteTimeCounter;
-    [SerializeField] private float coyoteGravity;
-
     private bool isGrounded;
-    
-
     public Transform groundCheck;
     public LayerMask groundLayer;
     public float groundRadius;
+    #endregion
 
-    public float health;
-    [SerializeField] private float maxHealth;
+    #region Jump Variables
+    public float jumpingPower;
+    [SerializeField]private float jumpCount = 0f;
+    private float maxJumps = 2f;
+    private bool wasGrounded = false;
+    #endregion
 
-    //Variables de Dash
-    private bool isFalling;
+    #region Coyote Time Variables
+    [SerializeField] private float coyoteTime;
+    private float coyoteTimeCounter;
+    [SerializeField] private float coyoteGravity;
+    #endregion
+
+    #region Dash Variables
     private bool canDash;
     private bool isDashing;
     [SerializeField] private float dashingPower;
     [SerializeField] private float dashingTime;
     [SerializeField] private float dashingCooldown;
+    #endregion
 
+    #region Levitate Variables
     //Variables de Levitate
     [SerializeField] private float levitateDuration;
     [SerializeField] private float gravityLevitate;
     private bool isLevitating;
     private Coroutine levitateCoroutine;
+    #endregion
 
+    #region Hit Variables
     public float hitTime;
     public float hitForceX;
     public float hitForceY;
-    private bool hitFromRight;
+    public bool hitFromRight;
+    #endregion
+
+    public float health;
+    [SerializeField] public float maxHealth;
+    [SerializeField] private HealthUI healthUI;
+
+    private bool isFalling;
 
     [SerializeField] private GameObject pickUp;
 
@@ -127,12 +134,16 @@ public class PlayerController : MonoBehaviour
         hitTime -= Time.deltaTime;
     }
 
+    #region Input System Methods
+
+    #region Movement Methods
     public void Move(InputAction.CallbackContext context)
     {
         horizontal = context.ReadValue<Vector2>().x;
     }
+    #endregion
 
-
+    #region Jump Methods
     public void Jump(InputAction.CallbackContext context)
     {
         // saltar
@@ -163,14 +174,16 @@ public class PlayerController : MonoBehaviour
             
         }
     }
+    #endregion
 
-    
-
+    #region OnGrounded Method
     public bool OnGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
     }
+    #endregion
 
+    #region Dash Methods
     public void Dash(InputAction.CallbackContext context)
     {
         if (context.performed && canDash)
@@ -199,7 +212,9 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
     }
+    #endregion
 
+    #region Levitate Methods
     public void Levitate(InputAction.CallbackContext context)
     {
         
@@ -236,10 +251,14 @@ public class PlayerController : MonoBehaviour
         rb.gravityScale = gravity;
         isLevitating = false;
     }
+    #endregion
+    #endregion
 
     public void TakeDamage(float damage)
     {
-        if(health - damage <= 0)
+        
+
+        if (health - damage <= 0)
         {
             health = 0;
         }
@@ -247,12 +266,18 @@ public class PlayerController : MonoBehaviour
         {
             health -= damage;
         }
-            
+
+        if (healthUI != null)
+            healthUI.UpdateHearts();
+        else
+            Debug.LogError(" healthUI no está asignado en el PlayerController");
     }
 
     public void AddHealth(float _health)
     {
-        if(health + _health > maxHealth)
+        
+
+        if (health + _health > maxHealth)
         {
             health = maxHealth;
         }
@@ -260,6 +285,8 @@ public class PlayerController : MonoBehaviour
         {
             health += _health;
         }
+
+        healthUI.UpdateHearts();
     }
 
     
