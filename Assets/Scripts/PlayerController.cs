@@ -290,5 +290,46 @@ public class PlayerController : MonoBehaviour
         healthUI.UpdateHearts();
     }
 
+<<<<<<< Updated upstream
     
+=======
+    public void PickUp(InputAction.CallbackContext context)
+    {
+        CameraEffects cameraEffects = Camera.main.GetComponent<CameraEffects>();
+
+        if (context.performed)
+        {
+            Debug.Log("Pick Up");
+            pickUp.SetActive(false);
+            cameraEffects.effectActive = false;
+
+        }
+    }
+
+    public class PlayerInteractWithCandle : MonoBehaviour
+{
+    public KeyCode interactKey = KeyCode.E;
+    private Candle currentCandle;
+
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        Candle c = col.GetComponentInParent<Candle>();
+        if (c != null) currentCandle = c;
+    }
+
+    void OnTriggerExit2D(Collider2D col)
+    {
+        Candle c = col.GetComponentInParent<Candle>();
+        if (c != null && c == currentCandle) currentCandle = null;
+    }
+
+    void Update()
+    {
+        if (currentCandle != null && Input.GetKeyDown(interactKey))
+        {
+            currentCandle.IgniteInstant();
+        }
+    }
+}
+>>>>>>> Stashed changes
 }
