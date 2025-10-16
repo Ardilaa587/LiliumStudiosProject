@@ -166,7 +166,7 @@ MonoBehaviour:
   rb: {fileID: 5370634959220833695}
   speed: 3
   ObjectHitTime: 0.2
-  ObjectHitForceX: 2
+  ObjectHitForceX: 0
   ObjectHitForceY: 0
 --- !u!114 &-5571987324997989884
 MonoBehaviour:
@@ -223,8 +223,8 @@ MonoBehaviour:
   m_DefaultVelocity: {x: 0, y: -1, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 1
-  m_IgnoreTag: Stairs
+    m_Bits: 256
+  m_IgnoreTag: 
   m_UseImpactDirection: 0
   m_ScaleImpactWithMass: 0
   m_ScaleImpactWithSpeed: 0

@@ -10,9 +10,9 @@ public class GameOverUI : MonoBehaviour
     {
         Time.timeScale = 1f;
 
-        var oldPlayer = GameObject.FindWithTag("Player");
-        if (oldPlayer != null)
-            Destroy(oldPlayer);
+        //var oldPlayer = GameObject.FindWithTag("Player");
+        //if (oldPlayer != null)
+        //    Destroy(oldPlayer);
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

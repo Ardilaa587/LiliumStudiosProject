@@ -7453,7 +7453,7 @@ Transform:
   m_GameObject: {fileID: 946112167}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 242.4, y: 6.3, z: -10}
+  m_LocalPosition: {x: 271.5, y: 5.7, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8723,7 +8723,7 @@ Transform:
   m_GameObject: {fileID: 1140006443}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 242.4, y: 6.3, z: -10}
+  m_LocalPosition: {x: 271.5, y: 5.7, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9707,6 +9707,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OlgaPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 751283492310124285, guid: ce028a0a5dae1254791262826f4e6544, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1059961690105329615, guid: ce028a0a5dae1254791262826f4e6544, type: 3}
       propertyPath: m_SortingOrder
       value: 1
@@ -9722,6 +9726,14 @@ PrefabInstance:
     - target: {fileID: 5364646213551206305, guid: ce028a0a5dae1254791262826f4e6544, type: 3}
       propertyPath: m_Offset.y
       value: 0.0559209
+      objectReference: {fileID: 0}
+    - target: {fileID: 7004132576569940599, guid: ce028a0a5dae1254791262826f4e6544, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7060852250931025587, guid: ce028a0a5dae1254791262826f4e6544, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7553296411002466116, guid: ce028a0a5dae1254791262826f4e6544, type: 3}
       propertyPath: speed
@@ -9747,13 +9759,17 @@ PrefabInstance:
       propertyPath: groundLayer.m_Bits
       value: 72
       objectReference: {fileID: 0}
+    - target: {fileID: 8348835843458773617, guid: ce028a0a5dae1254791262826f4e6544, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8923869561656758174, guid: ce028a0a5dae1254791262826f4e6544, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 242.4
+      value: 271.5
       objectReference: {fileID: 0}
     - target: {fileID: 8923869561656758174, guid: ce028a0a5dae1254791262826f4e6544, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.3
+      value: 5.7
       objectReference: {fileID: 0}
     - target: {fileID: 8923869561656758174, guid: ce028a0a5dae1254791262826f4e6544, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12852,7 +12868,7 @@ GameObject:
   - component: {fileID: 1671921361}
   - component: {fileID: 1671921362}
   - component: {fileID: 1671921363}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Feet
   m_TagString: Untagged
   m_Icon: {fileID: 0}

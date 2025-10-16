@@ -139,6 +139,7 @@ public class PlayerController : MonoBehaviour
     #region Movement Methods
     public void Move(InputAction.CallbackContext context)
     {
+        Debug.Log("Move");
         horizontal = context.ReadValue<Vector2>().x;
     }
     #endregion

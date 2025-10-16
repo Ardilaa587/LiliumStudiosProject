@@ -49,7 +49,7 @@ public class HealthUI : MonoBehaviour
         if (diePanel != null)
         {
             diePanel.SetActive(true);
-            Time.timeScale = 0f; 
+            //Time.timeScale = 0f; 
         }
     }
 }

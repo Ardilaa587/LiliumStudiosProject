@@ -26,6 +26,8 @@ public class ObjectsDamage : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log(collision.gameObject.name);
+        Debug.Log(collision.gameObject.layer);
         if (collision.gameObject.layer  == LayerMask.NameToLayer("Stairs"))
         {
             rb.AddForce(collision.transform.right * speed, ForceMode2D.Impulse);
@@ -34,6 +36,7 @@ public class ObjectsDamage : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log(collision.gameObject.name);   
             PlayerController player = collision.gameObject.GetComponent<PlayerController>();
 
             player.TakeDamage(objectDamage);
