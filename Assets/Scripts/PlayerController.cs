@@ -151,11 +151,11 @@ public class PlayerController : MonoBehaviour
         if (context.performed)
         {
             
-            if ((OnGrounded() || coyoteTimeCounter > 0f)&& jumpCount < maxJumps) 
+            if (OnGrounded() || coyoteTimeCounter > 0f) 
             {
                 
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-                coyoteTimeCounter = 0f;
+                    coyoteTimeCounter = 0f;
                 jumpCount++;
 
 
@@ -290,9 +290,7 @@ public class PlayerController : MonoBehaviour
         healthUI.UpdateHearts();
     }
 
-<<<<<<< Updated upstream
-    
-=======
+
     public void PickUp(InputAction.CallbackContext context)
     {
         CameraEffects cameraEffects = Camera.main.GetComponent<CameraEffects>();
@@ -306,30 +304,5 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public class PlayerInteractWithCandle : MonoBehaviour
-{
-    public KeyCode interactKey = KeyCode.E;
-    private Candle currentCandle;
 
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        Candle c = col.GetComponentInParent<Candle>();
-        if (c != null) currentCandle = c;
-    }
-
-    void OnTriggerExit2D(Collider2D col)
-    {
-        Candle c = col.GetComponentInParent<Candle>();
-        if (c != null && c == currentCandle) currentCandle = null;
-    }
-
-    void Update()
-    {
-        if (currentCandle != null && Input.GetKeyDown(interactKey))
-        {
-            currentCandle.IgniteInstant();
-        }
-    }
-}
->>>>>>> Stashed changes
 }
