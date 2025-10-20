@@ -4,30 +4,21 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - CoffeeBags
-  - Stairs
   - Weak Point
+  - CoffeeBags
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - 
   - Water
   - UI
-  - Stairs
-<<<<<<< Updated upstream
-  - DestroyCoffeeBags
-  - Player
+  - Ground
   - 
   - 
   - 
-=======
-  - Default
-  - Player
-  - EnemyHand
-  - Platform
-  - Trigger
->>>>>>> Stashed changes
+  - 
+  - 
   - 
   - 
   - 
@@ -51,22 +42,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Background
-    uniqueID: 1249093771
-    locked: 0
-  - name: Platforms
-    uniqueID: 1710018173
-    locked: 0
-  - name: Candles
-    uniqueID: 3370075713
-    locked: 0
-  - name: Hands
-    uniqueID: 1650551381
-    locked: 0
-  - name: Player
-    uniqueID: 3886553359
-    locked: 0
-  - name: Foreground
-    uniqueID: 1249080381
     locked: 0
