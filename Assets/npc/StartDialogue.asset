@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a9f20eef25cab43a7fde94be65841d, type: 3}
   m_Name: StartDialogue
   m_EditorClassIdentifier: 
-  npcName: '  '
+  npcName: 
   dialogueLines:
   - Olga, buscame, avanza
   autoProgressLines: 00
