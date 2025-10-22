@@ -37,7 +37,7 @@ public class MiniEnemiesController : MonoBehaviour
                 actualObjective = enemyMovementPoints[1];
                 
             }
-            else if (actualObjective == enemyMovementPoints[1]) // Lelgue al punto B
+            else if (actualObjective == enemyMovementPoints[1]) // Llegue al punto B
             {
                 actualObjective = enemyMovementPoints[0];
                 
@@ -46,9 +46,13 @@ public class MiniEnemiesController : MonoBehaviour
 
         Vector2 direction = (actualObjective.position - transform.position).normalized;
 
-        rb.MovePosition(rb.position + movement * enemySpeed * Time.fixedDeltaTime);
-        if (direction.x != 0)
-            transform.localScale = new Vector3(Mathf.Sign(direction.x), 1, 1);
+        int roundedDirection = Mathf.RoundToInt(direction.x);
+
+        movement = new Vector2(roundedDirection, 0);
+
+
+        rb.MovePosition(rb.position + movement * enemySpeed * Time.deltaTime);
+
     }
 
     public void OnCollisionEnter2D(Collision2D collision)

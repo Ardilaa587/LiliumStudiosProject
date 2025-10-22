@@ -291,18 +291,5 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    public void PickUp(InputAction.CallbackContext context)
-    {
-        CameraEffects cameraEffects = Camera.main.GetComponent<CameraEffects>();
-
-        if (context.performed)
-        {
-            Debug.Log("Pick Up");
-            pickUp.SetActive(false);
-            cameraEffects.effectActive = false;
-
-        }
-    }
-
 
 }

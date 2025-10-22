@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class PickUps : MonoBehaviour, InteractableI
 {
-    [SerializeField] private GameObject pickUp;
-    private bool isPickedUp = false;
+    
+    public bool isPickedUp = false;
 
     [SerializeField] private string itemName;
     [SerializeField] private Sprite itemSprite;
@@ -29,13 +29,13 @@ public class PickUps : MonoBehaviour, InteractableI
 
         if (isPickedUp) return;
 
-        if (pickUp != null)
+        if (pickUpUI != null)
         {
             cameraEffects.effectActive = false;
 
             pickUpUI.ShowPickUp(itemSprite, itemName);
 
-            pickUp.SetActive(false);
+            
         }       
 
         isPickedUp = true;
