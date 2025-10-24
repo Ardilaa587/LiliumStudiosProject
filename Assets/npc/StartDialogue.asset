@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: 
   dialogueLines:
-  - Olga, buscame, avanza
+  - "Olga, b\xFAscame, avanza"
   autoProgressLines: 00
   typingSpeed: 0.05
   autoProgressDelay: 1.5

@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Abuelo Florencio
   dialogueLines:
-  - Hola, querida Olga
-  - "Cu\xE1nto tiempo sin vernos"
+  - Hola, querida Olga.Cuanto tiempo sin vernos.
+  - "Ser\xE9 yo tu gu\xEDa en este viaje por el tiempo."
+  - Regresa al lugar en donde estabas al principio.
   autoProgressLines: 0100
   typingSpeed: 0.05
   autoProgressDelay: 1.5
