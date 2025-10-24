@@ -99,8 +99,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPickedUp: 0
-  itemName: "Traje T\xEDpico Colombiano"
+  itemName: 
   itemSprite: {fileID: 0}
+  platformToHide: {fileID: 6053842202347745361, guid: a756dfe2c2f7b3146a1c387c2af706f4, type: 3}
 --- !u!61 &8023420215705116429
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -8,7 +8,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
-    [SerializeField] private float gravity;
+    [SerializeField] public float gravity;
 
     #region Movement Variables
     [SerializeField] private float speed;
@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private GameObject pickUp;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -77,6 +78,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
+
         if (OnGrounded() && !wasGrounded)
         {
             coyoteTimeCounter = coyoteTime;
@@ -290,6 +293,6 @@ public class PlayerController : MonoBehaviour
         healthUI.UpdateHearts();
     }
 
-
+ 
 
 }

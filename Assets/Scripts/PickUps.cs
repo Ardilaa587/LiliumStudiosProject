@@ -13,6 +13,8 @@ public class PickUps : MonoBehaviour, InteractableI
 
     private PickUpUI pickUpUI;
 
+    
+
     void Start()
     {
         pickUpUI = FindObjectOfType<PickUpUI>();
@@ -40,5 +42,7 @@ public class PickUps : MonoBehaviour, InteractableI
 
         isPickedUp = true;
         gameObject.SetActive(false);
+
+        
     }
 }
