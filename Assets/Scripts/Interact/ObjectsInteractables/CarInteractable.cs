@@ -22,7 +22,7 @@ public class CarInteractable : MonoBehaviour, InteractableI
 
     public void Interact()
     {
-        if (isFinished || !canInteract())
+        if (!canInteract())
         {
             return;
         }
@@ -32,15 +32,18 @@ public class CarInteractable : MonoBehaviour, InteractableI
         if (playerObject != null)
         {
             playerControllerScript = playerObject.GetComponent(PlayerControllerScriptName) as MonoBehaviour;
-            playerObject.transform.position = playerMountPoint.position;
+            
 
             if (playerControllerScript != null)
             {
                 playerControllerScript.enabled = false;
             }
 
+            playerObject.transform.position = playerMountPoint.position;
+
             if (rb != null)
             {
+                rb.bodyType = RigidbodyType2D.Dynamic;
                 rb.velocity = Vector2.zero;
                 movement = Vector2.zero;
             }
@@ -65,13 +68,19 @@ public class CarInteractable : MonoBehaviour, InteractableI
             return;
         }
 
+        if (rb != null)
+        {
+            rb.bodyType = RigidbodyType2D.Static;
+            rb.velocity = Vector2.zero;
+        }
+
         actualObjective = movementPoints[0];
         isMoving = false;
     }
 
     void FixedUpdate()
     {
-        if (!isMoving || movementPoints.Length < 2)
+        if (!isMoving) // Solo comprueba la bandera de movimiento
         {
             return;
         }
@@ -105,9 +114,12 @@ public class CarInteractable : MonoBehaviour, InteractableI
 
                 rb.velocity = Vector2.zero;
                 isMoving = false;
-                isFinished = true; 
+                isFinished = true;
 
-                rb.bodyType = RigidbodyType2D.Kinematic;
+                if (rb != null)
+                {
+                    rb.bodyType = RigidbodyType2D.Static;
+                }
 
                 this.enabled = false;
 

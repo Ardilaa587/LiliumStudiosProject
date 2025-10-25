@@ -14,7 +14,7 @@ public class NPC : MonoBehaviour, InteractableI
 
     public void Start()
     {
-        dialoguePanel.SetActive(false);
+        
     }
 
     public bool canInteract()
