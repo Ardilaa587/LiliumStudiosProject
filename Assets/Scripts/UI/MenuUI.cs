@@ -10,7 +10,7 @@ public class MenuUI : MonoBehaviour
 
     public void OnStart()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("Nivel1");
     }
 
     public void OnSettings()
