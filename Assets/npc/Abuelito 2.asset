@@ -18,6 +18,6 @@ MonoBehaviour:
   - "\xA1Sigue avanzando y encontrar\xE1s una sorpresa que he dejado para ti!"
   - "\xA1Continua avanzando!"
   - Es momento de subir a la superficie.
-  autoProgressLines: 0100
+  autoProgressLines: 01010100
   typingSpeed: 0.05
   autoProgressDelay: 1.5

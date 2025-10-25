@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c4a9f20eef25cab43a7fde94be65841d, type: 3}
-  m_Name: StartDialogue
+  m_Name: RadioNews
   m_EditorClassIdentifier: 
-  npcName: 
+  npcName: Emisora 98
   dialogueLines:
-  - "Olga, b\xFAscame, avanza"
-  autoProgressLines: 00
+  - "Buen d\xEDa, habitantes Guatape\xF1os. Nos gustar\xEDa darles buenas noticias"
+  - "pero, la mula de hierro sigue al achecho. No salgan de sus casas, ni suban el
+    pe\xF1ol"
+  autoProgressLines: 0100
   typingSpeed: 0.05
   autoProgressDelay: 1.5

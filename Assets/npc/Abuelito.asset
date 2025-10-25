@@ -17,6 +17,6 @@ MonoBehaviour:
   - Hola, querida Olga.Cuanto tiempo sin vernos.
   - "Ser\xE9 yo tu gu\xEDa en este viaje por el tiempo."
   - Regresa al lugar en donde estabas al principio.
-  autoProgressLines: 0100
+  autoProgressLines: 010100
   typingSpeed: 0.05
   autoProgressDelay: 1.5
