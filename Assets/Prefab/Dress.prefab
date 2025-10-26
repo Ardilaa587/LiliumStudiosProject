@@ -101,7 +101,9 @@ MonoBehaviour:
   isPickedUp: 0
   itemName: 
   itemSprite: {fileID: 0}
-  platformToHide: {fileID: 6053842202347745361, guid: a756dfe2c2f7b3146a1c387c2af706f4, type: 3}
+  secondSprite: {fileID: 0}
+  secondText: "Ahora puedes caer m\xE1s lento para recorrer mayores distancias"
+  pickUpSound: {fileID: 8300000, guid: eea7e632a2090a34ea282c3d3e53a40e, type: 3}
 --- !u!61 &8023420215705116429
 BoxCollider2D:
   m_ObjectHideFlags: 0

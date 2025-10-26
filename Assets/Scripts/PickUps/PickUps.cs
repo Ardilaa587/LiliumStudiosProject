@@ -10,6 +10,9 @@ public class PickUps : MonoBehaviour, InteractableI
 
     [SerializeField] private string itemName;
     [SerializeField] private Sprite itemSprite;
+    [SerializeField] private Sprite secondSprite; 
+    [SerializeField] private string secondText;  
+    [SerializeField] private AudioClip pickUpSound;
 
     private PickUpUI pickUpUI;
 
@@ -35,9 +38,9 @@ public class PickUps : MonoBehaviour, InteractableI
         {
             cameraEffects.effectActive = false;
 
-            pickUpUI.ShowPickUp(itemSprite, itemName);
+            pickUpUI.StartSequence(itemSprite, itemName, pickUpSound,
+            secondSprite, secondText);
 
-            
         }       
 
         isPickedUp = true;
