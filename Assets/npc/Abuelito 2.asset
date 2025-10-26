@@ -15,9 +15,10 @@ MonoBehaviour:
   npcName: Abuelo Florencio
   dialogueLines:
   - "\xA1Ahora a descender!"
-  - "\xA1Sigue avanzando y encontrar\xE1s una sorpresa que he dejado para ti!"
-  - "\xA1Continua avanzando!"
-  - Es momento de subir a la superficie.
-  autoProgressLines: 01010100
+  - "\xA1Sigue avanzando y encontrar\xE1s una sorpresa brillante que he dejado para
+    ti!"
+  - "\xA1Continua avanzando y encontrar\xE1s en d\xF3nde debes buscar las parte del
+    desgranador!"
+  autoProgressLines: 010101
   typingSpeed: 0.05
   autoProgressDelay: 1.5
