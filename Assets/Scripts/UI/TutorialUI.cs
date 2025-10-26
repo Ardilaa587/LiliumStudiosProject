@@ -12,14 +12,18 @@ public class TutorialUI : MonoBehaviour
     [SerializeField] TMP_Text tutorialText;
     [SerializeField] private string tutorialMessages;
 
+    private bool hasBeenShown = false;
+
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        if(collision.CompareTag("Player") && !hasBeenShown)
         {
             tutorialPanel.SetActive(true);
             
             image.sprite = tutorialSprites;
             tutorialText.text = tutorialMessages;
+
+            hasBeenShown = true;
         }
     }
 
