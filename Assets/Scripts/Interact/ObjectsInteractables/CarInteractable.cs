@@ -41,6 +41,15 @@ public class CarInteractable : MonoBehaviour, InteractableI
 
             playerObject.transform.position = playerMountPoint.position;
 
+            GameObject objectToDestroy = GameObject.FindGameObjectWithTag("Destroy");
+
+            if (objectToDestroy != null)
+            {
+                // Opcional: añade un Log para verificar que se encontró el objeto correcto
+                // Debug.Log($"Objeto a destruir encontrado: {objectToDestroy.name}");
+                Destroy(objectToDestroy);
+            }
+
             if (rb != null)
             {
                 rb.bodyType = RigidbodyType2D.Dynamic;
@@ -106,7 +115,7 @@ public class CarInteractable : MonoBehaviour, InteractableI
                     if (playerControllerScript != null)
                     {
                         playerControllerScript.enabled = true;
-                        Debug.Log("Script de control del jugador re-habilitado.");
+                        Debug.Log("Script de control del jugador rehabilitado.");
                     }
 
                     playerObject.transform.position = transform.position + new Vector3(1f, 0f, 0f);

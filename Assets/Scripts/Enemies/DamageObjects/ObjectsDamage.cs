@@ -28,7 +28,7 @@ public class ObjectsDamage : MonoBehaviour
     {
         Debug.Log(collision.gameObject.name);
         Debug.Log(collision.gameObject.layer);
-        if (collision.gameObject.layer  == LayerMask.NameToLayer("Stairs"))
+        if (collision.gameObject.CompareTag("Stairs"))
         {
             rb.AddForce(collision.transform.right * speed, ForceMode2D.Impulse);
         }
@@ -52,7 +52,7 @@ public class ObjectsDamage : MonoBehaviour
                         
         }
 
-        if (collision.gameObject.layer == LayerMask.NameToLayer("DestroyCoffeeBags"))
+        if (collision.gameObject.CompareTag("DestroyCoffeeBags"))
         {
             Destroy(gameObject);
         }
