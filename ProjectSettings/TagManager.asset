@@ -9,6 +9,7 @@ TagManager:
   - DestroyCoffeeBags
   - Stairs
   - Destroy
+  - WaitPoint
   layers:
   - Default
   - TransparentFX
