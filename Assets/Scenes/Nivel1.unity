@@ -7877,6 +7877,7 @@ GameObject:
   m_Component:
   - component: {fileID: 654954951}
   - component: {fileID: 654954952}
+  - component: {fileID: 654954953}
   m_Layer: 0
   m_Name: HowToKillMiniEnemies
   m_TagString: Untagged
@@ -7931,7 +7932,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.6657867, y: 2.7942276}
+  m_Offset: {x: 4.492275, y: 1.8419495}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -7942,8 +7943,25 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.985565, y: 6.588455}
+  m_Size: {x: 20.30169, y: 8.493011}
   m_EdgeRadius: 0
+--- !u!114 &654954953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654954950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92541202edbd63042a29d95fe642b219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorialPanel: {fileID: 295380684}
+  image: {fileID: 2125650497}
+  tutorialSprites: {fileID: 0}
+  tutorialText: {fileID: 726580767}
+  tutorialMessages: Salta sobre los animales para que no te ataquen
 --- !u!1 &669213181
 GameObject:
   m_ObjectHideFlags: 0
@@ -12864,6 +12882,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1097255272}
   - component: {fileID: 1097255273}
+  - component: {fileID: 1097255274}
   m_Layer: 0
   m_Name: HowToDoubleJump
   m_TagString: Untagged
@@ -12880,7 +12899,7 @@ Transform:
   m_GameObject: {fileID: 1097255271}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -128.14, y: -0.66934204, z: 0.061584294}
+  m_LocalPosition: {x: -141.43, y: -0.66934204, z: 0.061584294}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12931,6 +12950,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.985565, y: 6.588455}
   m_EdgeRadius: 0
+--- !u!114 &1097255274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1097255271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92541202edbd63042a29d95fe642b219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorialPanel: {fileID: 295380684}
+  image: {fileID: 2125650497}
+  tutorialSprites: {fileID: -169325772, guid: d188b1e096f2e0a46b39c8035eb44528, type: 3}
+  tutorialText: {fileID: 726580767}
+  tutorialMessages: "Para alcanzar mayores distancias salta una vez m\xE1s en el
+    aire"
 --- !u!1 &1100858222
 GameObject:
   m_ObjectHideFlags: 0
