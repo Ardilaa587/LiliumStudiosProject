@@ -6,6 +6,7 @@ public class CoinPickUp : MonoBehaviour
 {
     [SerializeField] private int coinValue = 1;
     private CoinCounter coinCounter;
+    [SerializeField] private AudioSource coinSound;
 
     private void Start()
     {
@@ -16,6 +17,10 @@ public class CoinPickUp : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            if (coinSound != null)
+            {
+                AudioSource.PlayClipAtPoint(coinSound.clip, transform.position);
+            }
             coinCounter.AddCoins(coinValue);
             Destroy(gameObject);
         }
