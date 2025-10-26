@@ -4,21 +4,18 @@ using UnityEngine;
 
 public class MiniEnemiesStomp : MonoBehaviour
 {
-    private const float PLAYER_REBOUND_FORCE = 10f;
+    private const float reboundForce = 2f;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Weak Point"))
         {
-            // 2. Obtener la referencia al Transform del objeto padre.
             Transform parentTransform = collision.gameObject.transform.parent;
 
             if (parentTransform != null)
             {
-                // Destruimos el objeto padre (el Mini-enemigo completo)
                 Destroy(parentTransform.gameObject);
 
-                // Rebotar el jugador
                 ReboundPlayer();
             }
         }
@@ -26,7 +23,6 @@ public class MiniEnemiesStomp : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // 1. Revisamos si la colisión sólida es con el JEFE
         if (collision.gameObject.CompareTag("Boss"))
         {
             Vector2 contactNormal = collision.GetContact(0).normal;
@@ -38,7 +34,7 @@ public class MiniEnemiesStomp : MonoBehaviour
                 if (bossScript != null)
                 {
                     bossScript.TakeHit();
-                    ReboundPlayer(); // Rebotamos al jugador
+                    ReboundPlayer(); 
                 }
             }
         }
@@ -50,7 +46,7 @@ public class MiniEnemiesStomp : MonoBehaviour
         if (playerRb != null)
         {
 
-            playerRb.velocity = new Vector2(playerRb.velocity.x, PLAYER_REBOUND_FORCE);
+            playerRb.velocity = new Vector2(playerRb.velocity.x, reboundForce);
         }
     }
 }

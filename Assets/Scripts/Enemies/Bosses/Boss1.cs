@@ -22,7 +22,7 @@ public class Boss1 : MonoBehaviour
     [Header("Configuración de Combate")]
     [SerializeField] private int maxHits = 3; // Total de golpes necesarios
     public int currentHits = 0;             // Contador actual
-    private bool isDefeated = false;         // Nuevo estado de derrota
+    private bool isDefeated = false;
 
     [Header("Escena de Victoria")]
     [SerializeField]
@@ -98,13 +98,8 @@ public class Boss1 : MonoBehaviour
         {
             Vector2 contactNormal = collision.GetContact(0).normal;
 
-            // Si la normal Y apunta hacia arriba (significa que el jugador golpeó la parte superior),
-            // ASUMIMOS que el script MiniEnemiesStomp ya se encargó de TakeHit(),
-            // y NO aplicamos daño.
             if (contactNormal.y > 0.8f)
             {
-                // Es un pisotón. Ignoramos la aplicación de daño aquí,
-                // ya que el script MiniEnemiesStomp ya manejó el "TakeHit()".
                 return;
             }
             if (!isDefeated)
