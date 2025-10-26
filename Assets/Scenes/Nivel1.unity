@@ -13071,6 +13071,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1110950662}
   - component: {fileID: 1110950663}
+  - component: {fileID: 1110950664}
   m_Layer: 0
   m_Name: HowToJump
   m_TagString: Untagged
@@ -13138,6 +13139,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 7.985565, y: 6.588455}
   m_EdgeRadius: 0
+--- !u!114 &1110950664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110950661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92541202edbd63042a29d95fe642b219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorialPanel: {fileID: 295380684}
+  image: {fileID: 2125650497}
+  tutorialSprites: {fileID: -169325772, guid: d188b1e096f2e0a46b39c8035eb44528, type: 3}
+  tutorialText: {fileID: 726580767}
+  tutorialMessages: Para saltar
 --- !u!1 &1130409355
 GameObject:
   m_ObjectHideFlags: 0
@@ -20291,7 +20309,7 @@ Transform:
   m_GameObject: {fileID: 1675182557}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -143.40004, y: -152.8, z: 0.49053824}
+  m_LocalPosition: {x: -144.08, y: -153.86, z: 0.49053824}
   m_LocalScale: {x: 5.4745617, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
