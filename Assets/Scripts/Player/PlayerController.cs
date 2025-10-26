@@ -222,7 +222,7 @@ public class PlayerController : MonoBehaviour
     public void Levitate(InputAction.CallbackContext context)
     {
         
-        if (context.performed && !OnGrounded() && !isLevitating)
+        if (context.performed && !OnGrounded() && !isLevitating && isFalling)
         {
             levitateCoroutine = StartCoroutine(LevitateTimer());
         }
