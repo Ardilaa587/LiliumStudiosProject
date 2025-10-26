@@ -14,9 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Emisora 98
   dialogueLines:
-  - "Buen d\xEDa, habitantes Guatape\xF1os. Nos gustar\xEDa darles buenas noticias"
-  - "pero, la mula de hierro sigue al achecho. No salgan de sus casas, ni suban el
-    pe\xF1ol"
-  autoProgressLines: 0100
+  - "Buen d\xEDa, habitantes Guatape\xF1os.       Nos gustar\xEDa darles buenas noticias,
+    pero la mula de hierro sigue al achecho. "
+  - "No salgan de sus casas, ni suban el pe\xF1ol. No sabemos a qu\xE9 nos enfrentamos."
+  - Varios habitantes afirman haber visto en la cima de la piedra un destello en
+    la madrugada junto a un remolino.
+  - Los arrieros siguen con miedo, perdieron la calma y fuente de ingresos.
+  - Por ahora, solo podemos ser cuidadoso. Y rezar para que Dios nos ampare.
+  autoProgressLines: 0101010101
   typingSpeed: 0.05
   autoProgressDelay: 1.5
