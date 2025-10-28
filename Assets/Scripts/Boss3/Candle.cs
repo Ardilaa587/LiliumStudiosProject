@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Candle : MonoBehaviour
+public class Candle : MonoBehaviour, InteractableI
 {
     [Header("Flama (hijo del objeto)")]
     public GameObject flame; // arrastra aquí el objeto hijo de la vela que representa el fuego
@@ -35,5 +35,24 @@ public class Candle : MonoBehaviour
 
         var sr = GetComponent<SpriteRenderer>();
         if (sr != null) sr.color = Color.white;
+    }
+
+    // ==========================
+    // 🔥 Integración con el sistema de interacción del jugador
+    // ==========================
+
+    public void Interact()
+    {
+        if (!IsLit)
+        {
+            Relight();
+            Debug.Log($"🕯️ {name} encendida por el jugador.");
+        }
+    }
+
+    public bool canInteract()
+    {
+        // solo se puede interactuar si está apagada
+        return !IsLit;
     }
 }
