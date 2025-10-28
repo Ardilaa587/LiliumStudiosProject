@@ -12,6 +12,10 @@ public class CameraEffects : MonoBehaviour
     void Start()
     {
         material = new Material (shader);
+        if (RespawnManager.instance != null)
+        {
+            effectActive = RespawnManager.instance.isCameraEffectActive;
+        }
     }
 
     // Update is called once per frame

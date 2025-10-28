@@ -73,6 +73,11 @@ public class PlayerController : MonoBehaviour
         health = maxHealth;
 
         canDash = true;
+
+        if (RespawnManager.instance != null && RespawnManager.instance.lastRespawnPosition != Vector2.zero)
+        {
+            RespawnManager.instance.RespawnPlayer(gameObject);
+        }
     }
 
     // Update is called once per frame
@@ -222,7 +227,7 @@ public class PlayerController : MonoBehaviour
     public void Levitate(InputAction.CallbackContext context)
     {
         
-        if (context.performed && !OnGrounded() && !isLevitating && isFalling)
+        if (context.performed && !OnGrounded() && !isLevitating)
         {
             levitateCoroutine = StartCoroutine(LevitateTimer());
         }
