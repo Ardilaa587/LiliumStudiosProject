@@ -6,17 +6,23 @@ TagManager:
   tags:
   - Weak Point
   - CoffeeBags
+  - DestroyCoffeeBags
+  - Stairs
+  - Destroy
+  - WaitPoint
+  - FxTemporaire
+  - Boss
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Prueba
   - Water
   - UI
   - Ground
-  - 
-  - 
-  - 
+  - Stairs
+  - DestroyCoffeeBags
+  - Particles
   - 
   - 
   - 
@@ -42,4 +48,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Particles
+    uniqueID: 520758325
     locked: 0

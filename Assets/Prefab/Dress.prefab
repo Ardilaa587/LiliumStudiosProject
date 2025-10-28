@@ -74,7 +74,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -101,7 +101,9 @@ MonoBehaviour:
   isPickedUp: 0
   itemName: 
   itemSprite: {fileID: 0}
-  platformToHide: {fileID: 6053842202347745361, guid: a756dfe2c2f7b3146a1c387c2af706f4, type: 3}
+  secondSprite: {fileID: 0}
+  secondText: "Ahora puedes caer m\xE1s lento para recorrer mayores distancias"
+  pickUpSound: {fileID: 8300000, guid: eea7e632a2090a34ea282c3d3e53a40e, type: 3}
 --- !u!61 &8023420215705116429
 BoxCollider2D:
   m_ObjectHideFlags: 0

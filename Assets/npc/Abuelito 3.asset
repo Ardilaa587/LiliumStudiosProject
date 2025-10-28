@@ -17,6 +17,6 @@ MonoBehaviour:
   - "Haz llegado a la Piedra del Pe\xF1ol."
   - "Tendr\xE1s que subirla para poder reconstruir mi antiguo desgranador de ma\xEDz."
   - "\xA1T\xFA puedes Olga!"
-  autoProgressLines: 0100
+  autoProgressLines: 010101
   typingSpeed: 0.05
   autoProgressDelay: 1.5
