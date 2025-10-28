@@ -16,11 +16,17 @@ public class PickUps : MonoBehaviour, InteractableI
 
     private PickUpUI pickUpUI;
 
-    
-
     void Start()
     {
         pickUpUI = FindObjectOfType<PickUpUI>();
+
+        if (RespawnManager.instance != null && RespawnManager.instance.effectRemovalItemCollected)
+        {
+
+            isPickedUp = true;
+
+            gameObject.SetActive(false);
+        }
     }
 
     public bool canInteract()
@@ -37,6 +43,11 @@ public class PickUps : MonoBehaviour, InteractableI
         if (pickUpUI != null)
         {
             cameraEffects.effectActive = false;
+
+            if (RespawnManager.instance != null)
+            {
+                RespawnManager.instance.CollectEffectRemovalItem();
+            }
 
             pickUpUI.StartSequence(itemSprite, itemName, pickUpSound,
             secondSprite, secondText);
