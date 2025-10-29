@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2c1a262ebbfb1bf4e848eac46d55f774
+guid: c3663c741e86a2a49a4f6455440a4ccf
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -71,7 +71,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -97,7 +97,28 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "TilesCasasGuatap\xE9_0"
+      name: TilesNivel3A_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4f3140efb64f144c99e68255312cc5d
+      internalID: -1214455451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesNivel3A_1
       rect:
         serializedVersion: 2
         x: 32
@@ -111,14 +132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ba69b137f1c28d4689e631af80261f8
-      internalID: -1346490126
+      spriteID: 1b67d657d1a56954c9b9dcd274120e1e
+      internalID: 299206667
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "TilesCasasGuatap\xE9_1"
+      name: TilesNivel3A_2
       rect:
         serializedVersion: 2
         x: 64
@@ -132,17 +153,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ddb2174380548d41933033f23c5f659
-      internalID: 2099726342
+      spriteID: 16394bc98f269804a985bf9d85eefa92
+      internalID: 2108321751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "TilesCasasGuatap\xE9_2"
+      name: TilesNivel3A_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 128
         y: 192
         width: 32
         height: 32
@@ -153,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c746cac32a6190d43a455da6da922f74
-      internalID: 1856766492
+      spriteID: 830bc9aad7eaaae4e9aa9ae4db5179eb
+      internalID: -154347442
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "TilesCasasGuatap\xE9_3"
+      name: TilesNivel3A_4
       rect:
         serializedVersion: 2
         x: 160
@@ -174,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db538d0368a259a4ebc1496ee0d48064
-      internalID: -427735353
+      spriteID: d02f3d847100ad7438ccb34d81ceb62c
+      internalID: 1707019769
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "TilesCasasGuatap\xE9_4"
+      name: TilesNivel3A_5
       rect:
         serializedVersion: 2
         x: 192
@@ -195,14 +216,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a648a0d6bba5f443a7992ec5851d77f
-      internalID: 302207744
+      spriteID: 79e54a7af724ae240beb0ed6fa9c140e
+      internalID: 1070108107
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "TilesCasasGuatap\xE9_5"
+      name: TilesNivel3A_6
       rect:
         serializedVersion: 2
         x: 224
@@ -216,17 +237,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8eff012e9833d0d448fe38bdd1a61243
-      internalID: -1779981016
+      spriteID: af56173464e14fc4892e87e2c857e5c6
+      internalID: -1305097920
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "TilesCasasGuatap\xE9_6"
+      name: TilesNivel3A_7
       rect:
         serializedVersion: 2
-        x: 32
+        x: 128
         y: 160
         width: 32
         height: 32
@@ -237,56 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6396cabd3e9e6d84abd1ddfc09d72112
-      internalID: 1645344439
+      spriteID: 699fb185ef52f1142bb7ae65e0d279e9
+      internalID: 1965594404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "TilesCasasGuatap\xE9_7"
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6b99b65bb189af840b46f5e22351b9c8
-      internalID: 1473847599
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "TilesCasasGuatap\xE9_8"
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 160
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b41b92979dc844748aaec9174c388d38
-      internalID: 1892450682
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "TilesCasasGuatap\xE9_9"
+      name: TilesNivel3A_8
       rect:
         serializedVersion: 2
         x: 160
@@ -300,14 +279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4092e72205aaf1f4fafc632177a3b983
-      internalID: 334182024
+      spriteID: c402183c3f7573b43958e224751239ad
+      internalID: -1894905369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "TilesCasasGuatap\xE9_10"
+      name: TilesNivel3A_9
       rect:
         serializedVersion: 2
         x: 192
@@ -321,14 +300,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 719713da048fbcb4b9a3b2d955617219
-      internalID: -402899407
+      spriteID: 761c898ee58943846be4092470af55ff
+      internalID: 2007704876
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "TilesCasasGuatap\xE9_11"
+      name: TilesNivel3A_10
       rect:
         serializedVersion: 2
         x: 224
@@ -342,14 +321,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5d0c4ee582095f44b87e0e58e114bdf4
-      internalID: -1348802488
+      spriteID: b33901887589d0c4693f1ceff5adaedc
+      internalID: 678205017
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "TilesCasasGuatap\xE9_12"
+      name: TilesNivel3A_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4edc8578c5f4a643a65958c681e8d34
+      internalID: -1818228611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesNivel3A_12
       rect:
         serializedVersion: 2
         x: 32
@@ -363,14 +363,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef71c5904a001c741810c527fe90d06b
-      internalID: 48655216
+      spriteID: 18381fcd0dda7004282a5f564785702a
+      internalID: 1357389067
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "TilesCasasGuatap\xE9_13"
+      name: TilesNivel3A_13
       rect:
         serializedVersion: 2
         x: 64
@@ -384,17 +384,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7922a5db616ad7e439cf06065fd1cf2d
-      internalID: -912138633
+      spriteID: 7459e81cee46ad24581ec8f26904bc2f
+      internalID: -667946382
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "TilesCasasGuatap\xE9_14"
+      name: TilesNivel3A_14
       rect:
         serializedVersion: 2
-        x: 96
+        x: 128
         y: 128
         width: 32
         height: 32
@@ -405,14 +405,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 240cbf1d1fe9a2946a8f1a2ab57eb088
-      internalID: -599130578
+      spriteID: d6215c99f1971f74eb65e0ebe0801c5d
+      internalID: -1659622866
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "TilesCasasGuatap\xE9_15"
+      name: TilesNivel3A_15
       rect:
         serializedVersion: 2
         x: 160
@@ -426,18 +426,39 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1afb9c4a0e10c224ba9d63f2c618b5b9
-      internalID: 1191702710
+      spriteID: 74c89b151c86be9468928131fbff37a2
+      internalID: -903874245
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "TilesCasasGuatap\xE9_16"
+      name: TilesNivel3A_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b896305d381f2b4681698f96eecea35
+      internalID: -1919244603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesNivel3A_17
       rect:
         serializedVersion: 2
         x: 32
-        y: 32
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -447,18 +468,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae4032e557116064b9ddaee63bfb981a
-      internalID: 1705213763
+      spriteID: 03489cd0566a9d34e9a4f835aac21136
+      internalID: -870715927
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "TilesCasasGuatap\xE9_17"
+      name: TilesNivel3A_18
       rect:
         serializedVersion: 2
         x: 64
-        y: 32
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -468,18 +489,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a7ac925e6d0487c4b8d9408bb21847f7
-      internalID: 987866168
+      spriteID: 9a6bce8ceb6031f48a6818c69d1ecf9c
+      internalID: 1514738562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "TilesCasasGuatap\xE9_18"
+      name: TilesNivel3A_19
       rect:
         serializedVersion: 2
-        x: 96
-        y: 32
+        x: 128
+        y: 96
         width: 32
         height: 32
       alignment: 0
@@ -489,8 +510,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db13b11f99941f04eb6f866b22d65524
-      internalID: -1410979324
+      spriteID: 892b5ec5245fcac41bd8d9993d81bf0e
+      internalID: -1286626700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesNivel3A_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 678eced48e10747438dab301cdbf14ea
+      internalID: -970411867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesNivel3A_21
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04c31a085e8aac74db6af3022db967ab
+      internalID: -85393026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TilesNivel3A_22
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8d05d3295ad5a745b76f814c1a8632d
+      internalID: -1746536770
       vertices: []
       indices: 
       edges: []
@@ -506,25 +590,29 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "TilesCasasGuatap\xE9_0": -1346490126
-      "TilesCasasGuatap\xE9_1": 2099726342
-      "TilesCasasGuatap\xE9_10": -402899407
-      "TilesCasasGuatap\xE9_11": -1348802488
-      "TilesCasasGuatap\xE9_12": 48655216
-      "TilesCasasGuatap\xE9_13": -912138633
-      "TilesCasasGuatap\xE9_14": -599130578
-      "TilesCasasGuatap\xE9_15": 1191702710
-      "TilesCasasGuatap\xE9_16": 1705213763
-      "TilesCasasGuatap\xE9_17": 987866168
-      "TilesCasasGuatap\xE9_18": -1410979324
-      "TilesCasasGuatap\xE9_2": 1856766492
-      "TilesCasasGuatap\xE9_3": -427735353
-      "TilesCasasGuatap\xE9_4": 302207744
-      "TilesCasasGuatap\xE9_5": -1779981016
-      "TilesCasasGuatap\xE9_6": 1645344439
-      "TilesCasasGuatap\xE9_7": 1473847599
-      "TilesCasasGuatap\xE9_8": 1892450682
-      "TilesCasasGuatap\xE9_9": 334182024
+      TilesNivel3A_0: -1214455451
+      TilesNivel3A_1: 299206667
+      TilesNivel3A_10: 678205017
+      TilesNivel3A_11: -1818228611
+      TilesNivel3A_12: 1357389067
+      TilesNivel3A_13: -667946382
+      TilesNivel3A_14: -1659622866
+      TilesNivel3A_15: -903874245
+      TilesNivel3A_16: -1919244603
+      TilesNivel3A_17: -870715927
+      TilesNivel3A_18: 1514738562
+      TilesNivel3A_19: -1286626700
+      TilesNivel3A_2: 2108321751
+      TilesNivel3A_20: -970411867
+      TilesNivel3A_21: -85393026
+      TilesNivel3A_22: -1746536770
+      TilesNivel3A_3: -154347442
+      TilesNivel3A_4: 1707019769
+      TilesNivel3A_5: 1070108107
+      TilesNivel3A_6: -1305097920
+      TilesNivel3A_7: 1965594404
+      TilesNivel3A_8: -1894905369
+      TilesNivel3A_9: 2007704876
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
