@@ -31,10 +31,10 @@ public class RespawnManager : MonoBehaviour
 
         lastRespawnPosition = Vector2.zero;
         isCameraEffectActive = true;
-        SceneManager.sceneLoaded += OnSceneLoaded;
+        //SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    public void OnDestroy()
+    /*public void OnDestroy()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
@@ -45,8 +45,21 @@ public class RespawnManager : MonoBehaviour
         CameraEffects cameraEffects = Camera.main?.GetComponent<CameraEffects>();
 
         PickUps[] pickUpsInScene = FindObjectsOfType<PickUps>(true);
+    */
 
+    public void SoftRespawn(PlayerController player)
+    {
+        player.gameObject.SetActive(false);
+        player.transform.position = lastRespawnPosition;
+
+        player.health = player.maxHealth;
+
+        player.rb.velocity = Vector2.zero;
+        player.horizontal = 0f;
+
+        player.gameObject.SetActive(true);
     }
+
 
     public void SetCheckpoint(Vector2 newPosition)
     {

@@ -6,11 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class GameOverUI : MonoBehaviour
 {
+    public PlayerController playerController;
+
     public void Retry()
     {
         Time.timeScale = 1f;
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        if(RespawnManager.instance != null && playerController != null)
+        {
+            RespawnManager.instance.SoftRespawn(playerController);
+            gameObject.SetActive(false);
+        }
     }
 
     public void Quit()

@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] private GameObject pickUp;
 
+    [SerializeField] private GameOverUI gameOverUI;
 
     // Start is called before the first frame update
     void Start()
@@ -270,6 +271,12 @@ public class PlayerController : MonoBehaviour
         if (health - damage <= 0)
         {
             health = 0;
+
+            if(gameOverUI != null)
+            {
+                Time.timeScale = 0f;
+                gameOverUI.gameObject.SetActive(true);
+            }
         }
         else
         {
@@ -277,9 +284,10 @@ public class PlayerController : MonoBehaviour
         }
 
         if (healthUI != null)
+        {
             healthUI.UpdateHearts();
-        else
-            Debug.LogError(" healthUI no está asignado en el PlayerController");
+        }
+
     }
 
     public void AddHealth(float _health)
