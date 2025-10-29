@@ -6,7 +6,7 @@ public class Enemy2 : MonoBehaviour
 {
     public Transform[] EnemyMovementPoints;
     [SerializeField] private Transform actualObjective;
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Rigidbody2D enemyRb;
 
     [SerializeField] private float speed;
 
@@ -18,11 +18,21 @@ public class Enemy2 : MonoBehaviour
     [SerializeField] private float shootInterval;
     public float shootTimer;
 
+    private Transform playerTarget;
+    private Rigidbody2D playerRb;
+
     // Start is called before the first frame update
     void Start()
     {
         actualObjective = EnemyMovementPoints[0];
-        rb = GetComponent<Rigidbody2D>();
+        enemyRb = GetComponent<Rigidbody2D>();
+
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            playerTarget = player.transform;
+            playerRb = player.GetComponent<Rigidbody2D>(); // OBTENER EL RB DEL JUGADOR
+        }
     }
 
     // Update is called once per frame
@@ -49,7 +59,7 @@ public class Enemy2 : MonoBehaviour
 
         movement = new Vector2(roundedDirection, 0);
 
-        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+        enemyRb.MovePosition(enemyRb.position + movement * speed * Time.fixedDeltaTime);
 
         shootTimer += Time.deltaTime;
         if (shootTimer >= shootInterval)
@@ -59,6 +69,25 @@ public class Enemy2 : MonoBehaviour
         }
     }
 
-    
+    private void ShootCardAtTarget()
+    {
+        Vector2 targetPosition = playerTarget.position;
+        float projectileSpeed = businessCardPrefab.GetComponent<BusinessCard>().speed;
+
+        Vector2 direction = (targetPosition - (Vector2)shootPoint.position).normalized;
+
+        float maxAngleComponentY = 0.5f;
+        direction.y = Mathf.Clamp(direction.y, -maxAngleComponentY, maxAngleComponentY);
+
+        direction = direction.normalized;
+
+        GameObject cardGO = Instantiate(businessCardPrefab, shootPoint.position, Quaternion.identity);
+
+        BusinessCard cardScript = cardGO.GetComponent<BusinessCard>();
+        if (cardScript != null)
+        {
+            cardScript.SetDirection(direction);
+        }
+    }
    
 }
