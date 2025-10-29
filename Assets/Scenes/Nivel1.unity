@@ -2702,7 +2702,7 @@ Transform:
   m_GameObject: {fileID: 125693450}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 37.497704, y: -20.524704, z: 0.8464752}
+  m_LocalPosition: {x: 36.14, y: -20.524704, z: 0.8464752}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11076,6 +11076,7 @@ GameObject:
   - component: {fileID: 544607030}
   - component: {fileID: 544607032}
   - component: {fileID: 544607031}
+  - component: {fileID: 544607033}
   m_Layer: 0
   m_Name: RadioDialogueActivator
   m_TagString: Untagged
@@ -11092,7 +11093,7 @@ Transform:
   m_GameObject: {fileID: 544607029}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.6, y: -41, z: 0}
+  m_LocalPosition: {x: 8.65, y: -41.17, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11114,7 +11115,7 @@ MonoBehaviour:
   dialoguePanel: {fileID: 1143506487}
   dialogueText: {fileID: 1143506485}
   nameText: {fileID: 1143506486}
-  sound: {fileID: 0}
+  sound: {fileID: 544607033}
 --- !u!61 &544607032
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -11160,6 +11161,102 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 12.13364, y: 7.3620605}
   m_EdgeRadius: 0
+--- !u!82 &544607033
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 544607029}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: a7a43d3f2162335498af77288621efaf, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &545677175
 GameObject:
   m_ObjectHideFlags: 0
@@ -12349,7 +12446,7 @@ Transform:
   m_GameObject: {fileID: 638968950}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.6, y: -41, z: 0}
+  m_LocalPosition: {x: 11.76, y: -41, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15168,7 +15265,7 @@ Transform:
   m_GameObject: {fileID: 777418746}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -129.6, y: -194.7, z: -10}
+  m_LocalPosition: {x: 44.7, y: -233.1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25453,7 +25550,7 @@ Transform:
   m_GameObject: {fileID: 1140006443}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -125.95644, y: -194.70824, z: -10}
+  m_LocalPosition: {x: 44.7, y: -233.1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28248,11 +28345,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8923869561656758174, guid: ce028a0a5dae1254791262826f4e6544, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -129.6
+      value: 44.7
       objectReference: {fileID: 0}
     - target: {fileID: 8923869561656758174, guid: ce028a0a5dae1254791262826f4e6544, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -194.7
+      value: -233.1
       objectReference: {fileID: 0}
     - target: {fileID: 8923869561656758174, guid: ce028a0a5dae1254791262826f4e6544, type: 3}
       propertyPath: m_LocalPosition.z
@@ -35202,7 +35299,7 @@ Transform:
   m_GameObject: {fileID: 1465510201}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 35.9877, y: -20.7547, z: 0.628677}
+  m_LocalPosition: {x: 35.21, y: -20.7547, z: 0.628677}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -36362,7 +36459,7 @@ Transform:
   m_GameObject: {fileID: 1533493501}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7069334, w: 0.70728016}
-  m_LocalPosition: {x: 8.32, y: -194.4, z: 0.49053824}
+  m_LocalPosition: {x: 7.09, y: -194.4, z: 0.49053824}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -36434,11 +36531,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMountPoint: {fileID: 125693451}
   movementPoints:
-  - {fileID: 1465510202}
   - {fileID: 911726906}
-  speed: 4
+  - {fileID: 1465510202}
+  speed: 3.5
   detectionRadius: 0.5
-  actualObjective: {fileID: 1465510202}
+  actualObjective: {fileID: 911726906}
   rb: {fileID: 1533493505}
 --- !u!50 &1533493505
 Rigidbody2D:
