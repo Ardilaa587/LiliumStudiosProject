@@ -81,6 +81,12 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        string nombreObjeto = collision.gameObject.name;
+        Debug.Log("Colisionaste con: " + nombreObjeto);
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
