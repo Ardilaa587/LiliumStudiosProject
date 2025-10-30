@@ -7,6 +7,23 @@ using UnityEngine.SceneManagement;
 public class GameOverUI : MonoBehaviour
 {
     public PlayerController playerController;
+    public AudioSource musicSourceToStop;
+
+    private void OnEnable()
+    {
+        if(musicSourceToStop != null)
+        {
+            musicSourceToStop.Pause();
+        }
+    }
+
+    private void OnDisable()
+    {
+        if (musicSourceToStop != null)
+        {
+            musicSourceToStop.UnPause();
+        }
+    }
 
     public void Retry()
     {

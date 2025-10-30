@@ -75,7 +75,7 @@ public class Boss1 : MonoBehaviour
     {
         isDefeated = true;
         StopMovement();
-        GetComponent<Collider2D>().enabled = false;
+        
 
         StartCoroutine(LoadNextSceneAfterDelay(2f));
     }
