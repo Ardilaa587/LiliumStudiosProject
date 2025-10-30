@@ -102,7 +102,8 @@ MonoBehaviour:
   itemName: 
   itemSprite: {fileID: 0}
   secondSprite: {fileID: 0}
-  secondText: "Ahora puedes caer m\xE1s lento para recorrer mayores distancias"
+  secondText: Presionando "Z" ahora puedes recorrer una distancia mayor mientras
+    saltas
   pickUpSound: {fileID: 8300000, guid: eea7e632a2090a34ea282c3d3e53a40e, type: 3}
 --- !u!61 &8023420215705116429
 BoxCollider2D:

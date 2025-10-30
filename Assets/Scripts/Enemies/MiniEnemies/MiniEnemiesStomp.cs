@@ -5,6 +5,7 @@ using UnityEngine;
 public class MiniEnemiesStomp : MonoBehaviour
 {
     private const float reboundForce = 2f;
+    [SerializeField] private float respawnTime = 5f;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,11 +15,23 @@ public class MiniEnemiesStomp : MonoBehaviour
 
             if (parentTransform != null)
             {
-                Destroy(parentTransform.gameObject);
+                StartCoroutine(DespawnAndRespawn(parentTransform.gameObject));
 
                 ReboundPlayer();
             }
         }
+    }
+
+    private IEnumerator DespawnAndRespawn(GameObject objectToHandle)
+    {
+        // 1. Desactiva el objeto (simula la "destrucción")
+        objectToHandle.SetActive(false);
+
+        // 2. Espera el tiempo de reaparición
+        yield return new WaitForSeconds(respawnTime);
+
+        // 3. Reactiva el objeto (la "reaparición")
+        objectToHandle.SetActive(true);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

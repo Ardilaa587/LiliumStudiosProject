@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Boss1 : MonoBehaviour
 {
@@ -28,6 +30,18 @@ public class Boss1 : MonoBehaviour
     [SerializeField]
     private string nextSceneName = "Level2";
 
+    [SerializeField] private GameObject victoryPanel;
+    [SerializeField] private float victoryDisplayTime = 10f;
+    [SerializeField] private AudioClip victorySound;
+    [SerializeField] private AudioSource audioSource;
+
+    [SerializeField] private Image victoryImageComponent;
+    [SerializeField] private Sprite victorySprite;
+
+    [SerializeField] private TMP_Text victoryTextComponent;
+    [SerializeField] private string victoryMessage ;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -39,6 +53,11 @@ public class Boss1 : MonoBehaviour
             {
                 playerTransform = playerObject.transform;
             }
+        }
+
+        if (victoryPanel != null)
+        {
+            victoryPanel.SetActive(false);
         }
     }
 
@@ -75,7 +94,28 @@ public class Boss1 : MonoBehaviour
     {
         isDefeated = true;
         StopMovement();
-        
+
+        if (victoryTextComponent != null)
+        {
+            victoryTextComponent.text = victoryMessage;
+        }
+
+        if (victoryImageComponent != null && victorySprite != null)
+        {
+            victoryImageComponent.sprite = victorySprite;
+            victoryImageComponent.enabled = true;
+        }
+
+        if (victorySound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(victorySound);
+        }
+
+        if (victoryPanel != null)
+        {
+            victoryPanel.SetActive(true);
+            Debug.Log("¡Panel de Victoria Activado!");
+        }
 
         StartCoroutine(LoadNextSceneAfterDelay(2f));
     }
