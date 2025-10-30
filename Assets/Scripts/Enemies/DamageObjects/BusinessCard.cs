@@ -10,6 +10,7 @@ public class BusinessCard : MonoBehaviour
     [SerializeField] public float speed;
     [SerializeField] private Rigidbody2D rb;
     private Vector2 initialDirection;
+    [SerializeField] private float damage;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +37,13 @@ public class BusinessCard : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        PlayerController playerController = GetComponent<PlayerController>();
+
+        if (playerController != null)
+        {
+            playerController.TakeDamage(damage);
+        }
+
         Destroy(gameObject);
     }
 }

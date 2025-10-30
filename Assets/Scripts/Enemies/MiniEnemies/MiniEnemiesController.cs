@@ -51,7 +51,7 @@ public class MiniEnemiesController : MonoBehaviour
         movement = new Vector2(roundedDirection, 0);
 
 
-        rb.MovePosition(rb.position + movement * enemySpeed * Time.deltaTime);
+        rb.MovePosition(rb.position + movement * enemySpeed * Time.fixedDeltaTime);
 
     }
 
