@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
 
     #region Jump Variables
     public float jumpingPower;
-    [SerializeField]private float jumpCount = 0f;
+    [SerializeField] private float jumpCount = 0f;
     private float maxJumps = 2f;
     private bool wasGrounded = false;
     #endregion
@@ -59,15 +59,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] public float maxHealth;
     [SerializeField] private HealthUI healthUI;
 
-    private bool isFalling;
-
-    [SerializeField] private GameObject pickUp;
-
     [SerializeField] private GameOverUI gameOverUI;
+
+    [SerializeField] private Animator playerAnimator;
+    private bool isFacingRight = true;
 
     // Start is called before the first frame update
     void Start()
     {
+        playerAnimator = GetComponent<Animator>();
 
         rb.gravityScale = gravity;
 
@@ -84,12 +84,21 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-
+        playerAnimator.SetFloat("Direction", horizontal);
+        if (isFacingRight == true && horizontal < 0)
+        {
+            Flip();
+        }
+        else if (isFacingRight == false && horizontal > 0)
+        {
+            Flip();
+        }
 
         if (OnGrounded() && !wasGrounded)
         {
             coyoteTimeCounter = coyoteTime;
             jumpCount = 0f;
+            playerAnimator.SetBool("isJumping", false);
         }
         else if (!OnGrounded())
         {
@@ -110,7 +119,7 @@ public class PlayerController : MonoBehaviour
 
         if (!isDashing)
         {
-            
+
             if (hitTime <= 0)
             {
                 rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
@@ -130,16 +139,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (rb.velocity.y <= 0 && !OnGrounded())
-        {
-            isFalling = true;
-        }
-        else
-        {
-            isFalling = false;
-        }
 
-        
         hitTime -= Time.deltaTime;
     }
 
@@ -157,30 +157,32 @@ public class PlayerController : MonoBehaviour
     public void Jump(InputAction.CallbackContext context)
     {
         // saltar
-        if (context.performed)
+        if (context.started)
         {
             
-            if (OnGrounded() || coyoteTimeCounter > 0f) 
+
+            if (OnGrounded() || coyoteTimeCounter > 0f)
             {
-                
+
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-                    coyoteTimeCounter = 0f;
+                coyoteTimeCounter = 0f;
                 jumpCount++;
 
-
+                playerAnimator.SetBool("isJumping", true);
             }
             else if (!OnGrounded() && jumpCount < maxJumps)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
                 jumpCount++;
+                playerAnimator.SetBool("isJumping", true);
             }
-            
+
         }
 
-        
+
         if (context.canceled && rb.velocity.y > 0f)
         {
-           rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
             
         }
     }
@@ -227,7 +229,7 @@ public class PlayerController : MonoBehaviour
     #region Levitate Methods
     public void Levitate(InputAction.CallbackContext context)
     {
-        
+
         if (context.performed && !OnGrounded() && !isLevitating)
         {
             levitateCoroutine = StartCoroutine(LevitateTimer());
@@ -251,7 +253,7 @@ public class PlayerController : MonoBehaviour
     }
     private void StopLevitate()
     {
-        
+
         if (levitateCoroutine != null)
         {
             StopCoroutine(levitateCoroutine);
@@ -266,13 +268,13 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        
+
 
         if (health - damage <= 0)
         {
             health = 0;
 
-            if(gameOverUI != null)
+            if (gameOverUI != null)
             {
                 Time.timeScale = 0f;
                 gameOverUI.gameObject.SetActive(true);
@@ -292,7 +294,7 @@ public class PlayerController : MonoBehaviour
 
     public void AddHealth(float _health)
     {
-        
+
 
         if (health + _health > maxHealth)
         {
@@ -306,6 +308,13 @@ public class PlayerController : MonoBehaviour
         healthUI.UpdateHearts();
     }
 
- 
-
+    #region Auxiliar Methods
+    private void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        Vector3 localScale = transform.localScale;
+        localScale.x *= -1f;
+        transform.localScale = localScale;
+    }
+    #endregion
 }
