@@ -17,7 +17,6 @@ public class BusinessCard : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         rb.gravityScale = 0;
-        rb.velocity = initialDirection * speed;
 
         Destroy(gameObject, 5f);
     }

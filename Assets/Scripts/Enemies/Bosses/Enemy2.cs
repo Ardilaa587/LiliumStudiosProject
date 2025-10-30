@@ -64,7 +64,7 @@ public class Enemy2 : MonoBehaviour
         shootTimer += Time.deltaTime;
         if (shootTimer >= shootInterval)
         {
-            Instantiate(businessCardPrefab, shootPoint.position, Quaternion.identity);
+            ShootCardAtTarget();
             shootTimer = 0f;
         }
     }
