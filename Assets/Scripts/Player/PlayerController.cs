@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 
 public class PlayerController : MonoBehaviour
@@ -62,7 +63,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameOverUI gameOverUI;
 
     [SerializeField] private Animator playerAnimator;
-    private bool isFacingRight = true;
+    public bool isFacingRight = true;
+
+    [SerializeField] private Transform cameraFollowTarget;
+    [SerializeField] private float cameraLeadDistance;
 
     // Start is called before the first frame update
     void Start()
@@ -79,6 +83,8 @@ public class PlayerController : MonoBehaviour
         {
             RespawnManager.instance.RespawnPlayer(gameObject);
         }
+
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -99,6 +105,11 @@ public class PlayerController : MonoBehaviour
         {
             Flip();
         }
+
+        float targetX = transform.position.x + (isFacingRight ? cameraLeadDistance : -cameraLeadDistance);
+        cameraFollowTarget.position = Vector3.Lerp(cameraFollowTarget.position,
+        new Vector3(targetX, transform.position.y, transform.position.z),
+        Time.deltaTime * 10f);
 
         if (OnGrounded() && !wasGrounded)
         {
@@ -321,6 +332,10 @@ public class PlayerController : MonoBehaviour
         Vector3 localScale = transform.localScale;
         localScale.x *= -1f;
         transform.localScale = localScale;
+
+        
     }
+
+
     #endregion
 }
