@@ -12,6 +12,7 @@ TagManager:
   - WaitPoint
   - FxTemporaire
   - Boss
+  - Pointer
   layers:
   - Default
   - TransparentFX
