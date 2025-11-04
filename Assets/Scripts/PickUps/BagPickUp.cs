@@ -35,6 +35,7 @@ public class BagPickUp : MonoBehaviour, InteractableI
                 RespawnManager.instance.SetItemAInteracted();
             }
             isOpened = true;
+
         }
 
     }

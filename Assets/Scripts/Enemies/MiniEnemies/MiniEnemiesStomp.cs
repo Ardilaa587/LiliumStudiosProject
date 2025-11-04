@@ -34,24 +34,7 @@ public class MiniEnemiesStomp : MonoBehaviour
         objectToHandle.SetActive(true);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Boss"))
-        {
-            Vector2 contactNormal = collision.GetContact(0).normal;
 
-            if (contactNormal.y > 0.5f) 
-            {
-                Boss1 bossScript = collision.gameObject.GetComponent<Boss1>();
-
-                if (bossScript != null)
-                {
-                    bossScript.TakeHit();
-                    ReboundPlayer(); 
-                }
-            }
-        }
-    }
 
     private void ReboundPlayer()
     {

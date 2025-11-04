@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -7,8 +7,8 @@ using UnityEngine.UI;
 
 public class Boss1 : MonoBehaviour
 {
-    [SerializeField] private float detectionRange = 5f; 
-    [SerializeField] private float moveSpeed = 3f;      
+    [SerializeField] private float detectionRange = 5f;
+    [SerializeField] private float moveSpeed = 3f;
 
     [SerializeField] private float jumpAdvantageHeight = 0.5f;
     [SerializeField] private Transform playerTransform;
@@ -21,10 +21,13 @@ public class Boss1 : MonoBehaviour
     [SerializeField] private float bossHitForceY;
     [SerializeField] private float bossHitForceX;
 
-    [Header("Configuraci�n de Combate")]
-    [SerializeField] private int maxHits = 3; // Total de golpes necesarios
-    public int currentHits = 0;             // Contador actual
-    private bool isDefeated = false;
+    [Header("Configuración de Docilidad")]
+    [SerializeField] private BarBoss1 docilityBar;
+
+    [Header("Configuración de Combate")]
+    [SerializeField] private int maxHits = 3;
+    public int currentHits = 0;
+    private bool isFullyDocile = false;
 
     [Header("Escena de Victoria")]
     [SerializeField]
@@ -39,7 +42,7 @@ public class Boss1 : MonoBehaviour
     [SerializeField] private Sprite victorySprite;
 
     [SerializeField] private TMP_Text victoryTextComponent;
-    [SerializeField] private string victoryMessage ;
+    [SerializeField] private string victoryMessage;
 
 
     void Start()
@@ -63,38 +66,76 @@ public class Boss1 : MonoBehaviour
 
     void Update()
     {
-        if (playerTransform == null || isDefeated) return;
+        if (playerTransform == null || isFullyDocile)
+        {
+            StopMovement();
+            return;
+        }
 
         float distanceToPlayer = Mathf.Abs(transform.position.x - playerTransform.position.x);
 
         if (distanceToPlayer <= detectionRange)
         {
             PursuePlayer();
+            if (docilityBar != null && currentHits > 0)
+            {
+                docilityBar.ShowBar();
+            }
         }
         else
         {
             StopMovement();
-            isPursuing = false; 
+            isPursuing = false;
+            if (docilityBar != null)
+            {
+                docilityBar.HideBar();
+            }
         }
     }
-    public void TakeHit()
+
+    public void RegisterHit()
     {
-        if (isDefeated) return;
+        if (isFullyDocile) return;
 
         currentHits++;
-        Debug.Log("Jefe golpeado. Golpes: " + currentHits);
+
+        if (docilityBar != null)
+        {
+            docilityBar.UpdateDocility(currentHits, maxHits);
+        }
 
         if (currentHits >= maxHits)
         {
-            DefeatBoss();
+            ActivateDocileMode();
         }
     }
 
-    private void DefeatBoss()
+    private void ActivateDocileMode()
     {
-        isDefeated = true;
+        isFullyDocile = true;
         StopMovement();
 
+        if (docilityBar != null)
+        {
+            docilityBar.UpdateDocility(maxHits, maxHits);
+        }
+
+        StartCoroutine(HandleVictorySequence());
+    }
+
+    private IEnumerator HandleVictorySequence()
+    {
+        float victoryDisplayDelay = 2f; // Puedes usar tu campo victoryDisplayTime si lo prefieres
+
+        // Asegura que la barra de docilidad permanezca visible si estaba en uso
+        if (docilityBar != null)
+        {
+            // Espera el tiempo de docilidad MÁXIMA que pusiste en DocilityBar
+            float docileTime = docilityBar.displayTimeWhenMaxDocile;
+            yield return new WaitForSeconds(docileTime);
+        }
+
+        // Lógica visual de Victoria (Panel, Sonido, Texto)
         if (victoryTextComponent != null)
         {
             victoryTextComponent.text = victoryMessage;
@@ -114,23 +155,17 @@ public class Boss1 : MonoBehaviour
         if (victoryPanel != null)
         {
             victoryPanel.SetActive(true);
-            Debug.Log("�Panel de Victoria Activado!");
         }
 
-        StartCoroutine(LoadNextSceneAfterDelay(2f));
-    }
+        // Espera final antes de la transición
+        yield return new WaitForSeconds(victoryDisplayDelay);
 
-    private IEnumerator LoadNextSceneAfterDelay(float delay)
-    {
-        // Pausa la ejecuci�n por el tiempo especificado
-        yield return new WaitForSeconds(delay);
-
-        // Carga la escena, verificando que el nombre no est� vac�o
         if (!string.IsNullOrEmpty(nextSceneName))
         {
             SceneManager.LoadScene(nextSceneName);
         }
     }
+
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
@@ -138,15 +173,17 @@ public class Boss1 : MonoBehaviour
         {
             Vector2 contactNormal = collision.GetContact(0).normal;
 
-            if (contactNormal.y > 0.8f)
+            if (contactNormal.y < -0.8f)
             {
+                RegisterHit();
                 return;
             }
-            if (!isDefeated)
+
+            if (!isFullyDocile)
             {
                 PlayerController player = collision.gameObject.GetComponent<PlayerController>();
 
-                if(player != null)
+                if (player != null)
                 {
                     player.TakeDamage(bossDamage);
 
@@ -185,6 +222,22 @@ public class Boss1 : MonoBehaviour
     private void StopMovement()
     {
         rb.velocity = new Vector2(0, rb.velocity.y);
+    }
+
+    public void ActivateVictoryState()
+    {
+        // 💡 Lógica para asegurarse de que el jefe se detenga y muestre el panel de victoria
+        isFullyDocile = true;
+        StopMovement();
+
+        // Si la barra de docilidad es visible, ocúltala o déjala verde.
+        if (docilityBar != null)
+        {
+            docilityBar.UpdateDocility(maxHits, maxHits);
+        }
+
+        // Llama a la corrutina para iniciar la secuencia de victoria
+        StartCoroutine(HandleVictorySequence());
     }
 
 }
