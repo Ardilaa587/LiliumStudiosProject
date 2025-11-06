@@ -12036,7 +12036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a710539c336d2c147bcd8ab447b3f530, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueData: {fileID: 11400000, guid: 6d1e0b3d44704804484a1e96bc0b35ec, type: 2}
+  dialogueData: {fileID: 11400000, guid: 8e7ed35d0e58d8d4c92889684f828d2a, type: 2}
   dialoguePanel: {fileID: 4432168512554700270}
   dialogueText: {fileID: 9183536189701718281}
   nameText: {fileID: 7690333762939738001}

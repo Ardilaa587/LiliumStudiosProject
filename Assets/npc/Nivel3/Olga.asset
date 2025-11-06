@@ -10,14 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c4a9f20eef25cab43a7fde94be65841d, type: 3}
-  m_Name: Abuelito
+  m_Name: Olga
   m_EditorClassIdentifier: 
   npcName: Abuelo Florencio
   dialogueLines:
-  - Hola, querida Olga.Cuanto tiempo sin vernos.
-  - "Ser\xE9 yo tu gu\xEDa en este viaje por el tiempo."
-  - "No te preocupes, no te rega\xF1ar\xE9 *gui\xF1o*. Regresa al lugar en donde
-    estabas al principio."
-  autoProgressLines: 010101
+  - "\xA1Si abuelo!\xA1No puedo esperar para poder reconstruir tu desgranador!"
+  autoProgressLines: 01010101
   typingSpeed: 0.05
   autoProgressDelay: 1.5

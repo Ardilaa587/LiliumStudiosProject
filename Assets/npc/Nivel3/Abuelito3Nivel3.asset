@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c4a9f20eef25cab43a7fde94be65841d, type: 3}
-  m_Name: NpcNivel2 1
+  m_Name: Abuelito3Nivel3
   m_EditorClassIdentifier: 
   npcName: Abuelo Florencio
   dialogueLines:
-  - Vas bien Olga, aunque no veas nada. A veces es necesario dar un salto de fe.
-  - Usa tu vestido y guiate por las arepas.
-  - "La otra pieza del desgranador est\xE1 cerca."
-  autoProgressLines: 010101
+  - "\xA1Muy bien Olga!"
+  - "\xA1Haz podido recuperar la \xFAltima pieza del desgranador y evitar que la
+    identidad antioque\xF1a fuera v\xEDctima del  Olvido!"
+  - "\xBFLista para reconstruir mi desgranador de ma\xEDz  y volver al presente?"
+  autoProgressLines: 01010101
   typingSpeed: 0.05
   autoProgressDelay: 1.5
