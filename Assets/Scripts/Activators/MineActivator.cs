@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MineActivator : MonoBehaviour
 {
-    [SerializeField] private GameObject mineOpen;
+
     [SerializeField] private GameObject npc;
 
 
@@ -12,7 +12,7 @@ public class MineActivator : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            mineOpen.SetActive(false);
+
             npc.SetActive(true);
 
         }

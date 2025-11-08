@@ -22,6 +22,7 @@ public class ParallaxController : MonoBehaviour
     {
         // 1. Inicializar Cámara y Posición Inicial
         cam = Camera.main.transform;
+
         camStartPos = cam.position;
 
         int backCount = transform.childCount;
@@ -56,27 +57,25 @@ public class ParallaxController : MonoBehaviour
 
     void LateUpdate()
     {
-        // Si no hay cámara o no hay capas, salir
-        if (cam == null || Background.Length == 0) return;
+        if(cam == null || Background.Length == 0) return;
 
-        // 1. Calcular la distancia horizontal que se ha movido la cámara
-        distance = cam.position.x - camStartPos.x;
+        // 1. Calcular distancia SOLO en X (para el paralaje horizontal/tiling)
+        float horizontalDistance = cam.position.x - camStartPos.x;
 
-        // 2. Mover el controlador raíz del parallax horizontalmente con la cámara
-        // Esto asegura que el fondo fijo (velocidad 0.0) se quede estático en la pantalla.
-        transform.position = new Vector3(cam.position.x, transform.position.y, transform.position.z);
+        // 2. Mover el controlador raíz (Padre) para seguir la posición de la cámara en X y Y.
+        // ESTE ES EL CAMBIO CLAVE para que la escena avance.
+        transform.position = new Vector3(cam.position.x, cam.position.y, transform.position.z);
 
-        // 3. Aplicar el offset de textura a cada material
+        // 3. Aplicar el offset de textura SOLO en horizontal (X)
         for (int i = 0; i < Background.Length; i++)
         {
-            if (mat[i] == null) continue; // Saltar si el material no existe
+            if (mat[i] == null) continue;
 
-            // La velocidad es el factor serializado (layerSpeeds[i]) * el factor global (ParallaxSpeed)
             float speedFactor = layerSpeeds[i];
             float speed = speedFactor * ParallaxSpeed;
 
-            // Si speedFactor es 0.0, el offset será 0, y la textura no se moverá.
-            mat[i].SetTextureOffset("_MainTex", new Vector2(distance * speed, 0));
+            // El offset se aplica solo en X. El componente Y es 0.
+            mat[i].SetTextureOffset("_MainTex", new Vector2(horizontalDistance * speed, 0));
         }
     }
 }

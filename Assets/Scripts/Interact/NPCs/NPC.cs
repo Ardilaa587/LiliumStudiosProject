@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class NPC : MonoBehaviour, InteractableI
 {
@@ -11,6 +12,8 @@ public class NPC : MonoBehaviour, InteractableI
 
     private int dialogueIndex;
     private bool isTyping, isDialogueActive;
+
+    public UnityEvent OnDialogueEnd;
 
     public void Start()
     {
@@ -95,5 +98,7 @@ public class NPC : MonoBehaviour, InteractableI
         isDialogueActive = false;
         dialogueText.SetText("");
         dialoguePanel.SetActive(false);
+
+        OnDialogueEnd?.Invoke();
     }
 }
