@@ -41,7 +41,7 @@ public class PickUps : MonoBehaviour, InteractableI
         return !isPickedUp;
     }
 
-    public void Interact()
+    public void Interact(GameObject user)
     {
         CameraEffects cameraEffects = Camera.main.GetComponent<CameraEffects>();
 

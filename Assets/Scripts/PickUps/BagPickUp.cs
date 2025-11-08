@@ -23,7 +23,7 @@ public class BagPickUp : MonoBehaviour, InteractableI
         }
     }
 
-    public void Interact()
+    public void Interact(GameObject user)
     {
         if (!canInteract()) return;
         OpenBag();

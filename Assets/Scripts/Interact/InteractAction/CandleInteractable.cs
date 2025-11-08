@@ -12,7 +12,7 @@ public class CandleInteractable : MonoBehaviour, InteractableI
     public bool canBeInteracted = true;
 
     // Implementación de la interfaz
-    public void Interact()
+    public void Interact(GameObject user)
     {
         if (!canBeInteracted) return;
         if (!isLit)

@@ -41,7 +41,7 @@ public class Candle : MonoBehaviour, InteractableI
     // 🔥 Integración con el sistema de interacción del jugador
     // ==========================
 
-    public void Interact()
+    public void Interact(GameObject user)
     {
         if (!IsLit)
         {

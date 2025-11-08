@@ -33,7 +33,7 @@ public class InventoryItem : MonoBehaviour
         if (!isConsumable)
         {
             // Muestra el panel (Zanahoria)
-            ShowItemInfo();
+            inventory.SetSelectedMissionItem(this);
         }
         else
         {

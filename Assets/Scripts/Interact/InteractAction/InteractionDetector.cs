@@ -20,7 +20,7 @@ public class InteractionDetector : MonoBehaviour
     {
         if(context.performed)
         {
-            InteractableInRange?.Interact();
+            InteractableInRange?.Interact(gameObject);
         }
     }
 

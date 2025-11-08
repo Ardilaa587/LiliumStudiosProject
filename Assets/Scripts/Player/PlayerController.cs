@@ -336,6 +336,29 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    // Dentro de tu script PlayerController.cs (o el que controle el movimiento)
 
+    private bool canMove = true;
+
+    public void DisableMovement(bool disable)
+    {
+        canMove = !disable;
+        // Asegúrate de que tu lógica de movimiento en Update/FixedUpdate SOLO se ejecute si canMove es true.
+        if (!canMove)
+        {
+            // Detener la velocidad actual al ser deshabilitado
+            GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        }
+
+        if (rb != null)
+        {
+            rb.simulated = !disable;
+
+            if (disable)
+            {
+                rb.velocity = Vector2.zero; // Detener cualquier movimiento residual
+            }
+        }
+    }
     #endregion
 }

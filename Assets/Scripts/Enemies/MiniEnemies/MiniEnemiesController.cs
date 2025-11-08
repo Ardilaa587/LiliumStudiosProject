@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,6 +19,7 @@ public class MiniEnemiesController : MonoBehaviour
     public float enemyHitForceY;
     public float enemyHitTime;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,12 +37,12 @@ public class MiniEnemiesController : MonoBehaviour
             if (actualObjective == enemyMovementPoints[0]) // Llegue al punto A
             {
                 actualObjective = enemyMovementPoints[1];
-                
+                Flip();
             }
             else if (actualObjective == enemyMovementPoints[1]) // Llegue al punto B
             {
                 actualObjective = enemyMovementPoints[0];
-                
+                Flip();
             }
         }
 
@@ -53,6 +55,13 @@ public class MiniEnemiesController : MonoBehaviour
 
         rb.MovePosition(rb.position + movement * enemySpeed * Time.fixedDeltaTime);
 
+    }
+
+    private void Flip()
+    {
+        Vector3 localScale = transform.localScale;
+        localScale.x *= -1f;
+        transform.localScale = localScale;
     }
 
     public void OnCollisionEnter2D(Collision2D collision)
@@ -81,6 +90,7 @@ public class MiniEnemiesController : MonoBehaviour
                 // El jugador está a la derecha del enemigo.
                 player.hitFromRight = false;
             }
+
         }
     }
 }

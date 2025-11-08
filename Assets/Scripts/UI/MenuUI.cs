@@ -97,4 +97,9 @@ public class MenuUI : MonoBehaviour
             settingsPanel.SetActive(false);
         }
     }
+
+    public void OnMenu()
+    {
+        StartCoroutine(PlaySoundAndLoadScene("Menu"));
+    }
 }

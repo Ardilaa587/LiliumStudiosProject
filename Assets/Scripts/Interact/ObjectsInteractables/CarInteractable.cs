@@ -20,7 +20,9 @@ public class CarInteractable : MonoBehaviour, InteractableI
 
     private const string PlayerControllerScriptName = "PlayerController";
 
-    public void Interact()
+    [SerializeField] private GameObject collider;
+
+    public void Interact(GameObject user)
     {
         if (!canInteract())
         {
@@ -58,6 +60,7 @@ public class CarInteractable : MonoBehaviour, InteractableI
             }
 
             isMoving = true;
+            collider.SetActive(true);
         }
 
     }
@@ -69,6 +72,8 @@ public class CarInteractable : MonoBehaviour, InteractableI
 
     void Start()
     {
+        collider.SetActive(false);
+
         rb = GetComponent<Rigidbody2D>();
 
         if (movementPoints.Length < 2)

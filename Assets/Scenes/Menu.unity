@@ -507,7 +507,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7de481af087407649a6daa5a9ab771f5, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7dd3cc3b2e878344e9326f9b5f265a34, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.258
   m_Pitch: 1
@@ -607,7 +607,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   settingsPanel: {fileID: 566304166}
   audioSource: {fileID: 520207067}
-  buttonClickSound: {fileID: 8300000, guid: ed03a428fab54804ba417feee3307d82, type: 3}
+  buttonClickSound: {fileID: 8300000, guid: 589e5f5400958114fbd83aa56fad181c, type: 3}
 --- !u!1 &165020817
 GameObject:
   m_ObjectHideFlags: 0
