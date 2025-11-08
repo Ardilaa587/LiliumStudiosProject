@@ -12,10 +12,21 @@ public class ObjectsDamage : MonoBehaviour
     [SerializeField] private float ObjectHitForceX;
     [SerializeField] private float ObjectHitForceY;
 
+    [SerializeField] private float initialPushForceX = 5f;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+
+        if (rb != null)
+        {
+            // Creamos un vector de fuerza (-X, 0)
+            Vector2 initialForce = new Vector2(-initialPushForceX, 0f);
+
+            // Aplicamos la fuerza usando ForceMode2D.Impulse para un empuje instantáneo.
+            rb.AddForce(initialForce, ForceMode2D.Impulse);
+        }
     }
 
     // Update is called once per frame

@@ -15,10 +15,17 @@ public class PickUps : MonoBehaviour, InteractableI
     [SerializeField] private AudioClip pickUpSound;
 
     private PickUpUI pickUpUI;
+    private Inventory playerInventory;
 
     void Start()
     {
         pickUpUI = FindObjectOfType<PickUpUI>();
+
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            playerInventory = player.GetComponent<Inventory>();
+        }
 
         if (RespawnManager.instance != null && RespawnManager.instance.effectRemovalItemCollected)
         {
@@ -57,6 +64,11 @@ public class PickUps : MonoBehaviour, InteractableI
         isPickedUp = true;
         gameObject.SetActive(false);
 
-        
+        if (playerInventory != null)
+        {
+            playerInventory.SetInventoryUIVisibility(true);
+        }
+
+
     }
 }

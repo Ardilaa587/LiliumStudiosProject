@@ -55,5 +55,7 @@ public class BagPickUp : MonoBehaviour, InteractableI
             GameObject droppedItem = Instantiate(itemPrefab, transform.position + Vector3.left * 2, Quaternion.identity);
 
         }
+
+        gameObject.SetActive(false);
     }
 }

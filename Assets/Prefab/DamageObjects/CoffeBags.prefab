@@ -168,6 +168,7 @@ MonoBehaviour:
   ObjectHitTime: 0.2
   ObjectHitForceX: 0
   ObjectHitForceY: 0
+  initialPushForceX: 10
 --- !u!114 &-5571987324997989884
 MonoBehaviour:
   m_ObjectHideFlags: 0
