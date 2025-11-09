@@ -32,6 +32,12 @@ public class BossHands : MonoBehaviour
     private bool isRunning = false;
     private List<Candle> candlesInUse = new List<Candle>();
 
+    [Header("Animación")]
+    public Animator bossAnimator; // 🆕 Referencia al Animator del jefe
+    [SerializeField] private  string ANIM_IDLE = "Idle";
+    [SerializeField] private  string ANIM_HIT = "Hit";
+    [SerializeField] private string ANIM_EXPLOSION = "Explosion";
+
     void Start()
     {
         if (leftHand == null || rightHand == null)
@@ -68,26 +74,38 @@ public class BossHands : MonoBehaviour
         int candleLayerIndex = Mathf.RoundToInt(Mathf.Log(candleLayer.value, 2));
         Physics.IgnoreLayerCollision(gameObject.layer, candleLayerIndex, true);
 
+        SetAnimation(ANIM_IDLE);
+
         if (startOnAwake)
             StartCoroutine(BossRoutine());
     }
 
+    void SetAnimation(string animName)
+    {
+        if (bossAnimator != null)
+        {
+            bossAnimator.Play(animName);
+        }
+    }
+
     IEnumerator BossRoutine()
     {
+        SetAnimation(ANIM_IDLE);
+
         isRunning = true;
         while (isRunning)
         {
             if (AllCandlesOut())
             {
                 Debug.Log("🔥 TODAS LAS VELAS APAGADAS. Boss derrotado!");
-                SelfDestruct();
+                SelfDestruct(true);
                 yield break;
             }
 
             if (totalAttacks >= maxAttacks)
             {
                 Debug.Log("💀 Boss se autodestruye: no logró apagar las 100 velas!");
-                SelfDestruct();
+                SelfDestruct(false);
                 yield break;
             }
 
@@ -108,6 +126,8 @@ public class BossHands : MonoBehaviour
         Candle target = PickRandomLitCandleNotInUse();
         if (target == null) yield break;
         candlesInUse.Add(target);
+
+        SetAnimation(ANIM_HIT);
 
         Vector3 targetPos = target.transform.position;
         float timer = 0f; // seguridad de tiempo
@@ -148,6 +168,8 @@ public class BossHands : MonoBehaviour
             yield return null;
         }
 
+        SetAnimation(ANIM_IDLE);
+
         // Reactivar collider
         if (col) col.enabled = true;
         candlesInUse.Remove(target);
@@ -177,12 +199,27 @@ public class BossHands : MonoBehaviour
         Debug.Log($"🕯️ Se encontraron {candles.Count} velas en el layer CANDLE.");
     }
 
-    void SelfDestruct()
+    void SelfDestruct(bool defeated)
     {
         isRunning = false;
-        if (leftHand) Destroy(leftHand.gameObject);
-        if (rightHand) Destroy(rightHand.gameObject);
-        Destroy(gameObject, 0.5f);
+
+        // 🆕 Si fue derrotado, reproducir animación de explosión
+        if (defeated)
+        {
+            SetAnimation(ANIM_EXPLOSION);
+            // Dejar la destrucción hasta que termine la animación, o con un retraso fijo
+            Destroy(leftHand.gameObject, 0.1f);
+            Destroy(rightHand.gameObject, 0.1f);
+            Destroy(gameObject, 2f); // Destruir el jefe 2 segundos después (ajusta el tiempo a la duración de la animación)
+        }
+        else
+        {
+            // Autodestrucción normal si no fue por derrota
+            if (leftHand) Destroy(leftHand.gameObject);
+            if (rightHand) Destroy(rightHand.gameObject);
+            Destroy(gameObject, 0.5f);
+        }
     }
 }
+
 
