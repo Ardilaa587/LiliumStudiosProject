@@ -16,13 +16,14 @@ public class CandleInteractable : MonoBehaviour, InteractableI
     public void Interact(GameObject user)
     {
         if (!canBeInteracted) return;
-        if (!isLit)
+        if (isLit)
         {
-            LightUp();
+            Debug.Log($"{name}: La vela debe estar apagada para encenderla.");
+            return;
         }
         else
         {
-            Debug.Log($"{name}: ya está encendida.");
+            LightUp();
         }
     }
 
