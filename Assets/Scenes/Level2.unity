@@ -49965,10 +49965,13 @@ PrefabInstance:
       value: 13
       objectReference: {fileID: 0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     - target: {fileID: 8423422471265427402, guid: e79410e8cbd3f234488f85b6f2510480, type: 3}
       propertyPath: m_SortingOrder
       value: 1
 =======
+=======
+>>>>>>> Stashed changes
     - target: {fileID: 7283537210285544693, guid: e79410e8cbd3f234488f85b6f2510480, type: 3}
       propertyPath: m_Tiles.Array.data[2612].second.m_TileSpriteIndex
       value: 13
@@ -50104,6 +50107,9 @@ PrefabInstance:
     - target: {fileID: 7283537210285544693, guid: e79410e8cbd3f234488f85b6f2510480, type: 3}
       propertyPath: m_Tiles.Array.data[2645].second.m_TileSpriteIndex
       value: 13
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 8872856726447763404, guid: e79410e8cbd3f234488f85b6f2510480, type: 3}
