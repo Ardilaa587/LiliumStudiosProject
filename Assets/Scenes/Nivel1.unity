@@ -2139,7 +2139,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2052314346}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
 --- !u!1 &135879567
 GameObject:
   m_ObjectHideFlags: 0
@@ -2224,8 +2223,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-=======
->>>>>>> Stashed changes
 --- !u!1001 &137821482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3774,7 +3771,6 @@ GameObject:
   - component: {fileID: 235513978}
   - component: {fileID: 235513979}
   m_Layer: 0
-<<<<<<< Updated upstream
   m_Name: Triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3858,8 +3854,6 @@ GameObject:
   m_Component:
   - component: {fileID: 236561911}
   m_Layer: 0
-=======
->>>>>>> Stashed changes
   m_Name: WaitPoint (38)
   m_TagString: WaitPoint
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
@@ -5530,7 +5524,6 @@ BoxCollider2D:
   m_Size: {x: 4.0408173, y: 5.600113}
   m_EdgeRadius: 0
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
 --- !u!1 &347480679
 GameObject:
   m_ObjectHideFlags: 0
@@ -5745,8 +5738,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-=======
->>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 --- !u!1001 &354863272
@@ -12166,7 +12157,6 @@ Transform:
   m_Father: {fileID: 1198494876}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
 --- !u!1 &609901639
 GameObject:
   m_ObjectHideFlags: 0
@@ -12454,8 +12444,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-=======
->>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 --- !u!1001 &627647769
@@ -23329,7 +23317,6 @@ MeshFilter:
   m_GameObject: {fileID: 1068810829}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
 --- !u!1 &1080037524
 GameObject:
   m_ObjectHideFlags: 0
@@ -23461,8 +23448,6 @@ BoxCollider2D:
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 =======
-=======
->>>>>>> Stashed changes
 --- !u!1001 &1080434543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24018,7 +24003,6 @@ MonoBehaviour:
   m_ScaleImpactWithMass: 0
   m_ScaleImpactWithSpeed: 0
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
 --- !u!1 &1101855850
 GameObject:
   m_ObjectHideFlags: 0
@@ -24233,8 +24217,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
-=======
->>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 --- !u!1 &1110950661
@@ -31772,7 +31754,6 @@ Transform:
   m_PrefabInstance: {fileID: 1590875004}
   m_PrefabAsset: {fileID: 0}
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
 --- !u!1 &1604682442
 GameObject:
   m_ObjectHideFlags: 0
@@ -31987,8 +31968,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
-=======
->>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 --- !u!1 &1611812433
@@ -34600,11 +34579,7 @@ Transform:
   - {fileID: 1802650169}
   - {fileID: 881013257}
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
   - {fileID: 1189606276}
-=======
-  - {fileID: 1896704006}
->>>>>>> Stashed changes
 =======
   - {fileID: 1896704006}
 >>>>>>> Stashed changes
@@ -55760,7 +55735,6 @@ GameObject:
   - component: {fileID: 2002265845}
   - component: {fileID: 2002265846}
   m_Layer: 0
-<<<<<<< Updated upstream
   m_Name: Triangle (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -55844,8 +55818,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2004646047}
   m_Layer: 0
-=======
->>>>>>> Stashed changes
   m_Name: WaitPoint (85)
   m_TagString: WaitPoint
   m_Icon: {fileID: 1206586993520771344, guid: 0000000000000000d000000000000000, type: 0}
