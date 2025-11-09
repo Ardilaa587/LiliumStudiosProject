@@ -17,9 +17,12 @@ public class PickUps : MonoBehaviour, InteractableI
     private PickUpUI pickUpUI;
     private Inventory playerInventory;
 
+    private GrayScaleController grayscaleController;
+
     void Start()
     {
         pickUpUI = FindObjectOfType<PickUpUI>();
+        grayscaleController = FindObjectOfType<GrayScaleController>();
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
@@ -43,13 +46,13 @@ public class PickUps : MonoBehaviour, InteractableI
 
     public void Interact(GameObject user)
     {
-        CameraEffects cameraEffects = Camera.main.GetComponent<CameraEffects>();
+        
 
         if (isPickedUp) return;
 
         if (pickUpUI != null)
         {
-            cameraEffects.effectActive = false;
+            
 
             if (RespawnManager.instance != null)
             {
@@ -59,6 +62,10 @@ public class PickUps : MonoBehaviour, InteractableI
             pickUpUI.StartSequence(itemSprite, itemName, pickUpSound,
             secondSprite, secondText);
 
+            if (grayscaleController != null)
+            {
+                grayscaleController.SetEffectActive(false); // Desactiva B/N (vuelve a color)
+            }
         }       
 
         isPickedUp = true;

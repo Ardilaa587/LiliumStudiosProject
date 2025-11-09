@@ -19,10 +19,12 @@ public class MiniEnemiesController : MonoBehaviour
     public float enemyHitForceY;
     public float enemyHitTime;
 
+    [SerializeField] private Animator miniEnemiesAnimator;
 
     // Start is called before the first frame update
     void Start()
     {
+        miniEnemiesAnimator = GetComponent<Animator>();
         actualObjective = enemyMovementPoints[0];
         rb = GetComponent<Rigidbody2D>();
     }
@@ -52,7 +54,7 @@ public class MiniEnemiesController : MonoBehaviour
 
         movement = new Vector2(roundedDirection, 0);
 
-
+        miniEnemiesAnimator.SetFloat("Direction", roundedDirection);
         rb.MovePosition(rb.position + movement * enemySpeed * Time.fixedDeltaTime);
 
     }
@@ -90,7 +92,7 @@ public class MiniEnemiesController : MonoBehaviour
                 // El jugador está a la derecha del enemigo.
                 player.hitFromRight = false;
             }
-
+            miniEnemiesAnimator.SetTrigger("Attack");
         }
     }
 }
