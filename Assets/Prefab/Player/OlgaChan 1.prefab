@@ -58,7 +58,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -288,17 +288,15 @@ MonoBehaviour:
   gravity: 3
   speed: 5
   horizontal: 0
-  jumpingPower: 6
-  jumpCount: 1
-  coyoteTime: 0.5
-  coyoteGravity: 0
   groundCheck: {fileID: 2987484218425415092}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
   groundRadius: 0.2
-  health: 0
-  maxHealth: 5
+  jumpingPower: 6
+  jumpCount: 1
+  coyoteTime: 0.5
+  coyoteGravity: 0
   dashingPower: 15
   dashingTime: 0.3
   dashingCooldown: 0.5
@@ -307,7 +305,15 @@ MonoBehaviour:
   hitTime: 0
   hitForceX: 0
   hitForceY: 0
-  pickUp: {fileID: 0}
+  hitFromRight: 0
+  health: 0
+  maxHealth: 5
+  healthUI: {fileID: 0}
+  gameOverUI: {fileID: 0}
+  playerAnimator: {fileID: 0}
+  isFacingRight: 1
+  cameraFollowTarget: {fileID: 0}
+  cameraLeadDistance: 0
 --- !u!1 &7004132576569940599
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,7 +366,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

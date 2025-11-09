@@ -58,7 +58,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -147,15 +147,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9287ba1a95d8e3644bf3b8b637daa0d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pickUpPanel: {fileID: 0}
-  pickUpImage: {fileID: 0}
-  carrotText: {fileID: 0}
   carrotSound: {fileID: 7805382286873129359}
-  typingDelay: 0.05
-  displayDuration: 3
   carrotName: Zanahoria de Hierro
   carrotExplanation: Usala para amansar a la temida Mula de Hierro
   carrotSprite: {fileID: 21300000, guid: 1e21dd33375006d49b210746e894bd1d, type: 3}
+  itemButtonPrefab: {fileID: 0}
+  missionEffect: {fileID: 0}
 --- !u!82 &7805382286873129359
 AudioSource:
   m_ObjectHideFlags: 0

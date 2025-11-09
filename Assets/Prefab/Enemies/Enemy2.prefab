@@ -56,7 +56,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -176,12 +176,18 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   actualObjective: {fileID: 0}
-  rb: {fileID: 8855015102826415024}
+  enemyRb: {fileID: 0}
   speed: 5
   businessCardPrefab: {fileID: 840468332321358439, guid: 1e2552df7416e60458174321d50d1e04, type: 3}
   shootPoint: {fileID: 8774676186750371422}
   shootInterval: 2
   shootTimer: 5
+  requiredJumpsToDefeat: 3
+  victoryPanel: {fileID: 0}
+  victoryText: {fileID: 0}
+  victoryMessage: 
+  victoryImageComponent: {fileID: 0}
+  victoryImage: {fileID: 0}
 --- !u!1 &2266437212212903295
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class CandleInteractable : MonoBehaviour, InteractableI
 {
     [Header("Configuración de la vela")]
     public bool isLit = false;                // Estado actual
     public ParticleSystem flameEffect;        // Partícula de fuego
-    public Light candleLight;                 // Luz opcional (si usas 3D)
+    public Light2D candleLight;                 // Luz opcional (si usas 3D)
     public AudioSource igniteSound;           // Sonido al encender
 
     [Tooltip("Evita encenderla si el boss está activo, por ejemplo.")]

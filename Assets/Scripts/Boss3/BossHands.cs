@@ -20,7 +20,7 @@ public class BossHands : MonoBehaviour
 
     [Header("Velas")]
     public LayerMask candleLayer; // ahora usamos layer
-    public List<Candle> candles = new List<Candle>();
+    public List<CandleInteractable> candles = new List<CandleInteractable>();
 
     [Header("Jugador (para ignorar colisiones)")]
     public Collider playerCollider; // 🔹 <-- ESTA ERA LA VARIABLE FALTANTE
@@ -30,7 +30,7 @@ public class BossHands : MonoBehaviour
 
     private int totalAttacks = 0;
     private bool isRunning = false;
-    private List<Candle> candlesInUse = new List<Candle>();
+    private List<CandleInteractable> candlesInUse = new List<CandleInteractable>();
 
     [Header("Animación")]
     public Animator bossAnimator; // 🆕 Referencia al Animator del jefe
@@ -52,6 +52,11 @@ public class BossHands : MonoBehaviour
             Debug.LogError("⚠️ Las posiciones de descanso no están asignadas.", this);
             enabled = false;
             return;
+        }
+
+        if (bossAnimator == null)
+        {
+            Debug.LogWarning("⚠️ El Animator del jefe no está asignado. Las animaciones no funcionarán.", this);
         }
 
         // Buscar velas automáticamente según layer
@@ -123,7 +128,7 @@ public class BossHands : MonoBehaviour
 
     IEnumerator AttackRandomCandle(Transform hand, Transform restPos)
     {
-        Candle target = PickRandomLitCandleNotInUse();
+        CandleInteractable target = PickRandomLitCandleNotInUse();
         if (target == null) yield break;
         candlesInUse.Add(target);
 
@@ -175,7 +180,7 @@ public class BossHands : MonoBehaviour
         candlesInUse.Remove(target);
     }
 
-    Candle PickRandomLitCandleNotInUse()
+    CandleInteractable PickRandomLitCandleNotInUse()
     {
         var lit = candles.Where(c => c != null && c.IsLit && !candlesInUse.Contains(c)).ToList();
         if (lit.Count == 0) return null;
@@ -190,7 +195,7 @@ public class BossHands : MonoBehaviour
     void BuscarVelasPorLayer()
     {
         candles.Clear();
-        var allCandles = FindObjectsOfType<Candle>();
+        var allCandles = FindObjectsOfType<CandleInteractable>();
         foreach (var c in allCandles)
         {
             if (((1 << c.gameObject.layer) & candleLayer) != 0)
