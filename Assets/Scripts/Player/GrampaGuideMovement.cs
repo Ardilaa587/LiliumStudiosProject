@@ -108,4 +108,39 @@ public class GrampaGuideMovement : MonoBehaviour
             }
         }
     }
+
+    public void RespawnToNearestWaypoint(Vector2 checkpointPosition)
+    {
+        if (waypoints == null || waypoints.Length == 0)
+        {
+            Debug.LogWarning("GrampaGuide no tiene waypoints asignados. No puede reubicarse.");
+            return;
+        }
+
+        int nearestIndex = 0;
+        float minDistance = float.MaxValue;
+
+        // 1. Encontrar el waypoint más cercano a la posición del checkpoint
+        for (int i = 0; i < waypoints.Length; i++)
+        {
+            if (waypoints[i] == null) continue;
+
+            float distance = Vector2.Distance(checkpointPosition, waypoints[i].position);
+
+            if (distance < minDistance)
+            {
+                minDistance = distance;
+                nearestIndex = i;
+            }
+        }
+
+        // 2. Mover el guía a la posición de ese waypoint
+        transform.position = waypoints[nearestIndex].position;
+
+        // 3. Establecer el índice actual para que el guía continúe la ruta desde ese punto
+        currentWaypointIndex = nearestIndex;
+
+        // 4. Asegurarse de que no esté en estado de espera
+        isWaiting = false;
+    }
 }

@@ -39,5 +39,20 @@ public class CoffeBags : MonoBehaviour
 
     }
 
-    
+    public void DeactivateSpawn()
+    {
+        canSpawn = false;
+        CancelInvoke(nameof(Spawn));
+        Debug.Log("Spawning de Coffee Bags Desactivado.");
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+
+            DeactivateSpawn();
+
+        }
+    }
 }

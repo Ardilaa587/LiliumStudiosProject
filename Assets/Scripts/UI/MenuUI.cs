@@ -9,6 +9,9 @@ public class MenuUI : MonoBehaviour
     [SerializeField] public GameObject settingsPanel;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip buttonClickSound;
+    
+    [Header("Punto de Reinicio Fijo")]
+    public Transform fixedStartPosition;
 
     void Awake()
     {
@@ -102,4 +105,35 @@ public class MenuUI : MonoBehaviour
     {
         StartCoroutine(PlaySoundAndLoadScene("Menu"));
     }
+
+    public void OnReStart()
+    {
+        PlaySound();
+
+        // 2. Encontrar al Jugador
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+
+        // 3. Verificar referencias
+        if (RespawnManager.instance != null && playerObject != null && fixedStartPosition != null)
+        {
+            // A. SOBREESCRIBIR la última posición de respawn con la posición del objeto fijo.
+            // Convertimos la posición de Transform (Vector3) a Vector2 para tu RespawnManager 2D.
+            Vector2 fixedPos = fixedStartPosition.position;
+
+            RespawnManager.instance.SetCheckpoint(fixedPos);
+
+            // B. Mover al jugador usando la función del manager
+            // Usamos SoftRespawn si tenemos el PlayerController, ya que también cura y limpia la velocidad.
+            PlayerController playerController = playerObject.GetComponent<PlayerController>();
+
+            if (playerController != null)
+            {
+                RespawnManager.instance.SoftRespawn(playerController);
+            }
+            else
+            {
+                RespawnManager.instance.RespawnPlayer(playerObject);
+            }
+        }
+     }
 }

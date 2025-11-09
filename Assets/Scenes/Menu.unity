@@ -608,6 +608,7 @@ MonoBehaviour:
   settingsPanel: {fileID: 566304166}
   audioSource: {fileID: 520207067}
   buttonClickSound: {fileID: 8300000, guid: 589e5f5400958114fbd83aa56fad181c, type: 3}
+  fixedStartPosition: {fileID: 0}
 --- !u!1 &165020817
 GameObject:
   m_ObjectHideFlags: 0
@@ -1958,8 +1959,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 0.0038403, y: 10.3972}
+  m_SizeDelta: {x: 100.12, y: 102.4554}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1454403944
 MonoBehaviour:

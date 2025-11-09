@@ -7,7 +7,7 @@ public class CarInteractable : MonoBehaviour, InteractableI
 
     public Transform playerMountPoint;
     public Transform[] movementPoints;
-    public float speed = 5f;
+    public float speed;
     public float detectionRadius = 0.5f;
 
     [SerializeField] private Transform actualObjective;
@@ -21,6 +21,8 @@ public class CarInteractable : MonoBehaviour, InteractableI
     private const string PlayerControllerScriptName = "PlayerController";
 
     [SerializeField] private GameObject collider;
+    private Animator playerAnimator;
+    [SerializeField] private string ridingAnimationBool = "IsRiding";
 
     public void Interact(GameObject user)
     {
@@ -39,6 +41,12 @@ public class CarInteractable : MonoBehaviour, InteractableI
             if (playerControllerScript != null)
             {
                 playerControllerScript.enabled = false;
+            }
+
+            playerAnimator = playerObject.GetComponent<Animator>();
+            if (playerAnimator != null)
+            {
+                playerAnimator.SetBool(ridingAnimationBool, true);
             }
 
             playerObject.transform.position = playerMountPoint.position;
@@ -72,6 +80,8 @@ public class CarInteractable : MonoBehaviour, InteractableI
 
     void Start()
     {
+        Time.timeScale = 1.0f;
+
         collider.SetActive(false);
 
         rb = GetComponent<Rigidbody2D>();
@@ -99,6 +109,11 @@ public class CarInteractable : MonoBehaviour, InteractableI
             return;
         }
 
+        Vector2 direction = (actualObjective.position - transform.position).normalized;
+        Vector2 moveStep = direction * speed * Time.fixedDeltaTime;
+
+        // Mueve la posición del Rigidbody
+        rb.MovePosition(rb.position + moveStep);
         float distanceToObjective = Vector2.Distance(transform.position, actualObjective.position);
 
         if (distanceToObjective < detectionRadius)
@@ -123,6 +138,11 @@ public class CarInteractable : MonoBehaviour, InteractableI
                         Debug.Log("Script de control del jugador rehabilitado.");
                     }
 
+                    if (playerAnimator != null)
+                    {
+                        playerAnimator.SetBool(ridingAnimationBool, false); // Vuelve a la animación normal
+                    }
+
                     playerObject.transform.position = transform.position + new Vector3(1f, 0f, 0f);
                 }
 
@@ -141,8 +161,8 @@ public class CarInteractable : MonoBehaviour, InteractableI
             }
         }
 
-        Vector2 direction = (actualObjective.position - transform.position).normalized;
-        rb.velocity = direction * speed;
+        
+        
     }
 }
 

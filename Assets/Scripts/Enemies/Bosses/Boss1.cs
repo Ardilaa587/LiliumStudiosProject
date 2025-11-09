@@ -62,10 +62,13 @@ public class Boss1 : MonoBehaviour, InteractableI
     private Inventory playerInventory;
     private InteractionDetector playerDetector;
 
-
+    [Header("Animación Boss1")]
+    [SerializeField] private string hitBoolName = "IsHitting";
+    [SerializeField] private Animator bossAnimator;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        bossAnimator = GetComponent<Animator>();
 
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         if (playerObject != null)
@@ -83,6 +86,16 @@ public class Boss1 : MonoBehaviour, InteractableI
         if (finalPanel != null)
         {
             finalPanel.SetActive(false);
+        }
+
+        SetBossAnimation(true);
+    }
+
+    private void SetBossAnimation(bool isHitting)
+    {
+        if (bossAnimator != null)
+        {
+            bossAnimator.SetBool(hitBoolName, isHitting);
         }
     }
 
@@ -116,6 +129,7 @@ public class Boss1 : MonoBehaviour, InteractableI
         }
     }
 
+
     // --- Lógica de Combate y Docilidad ---
 
     public void RegisterHit()
@@ -140,6 +154,7 @@ public class Boss1 : MonoBehaviour, InteractableI
         isFullyDocile = true;
         StopMovement();
 
+        SetBossAnimation(false);
         if (docilityBar != null)
         {
             docilityBar.UpdateDocility(maxHits, maxHits);
@@ -163,6 +178,7 @@ public class Boss1 : MonoBehaviour, InteractableI
             if (!isFullyDocile)
             {
                 PlayerController player = collision.gameObject.GetComponent<PlayerController>();
+                SetBossAnimation(true);
 
                 if (player != null)
                 {

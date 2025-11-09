@@ -17,6 +17,7 @@ public class RespawnManager : MonoBehaviour
     public bool isCameraEffectActive = true;
     public bool effectRemovalItemCollected = false;
     public bool itemAInteracted = false;
+    private GrampaGuideMovement grampaGuide;
 
     private void Awake()
     {
@@ -31,23 +32,12 @@ public class RespawnManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+        grampaGuide = FindObjectOfType<GrampaGuideMovement>();
+
         lastRespawnPosition = Vector2.zero;
         isCameraEffectActive = true;
         //SceneManager.sceneLoaded += OnSceneLoaded;
     }
-
-    /*public void OnDestroy()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        CameraEffects cameraEffects = Camera.main?.GetComponent<CameraEffects>();
-
-        PickUps[] pickUpsInScene = FindObjectsOfType<PickUps>(true);
-    */
 
     public void SoftRespawn(PlayerController player)
     {
@@ -60,6 +50,11 @@ public class RespawnManager : MonoBehaviour
         player.horizontal = 0f;
 
         player.gameObject.SetActive(true);
+
+        if (grampaGuide != null)
+        {
+            grampaGuide.RespawnToNearestWaypoint(lastRespawnPosition);
+        }
     }
 
 
@@ -71,6 +66,12 @@ public class RespawnManager : MonoBehaviour
     public void RespawnPlayer(GameObject player)
     {
         player.transform.position = lastRespawnPosition;
+
+        if (grampaGuide != null)
+        {
+            // Usar la misma posición de respawn para reubicar la guía
+            grampaGuide.RespawnToNearestWaypoint(lastRespawnPosition);
+        }
     }
 
     public void SetCameraEffectState(bool state)
