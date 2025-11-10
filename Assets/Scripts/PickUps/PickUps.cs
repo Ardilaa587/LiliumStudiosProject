@@ -46,13 +46,13 @@ public class PickUps : MonoBehaviour, InteractableI
 
     public void Interact(GameObject user)
     {
-        
+
 
         if (isPickedUp) return;
 
         if (pickUpUI != null)
         {
-            
+
 
             if (RespawnManager.instance != null)
             {
@@ -66,9 +66,24 @@ public class PickUps : MonoBehaviour, InteractableI
             {
                 grayscaleController.SetEffectActive(false); // Desactiva B/N (vuelve a color)
             }
-        }       
+        }
+
+        PlayerController player = user.GetComponentInParent<PlayerController>();
+
+
 
         isPickedUp = true;
+
+        if (player != null)
+        {
+            player.ActivatePrime(true);
+            Debug.Log("Estado Prime ACTIVADO en el jugador.");
+        }
+        else
+        {
+            Debug.LogError("PlayerController no encontrado en el objeto 'user' (Jugador).");
+        }
+
         gameObject.SetActive(false);
 
         if (playerInventory != null)

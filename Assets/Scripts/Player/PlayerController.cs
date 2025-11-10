@@ -70,10 +70,18 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform cameraFollowTarget;
     [SerializeField] private float cameraLeadDistance;
 
+    public bool isPrimeActive = false;
+    private readonly int PrimeBoolHash = Animator.StringToHash("Prime");
+
     // Start is called before the first frame update
     void Start()
     {
         playerAnimator = GetComponent<Animator>();
+
+        if (playerAnimator != null)
+        {
+            playerAnimator.SetBool(PrimeBoolHash, isPrimeActive);
+        }
 
         rb.gravityScale = gravity;
 
@@ -108,6 +116,11 @@ public class PlayerController : MonoBehaviour
             Flip();
         }
 
+        if (playerAnimator != null)
+        {
+            playerAnimator.SetBool(PrimeBoolHash, isPrimeActive);
+        }
+
         float targetX = transform.position.x + (isFacingRight ? cameraLeadDistance : -cameraLeadDistance);
         cameraFollowTarget.position = Vector3.Lerp(cameraFollowTarget.position,
         new Vector3(targetX, transform.position.y, transform.position.z),
@@ -117,7 +130,7 @@ public class PlayerController : MonoBehaviour
         {
             coyoteTimeCounter = coyoteTime;
             jumpCount = 0f;
-            playerAnimator.SetBool("isJumping", false);
+            
         }
         else if (!OnGrounded())
         {
@@ -175,6 +188,8 @@ public class PlayerController : MonoBehaviour
     #region Jump Methods
     public void Jump(InputAction.CallbackContext context)
     {
+        bool canJump = false;
+
         // saltar
         if (context.started)
         {
@@ -186,15 +201,16 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
                 coyoteTimeCounter = 0f;
                 jumpCount++;
-
-                playerAnimator.SetBool("isJumping", true);
+                canJump = true;
             }
             else if (!OnGrounded() && jumpCount < maxJumps)
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
                 jumpCount++;
-                playerAnimator.SetBool("isJumping", true);
+                canJump = true;
             }
+
+
 
         }
 
@@ -203,6 +219,13 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
             
+        }
+
+        if (canJump && playerAnimator != null)
+        {
+            // Llama al Trigger "Jump" en el Animator Controller.
+            // Esto iniciará la transición de Idle/Run a Jump que configuramos.
+            playerAnimator.SetTrigger("Jump");
         }
     }
     #endregion
@@ -252,6 +275,17 @@ public class PlayerController : MonoBehaviour
         if (context.performed && !OnGrounded() && !isLevitating)
         {
             levitateCoroutine = StartCoroutine(LevitateTimer());
+
+            if (isPrimeActive)
+            {
+                if (playerAnimator != null)
+                {
+                    playerAnimator.SetTrigger("LevJump");
+                    Debug.Log("[Levitate] Animación LevJump activada (Estado Prime).");
+                }
+                // Salimos aquí para que NO llame al trigger "Jump" normal más abajo.
+                return;
+            }
         }
 
         if (context.canceled)
@@ -309,6 +343,7 @@ public class PlayerController : MonoBehaviour
             healthUI.UpdateHearts();
         }
 
+        playerAnimator.SetTrigger("Hit");
     }
 
     public void AddHealth(float _health)
@@ -361,6 +396,12 @@ public class PlayerController : MonoBehaviour
                 rb.velocity = Vector2.zero; // Detener cualquier movimiento residual
             }
         }
+    }
+
+    public void ActivatePrime(bool activate)
+    {
+        isPrimeActive = activate;
+        Debug.Log($"isPrimeActive establecido a: {activate}");
     }
     #endregion
 }
