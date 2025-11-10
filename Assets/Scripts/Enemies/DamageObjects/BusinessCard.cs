@@ -21,7 +21,7 @@ public class BusinessCard : MonoBehaviour
 
         rb.gravityScale = 0;
 
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, 2f);
     }
 
     public void SetDirection(Vector2 direction)
@@ -36,16 +36,23 @@ public class BusinessCard : MonoBehaviour
             rb.velocity = initialDirection * speed;
         }
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        PlayerController playerController = GetComponent<PlayerController>();
+
+        PlayerController playerController = collision.GetComponent<PlayerController>();
 
         if (playerController != null)
         {
             playerController.TakeDamage(damage);
         }
 
-        Destroy(gameObject);
+        // Si queremos que la tarjeta desaparezca al tocar al jugador o cualquier cosa.
+        // Podrías añadir una comprobación si quieres que solo se destruya al tocar al jugador.
+        if (playerController != null)
+        {
+            Destroy(gameObject);
+        }
+        // Si quieres que se destruya al tocar cualquier cosa (pared, suelo, etc.):
+        // Destroy(gameObject); 
     }
 }

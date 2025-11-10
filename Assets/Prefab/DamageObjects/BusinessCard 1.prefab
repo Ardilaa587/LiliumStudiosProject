@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8751252919663623520}
   - component: {fileID: 908307907392548459}
   m_Layer: 0
-  m_Name: BusinessCard
+  m_Name: BusinessCard 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2f13fa1e1a522f740b098420d0ddb886, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 328affc191be65346bff7b86a8cc197e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

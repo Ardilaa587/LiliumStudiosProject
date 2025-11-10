@@ -2,6 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine.UI;
+using TMPro;
 
 public class BossHands : MonoBehaviour
 {
@@ -26,7 +28,7 @@ public class BossHands : MonoBehaviour
     public Collider playerCollider; // 🔹 <-- ESTA ERA LA VARIABLE FALTANTE
 
     [Header("Debug")]
-    public bool startOnAwake = true;
+    public bool startOnAwake = false;
 
     private int totalAttacks = 0;
     private bool isRunning = false;
@@ -37,6 +39,18 @@ public class BossHands : MonoBehaviour
     [SerializeField] private  string ANIM_IDLE = "Idle";
     [SerializeField] private  string ANIM_HIT = "Hit";
     [SerializeField] private string ANIM_EXPLOSION = "Explosion";
+
+    [Header("UI de Derrota")]
+    [SerializeField] private GameObject defeatPanel; // Panel que contendrá el texto y la imagen.
+    [SerializeField] private TMP_Text defeatTextMessage; // Referencia al componente de texto
+    [SerializeField] private Image defeatImageDisplay; // 🌟🌟 NUEVO: Referencia al componente Image 🌟🌟
+    [SerializeField] private Sprite defeatSprite; // 🌟🌟 NUEVO: El sprite de la imagen de victoria 🌟🌟
+    [SerializeField] private float textDisplayTime = 3f;
+
+    [TextArea(3, 5)]
+    [SerializeField] private string textPhase1 = "";
+    [TextArea(3, 5)]
+    [SerializeField] private string textPhase2 = "";
 
     void Start()
     {
@@ -81,8 +95,8 @@ public class BossHands : MonoBehaviour
 
         SetAnimation(ANIM_IDLE);
 
-        if (startOnAwake)
-            StartCoroutine(BossRoutine());
+        //if (startOnAwake)
+            //StartCoroutine(BossRoutine());
     }
 
     void SetAnimation(string animName)
@@ -90,6 +104,15 @@ public class BossHands : MonoBehaviour
         if (bossAnimator != null)
         {
             bossAnimator.Play(animName);
+        }
+    }
+
+    public void ActivateBoss()
+    {
+        if (!isRunning)
+        {
+            Debug.Log("📢 BOSS ACTIVADO POR EL JUGADOR.");
+            StartCoroutine(BossRoutine());
         }
     }
 
@@ -225,6 +248,44 @@ public class BossHands : MonoBehaviour
             Destroy(gameObject, 0.5f);
         }
     }
-}
+
+    IEnumerator DisplayDefeatMessage()
+    {
+        // 1. Activar el panel principal de derrota
+        if (defeatPanel != null)
+        {
+            defeatPanel.SetActive(true);
+        }
+
+        // 🌟🌟 NUEVO: Configurar la imagen al inicio del mensaje de derrota 🌟🌟
+        if (defeatImageDisplay != null && defeatSprite != null)
+        {
+            defeatImageDisplay.sprite = defeatSprite;
+            defeatImageDisplay.enabled = true; // Asegurarse de que la imagen esté visible
+        }
+
+        // 2. Mostrar la Fase 1 del texto
+        if (defeatTextMessage != null)
+        {
+            defeatTextMessage.text = textPhase1;
+        }
+
+        yield return new WaitForSeconds(textDisplayTime); // Esperar el tiempo configurado
+
+        // 3. Mostrar la Fase 2 del texto
+        if (defeatTextMessage != null)
+        {
+            defeatTextMessage.text = textPhase2;
+        }
+
+        yield return new WaitForSeconds(textDisplayTime); // Esperar el tiempo configurado nuevamente
+
+        // 4. Opcional: Mostrar un mensaje final o limpiar la UI
+        if (defeatTextMessage != null)
+        {
+            defeatTextMessage.text = "Pulsa A para continuar...";
+        }
+    }
+    }
 
 
