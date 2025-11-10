@@ -21,7 +21,7 @@ public class HealthInventoryPickup : MonoBehaviour
     [SerializeField] private GameObject itemButtonPrefab; // Prefab del botón de UI (con InventoryItem.cs)
 
     private Inventory inventory;
-    private ItemDisplayPanel displayPanel;
+    [SerializeField] private ItemDisplayPanel displayPanel;
 
     private void Start()
     {
