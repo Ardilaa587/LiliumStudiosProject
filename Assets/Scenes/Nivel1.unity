@@ -304431,7 +304431,15 @@ PrefabInstance:
     - target: {fileID: 6456860965706518772, guid: 9cff2a09d008e3742a03ccfd7de11078, type: 3}
       propertyPath: startPosNivel1
       value: 
-      objectReference: {fileID: 272299965}
+      objectReference: {fileID: 1414407667249058723, guid: 57300bfe059d2d14780708a9e3ba2e6c, type: 3}
+    - target: {fileID: 6456860965706518772, guid: 9cff2a09d008e3742a03ccfd7de11078, type: 3}
+      propertyPath: startPosNivel2
+      value: 
+      objectReference: {fileID: 2221731640725074241, guid: a319953e8f844f9448457066e54130de, type: 3}
+    - target: {fileID: 6456860965706518772, guid: 9cff2a09d008e3742a03ccfd7de11078, type: 3}
+      propertyPath: startPosNivel3
+      value: 
+      objectReference: {fileID: 3538818353421815851, guid: 37858f0f35fb74d4f9cce3d313c92fed, type: 3}
     - target: {fileID: 6456860965706518772, guid: 9cff2a09d008e3742a03ccfd7de11078, type: 3}
       propertyPath: fixedStartPosition
       value: 
