@@ -60,6 +60,7 @@ public class CandleInteractable : MonoBehaviour, InteractableI
         if (candleLight != null)
         {
             candleLight.enabled = true; // Activa la luz, lo que actualiza isLit en Update
+            Debug.Log("hjgjhj");
         }
 
         if (igniteSound != null)

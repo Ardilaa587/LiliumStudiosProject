@@ -173,11 +173,11 @@ public class BossHands : MonoBehaviour
             timer += Time.deltaTime;
 
             // Si pasa demasiado tiempo, aborta
-            if (timer > 5f)
-            {
-                Debug.LogWarning($"⏱️ {hand.name} no pudo llegar a la vela, aborta ataque.");
-                break;
-            }
+           // if (timer > 15f)
+          //  {
+               // Debug.LogWarning($"⏱️ {hand.name} no pudo llegar a la vela, aborta ataque.");
+                //break;
+           // }
 
             yield return null;
         }

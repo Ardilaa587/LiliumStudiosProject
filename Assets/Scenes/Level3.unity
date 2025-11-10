@@ -210,7 +210,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 514089434}
+    m_TransformParent: {fileID: 574077095}
     m_Modifications:
     - target: {fileID: 288965715312173923, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: flame
@@ -218,23 +218,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0058933
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.06102
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.58
+      value: 38.84492
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.98
+      value: -5.6360874
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.06456195
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -282,7 +282,7 @@ PrefabInstance:
       objectReference: {fileID: 1114346942}
     - target: {fileID: 7437984198448526502, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Name
-      value: CANDLE1 (24)
+      value: VELA10
       objectReference: {fileID: 0}
     - target: {fileID: 7751846347113203908, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Size.x
@@ -1623,7 +1623,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.23137254, g: 0.31529108, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.78036785, b: 0, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -2660,7 +2660,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 514089434}
+    m_TransformParent: {fileID: 574077095}
     m_Modifications:
     - target: {fileID: 288965715312173923, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: flame
@@ -2668,23 +2668,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0058933
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.06102
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.1
+      value: 34.19234
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.07
+      value: 12.318336
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.06456195
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2736,7 +2736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7437984198448526502, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Name
-      value: CANDLE1 (15)
+      value: VELA1
       objectReference: {fileID: 0}
     - target: {fileID: 7751846347113203908, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Size.x
@@ -2857,7 +2857,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 514089434}
+    m_TransformParent: {fileID: 574077095}
     m_Modifications:
     - target: {fileID: 288965715312173923, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: flame
@@ -2865,23 +2865,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0058933
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.06102
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.493851
+      value: 23.859385
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.7431145
+      value: -0.70037836
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.06456195
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2929,7 +2929,7 @@ PrefabInstance:
       objectReference: {fileID: 425252127}
     - target: {fileID: 7437984198448526502, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Name
-      value: CANDLE1 (29)
+      value: VELA5
       objectReference: {fileID: 0}
     - target: {fileID: 7751846347113203908, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Size.x
@@ -4427,7 +4427,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 514089434}
+    m_TransformParent: {fileID: 574077095}
     m_Modifications:
     - target: {fileID: 288965715312173923, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: flame
@@ -4435,23 +4435,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0058933
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.06102
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -29.49385
+      value: 6.9589863
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.5
+      value: -8.01116
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.06456195
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4499,7 +4499,7 @@ PrefabInstance:
       objectReference: {fileID: 104185847}
     - target: {fileID: 7437984198448526502, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Name
-      value: CANDLE1 (30)
+      value: VELA6
       objectReference: {fileID: 0}
     - target: {fileID: 7751846347113203908, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Size.x
@@ -5035,7 +5035,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 514089434}
+    m_TransformParent: {fileID: 574077095}
     m_Modifications:
     - target: {fileID: 288965715312173923, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: flame
@@ -5043,23 +5043,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0058933
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.06102
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.26
+      value: 29.062569
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10
+      value: -5.6549373
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.06456195
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5111,7 +5111,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7437984198448526502, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Name
-      value: CANDLE1 (17)
+      value: VELA3
       objectReference: {fileID: 0}
     - target: {fileID: 7751846347113203908, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Size.x
@@ -5616,7 +5616,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 514089434}
+    m_TransformParent: {fileID: 574077095}
     m_Modifications:
     - target: {fileID: 288965715312173923, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: flame
@@ -5624,23 +5624,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0058933
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.06102
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.28
+      value: 32.025112
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.61
+      value: -8.114835
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.06456195
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5688,7 +5688,7 @@ PrefabInstance:
       objectReference: {fileID: 1830880546}
     - target: {fileID: 7437984198448526502, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Name
-      value: CANDLE1 (23)
+      value: VELA9
       objectReference: {fileID: 0}
     - target: {fileID: 7751846347113203908, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Size.x
@@ -5864,7 +5864,7 @@ GameObject:
   m_Component:
   - component: {fileID: 514089434}
   m_Layer: 0
-  m_Name: Candles
+  m_Name: CANDLES
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5884,11 +5884,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1918289038}
-  - {fileID: 574077095}
-  - {fileID: 1680798502}
-  - {fileID: 298365699}
-  - {fileID: 1267506477}
-  - {fileID: 445458444}
   - {fileID: 761475722}
   - {fileID: 1167938948}
   - {fileID: 1496883673}
@@ -5896,23 +5891,12 @@ Transform:
   - {fileID: 257751361}
   - {fileID: 2014086827}
   - {fileID: 1420726885}
-  - {fileID: 1918175591}
-  - {fileID: 1718057072}
-  - {fileID: 312411471}
-  - {fileID: 421263503}
-  - {fileID: 1382053377}
   - {fileID: 589683746}
   - {fileID: 85712302}
   - {fileID: 639248301}
   - {fileID: 1582347332}
   - {fileID: 190167463}
   - {fileID: 1841591608}
-  - {fileID: 1209915409}
-  - {fileID: 488087643}
-  - {fileID: 20432283}
-  - {fileID: 1781341387}
-  - {fileID: 1398074130}
-  - {fileID: 2017175789}
   - {fileID: 918731791}
   - {fileID: 1780634128}
   - {fileID: 1668728020}
@@ -6494,7 +6478,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.23137254, g: 0.33891872, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.8851317, b: 0, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -6534,7 +6518,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 514089434}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 288965715312173923, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: flame
@@ -6550,15 +6534,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -36.49385
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: 4.7431145
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.06456195
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6610,7 +6594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7437984198448526502, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Name
-      value: CANDLE1 (26)
+      value: VELA
       objectReference: {fileID: 0}
     - target: {fileID: 7751846347113203908, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Size.x
@@ -6637,6 +6621,51 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 582727676}
+    - targetCorrespondingSourceObject: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1680798502}
+    - targetCorrespondingSourceObject: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 298365699}
+    - targetCorrespondingSourceObject: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1267506477}
+    - targetCorrespondingSourceObject: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 445458444}
+    - targetCorrespondingSourceObject: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1918175591}
+    - targetCorrespondingSourceObject: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1718057072}
+    - targetCorrespondingSourceObject: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 312411471}
+    - targetCorrespondingSourceObject: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 421263503}
+    - targetCorrespondingSourceObject: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1382053377}
+    - targetCorrespondingSourceObject: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1209915409}
+    - targetCorrespondingSourceObject: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 488087643}
+    - targetCorrespondingSourceObject: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 20432283}
+    - targetCorrespondingSourceObject: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1781341387}
+    - targetCorrespondingSourceObject: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1398074130}
+    - targetCorrespondingSourceObject: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2017175789}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 7437984198448526502, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       insertIndex: -1
@@ -7498,7 +7527,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.23137254, g: 0.34468922, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.8134252, b: 0, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -8847,6 +8876,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1834314629}
     - target: {fileID: 5193806969350090957, guid: dbede1ea61f8660448de9092ed3c24de, type: 3}
+      propertyPath: maxAttacks
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5193806969350090957, guid: dbede1ea61f8660448de9092ed3c24de, type: 3}
       propertyPath: textPhase1
       value: "Has recuperado la Tolva. Lograste preservar la tradici\xF3n."
       objectReference: {fileID: 0}
@@ -9269,7 +9302,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 0.28855067, b: 0.23137254, a: 1}
+  m_Color: {r: 1, g: 0.78140974, b: 0, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -10164,7 +10197,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.9245283, g: 0.2668891, b: 0.15873975, a: 1}
+  m_Color: {r: 1, g: 0.76938033, b: 0, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -10403,7 +10436,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 0.3497193, b: 0.23137254, a: 1}
+  m_Color: {r: 1, g: 0.7738997, b: 0, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -24764,7 +24797,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 0.3616101, b: 0.23137254, a: 1}
+  m_Color: {r: 1, g: 0.7790817, b: 0, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -25131,7 +25164,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 514089434}
+    m_TransformParent: {fileID: 574077095}
     m_Modifications:
     - target: {fileID: 288965715312173923, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: flame
@@ -25139,23 +25172,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0058933
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.06102
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.14
+      value: 36.419216
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5
+      value: -0.94249016
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.06456195
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -25203,7 +25236,7 @@ PrefabInstance:
       objectReference: {fileID: 958790439}
     - target: {fileID: 7437984198448526502, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Name
-      value: CANDLE1 (22)
+      value: VELA8
       objectReference: {fileID: 0}
     - target: {fileID: 7751846347113203908, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Size.x
@@ -26128,7 +26161,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 514089434}
+    m_TransformParent: {fileID: 574077095}
     m_Modifications:
     - target: {fileID: 288965715312173923, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: flame
@@ -26136,23 +26169,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0058933
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.06102
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.89
+      value: 44.12381
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.4
+      value: -7.9169106
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.06456195
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -26204,7 +26237,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7437984198448526502, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Name
-      value: CANDLE1 (16)
+      value: VELA2
       objectReference: {fileID: 0}
     - target: {fileID: 7751846347113203908, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Size.x
@@ -26296,7 +26329,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.23137254, g: 0.34468922, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.86008054, b: 0, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -26541,7 +26574,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8030720650411821779, guid: 0991d89f053dc4e4686640222cf5ebef, type: 3}
       propertyPath: moveSpeed
-      value: 2.5
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8030720650411821779, guid: 0991d89f053dc4e4686640222cf5ebef, type: 3}
+      propertyPath: maxAttacks
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8030720650411821779, guid: 0991d89f053dc4e4686640222cf5ebef, type: 3}
+      propertyPath: attackDelay
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8030720650411821779, guid: 0991d89f053dc4e4686640222cf5ebef, type: 3}
       propertyPath: leftRestPos
@@ -26558,6 +26599,10 @@ PrefabInstance:
     - target: {fileID: 8030720650411821779, guid: 0991d89f053dc4e4686640222cf5ebef, type: 3}
       propertyPath: ANIM_EXPLOSION
       value: rightExplosion
+      objectReference: {fileID: 0}
+    - target: {fileID: 8030720650411821779, guid: 0991d89f053dc4e4686640222cf5ebef, type: 3}
+      propertyPath: minAttackDelay
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 8030720650411821779, guid: 0991d89f053dc4e4686640222cf5ebef, type: 3}
       propertyPath: candles.Array.size
@@ -34796,7 +34841,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 0.31435776, b: 0.23137254, a: 1}
+  m_Color: {r: 1, g: 0.80520356, b: 0, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -34836,7 +34881,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 514089434}
+    m_TransformParent: {fileID: 574077095}
     m_Modifications:
     - target: {fileID: 288965715312173923, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: flame
@@ -34844,23 +34889,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0058933
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.06102
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.71
+      value: 43.944862
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.18
+      value: 0.77283955
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.06456195
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -34908,7 +34953,7 @@ PrefabInstance:
       objectReference: {fileID: 1061666626}
     - target: {fileID: 7437984198448526502, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Name
-      value: CANDLE1 (20)
+      value: VELA7
       objectReference: {fileID: 0}
     - target: {fileID: 7751846347113203908, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Size.x
@@ -35113,7 +35158,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 514089434}
+    m_TransformParent: {fileID: 574077095}
     m_Modifications:
     - target: {fileID: 288965715312173923, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: flame
@@ -35121,23 +35166,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0058933
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.06102
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -31.49385
+      value: 4.970703
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.7431145
+      value: 3.0695794
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.06456195
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -35185,7 +35230,7 @@ PrefabInstance:
       objectReference: {fileID: 1223195869}
     - target: {fileID: 7437984198448526502, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Name
-      value: CANDLE1 (32)
+      value: VELA12
       objectReference: {fileID: 0}
     - target: {fileID: 7751846347113203908, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Size.x
@@ -39351,7 +39396,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 514089434}
+    m_TransformParent: {fileID: 574077095}
     m_Modifications:
     - target: {fileID: 288965715312173923, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: flame
@@ -39359,23 +39404,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0058933
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.06102
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.49385
+      value: 16.900398
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.5
+      value: -8.01116
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.06456195
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -39427,7 +39472,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7437984198448526502, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Name
-      value: CANDLE1 (27)
+      value: VELA0
       objectReference: {fileID: 0}
     - target: {fileID: 7751846347113203908, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Size.x
@@ -39727,7 +39772,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 514089434}
+    m_TransformParent: {fileID: 574077095}
     m_Modifications:
     - target: {fileID: 288965715312173923, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: flame
@@ -39735,23 +39780,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0058933
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.06102
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -25.49385
+      value: 10.93555
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.06456195
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -39799,7 +39844,7 @@ PrefabInstance:
       objectReference: {fileID: 308116555}
     - target: {fileID: 7437984198448526502, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Name
-      value: CANDLE1 (28)
+      value: VELA4
       objectReference: {fileID: 0}
     - target: {fileID: 7751846347113203908, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Size.x
@@ -40692,7 +40737,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.23137254, g: 0.31396815, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.84913063, b: 0, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -40748,7 +40793,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 514089434}
+    m_TransformParent: {fileID: 574077095}
     m_Modifications:
     - target: {fileID: 288965715312173923, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: flame
@@ -40756,23 +40801,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0058933
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.06102
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -38.9
+      value: -2.392056
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10
+      value: -5.6549373
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.06456195
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -40820,7 +40865,7 @@ PrefabInstance:
       objectReference: {fileID: 353489323}
     - target: {fileID: 7437984198448526502, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Name
-      value: CANDLE1 (31)
+      value: VELA11
       objectReference: {fileID: 0}
     - target: {fileID: 7751846347113203908, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Size.x
@@ -49086,16 +49131,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 43, y: 1, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 4
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 44, y: 1, z: 0}
     second:
       serializedVersion: 2
@@ -49156,26 +49191,6 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
-  - first: {x: 50, y: 1, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 51, y: 1, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
   - first: {x: 52, y: 1, z: 0}
     second:
       serializedVersion: 2
@@ -49217,26 +49232,6 @@ Tilemap:
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
   - first: {x: 56, y: 1, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 57, y: 1, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 58, y: 1, z: 0}
     second:
       serializedVersion: 2
       m_TileIndex: 3
@@ -49694,9 +49689,9 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 295b0206bba5f8348a18230516992ad4, type: 2}
   - m_RefCount: 18
     m_Data: {fileID: 11400000, guid: 05381f038fdf28648bb5386fdc7be6e6, type: 2}
-  - m_RefCount: 36
+  - m_RefCount: 32
     m_Data: {fileID: 11400000, guid: d1f8dc1402653f84c91e33f38abdca7e, type: 2}
-  - m_RefCount: 55
+  - m_RefCount: 54
     m_Data: {fileID: 11400000, guid: 62a2008649e936a41abf8a49960777f0, type: 2}
   - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: 034e4da4badb9bb4db264e776142373e, type: 2}
@@ -49717,9 +49712,9 @@ Tilemap:
     m_Data: {fileID: 299206667, guid: c3663c741e86a2a49a4f6455440a4ccf, type: 3}
   - m_RefCount: 18
     m_Data: {fileID: 2108321751, guid: c3663c741e86a2a49a4f6455440a4ccf, type: 3}
-  - m_RefCount: 36
+  - m_RefCount: 32
     m_Data: {fileID: -1919244603, guid: c3663c741e86a2a49a4f6455440a4ccf, type: 3}
-  - m_RefCount: 55
+  - m_RefCount: 54
     m_Data: {fileID: 1514738562, guid: c3663c741e86a2a49a4f6455440a4ccf, type: 3}
   - m_RefCount: 5
     m_Data: {fileID: -870715927, guid: c3663c741e86a2a49a4f6455440a4ccf, type: 3}
@@ -49734,7 +49729,7 @@ Tilemap:
   - m_RefCount: 589
     m_Data: {fileID: 1771210925, guid: 2556885008e0f28458bd717a51ec8f27, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 771
+  - m_RefCount: 766
     m_Data:
       e00: 1
       e01: 0
@@ -49753,7 +49748,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 771
+  - m_RefCount: 766
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -50317,7 +50312,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.23137254, g: 0.3563893, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.8256701, b: 0, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -50751,7 +50746,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 514089434}
+    m_TransformParent: {fileID: 574077095}
     m_Modifications:
     - target: {fileID: 288965715312173923, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: flame
@@ -50759,23 +50754,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0058933
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.06102
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.55
+      value: 36.826813
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.27
+      value: -7.7943883
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.06456195
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -50823,7 +50818,7 @@ PrefabInstance:
       objectReference: {fileID: 1512748431}
     - target: {fileID: 7437984198448526502, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Name
-      value: CANDLE1 (19)
+      value: VELA3
       objectReference: {fileID: 0}
     - target: {fileID: 7751846347113203908, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Size.x
@@ -51883,6 +51878,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -813344118, guid: 1b41f49a498436949a5ca144269d62ac, type: 3}
     - target: {fileID: 3030994585256168292, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3030994585256168292, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3030994585256168292, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3030994585256168292, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_SortingOrder
       value: 5
       objectReference: {fileID: 0}
@@ -52032,7 +52039,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 514089434}
+    m_TransformParent: {fileID: 574077095}
     m_Modifications:
     - target: {fileID: 288965715312173923, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: flame
@@ -52040,23 +52047,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.0058933
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.06102
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.78
+      value: 24.569056
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.5
+      value: -8.01116
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.06456195
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 943361258533390028, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_LocalRotation.w
@@ -52104,7 +52111,7 @@ PrefabInstance:
       objectReference: {fileID: 827670255}
     - target: {fileID: 7437984198448526502, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Name
-      value: CANDLE1 (25)
+      value: VELA13
       objectReference: {fileID: 0}
     - target: {fileID: 7751846347113203908, guid: cc80af8249bdc2c48b81cf198a6083f6, type: 3}
       propertyPath: m_Size.x
@@ -53697,6 +53704,7 @@ SceneRoots:
   - {fileID: 1331073835}
   - {fileID: 514089434}
   - {fileID: 2056742234}
+  - {fileID: 574077094}
   - {fileID: 1721942242}
   - {fileID: 1782137872}
   - {fileID: 2134399303}
