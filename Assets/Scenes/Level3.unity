@@ -328,8 +328,6 @@ GameObject:
   - component: {fileID: 29111674}
   - component: {fileID: 29111673}
   - component: {fileID: 29111672}
-  - component: {fileID: 29111671}
-  - component: {fileID: 29111670}
   m_Layer: 6
   m_Name: Roofs (18)
   m_TagString: Untagged
@@ -352,48 +350,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &29111670
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 29111668}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &29111671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 29111668}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 29111670}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &29111672
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -1028,7 +984,7 @@ GameObject:
   - component: {fileID: 113602144}
   - component: {fileID: 113602143}
   m_Layer: 0
-  m_Name: Start
+  m_Name: StartLevel3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1043,7 +999,7 @@ Transform:
   m_GameObject: {fileID: 113602141}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.956094, y: -11.449042, z: 0}
+  m_LocalPosition: {x: -6.956094, y: -11.449042, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1187,8 +1143,6 @@ GameObject:
   - component: {fileID: 144507077}
   - component: {fileID: 144507076}
   - component: {fileID: 144507075}
-  - component: {fileID: 144507074}
-  - component: {fileID: 144507073}
   m_Layer: 6
   m_Name: Roofs (3)
   m_TagString: Untagged
@@ -1211,48 +1165,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &144507073
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 144507071}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &144507074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 144507071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &144507075
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -1763,8 +1675,6 @@ GameObject:
   - component: {fileID: 192000607}
   - component: {fileID: 192000606}
   - component: {fileID: 192000605}
-  - component: {fileID: 192000604}
-  - component: {fileID: 192000603}
   m_Layer: 6
   m_Name: Roofs (6)
   m_TagString: Untagged
@@ -1787,48 +1697,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &192000603
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 192000601}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &192000604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 192000601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &192000605
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -2069,8 +1937,6 @@ GameObject:
   - component: {fileID: 214535893}
   - component: {fileID: 214535892}
   - component: {fileID: 214535891}
-  - component: {fileID: 214535890}
-  - component: {fileID: 214535889}
   m_Layer: 6
   m_Name: Roofs (8)
   m_TagString: Untagged
@@ -2093,48 +1959,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &214535889
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 214535887}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &214535890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 214535887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &214535891
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -2384,8 +2208,6 @@ GameObject:
   - component: {fileID: 251168917}
   - component: {fileID: 251168916}
   - component: {fileID: 251168915}
-  - component: {fileID: 251168914}
-  - component: {fileID: 251168913}
   m_Layer: 6
   m_Name: Roofs (2)
   m_TagString: Untagged
@@ -2408,48 +2230,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &251168913
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 251168911}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &251168914
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 251168911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &251168915
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -2562,37 +2342,7 @@ Tilemap:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 251168911}
   m_Enabled: 1
-  m_Tiles:
-  - first: {x: 53, y: 3, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 5
-      m_TileSpriteIndex: 5
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 54, y: 3, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 4
-      m_TileSpriteIndex: 4
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
-  - first: {x: 55, y: 3, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 3
-      m_TileSpriteIndex: 3
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      dummyAlignment: 0
-      m_AllTileFlags: 1073741825
+  m_Tiles: {}
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 0
@@ -2601,12 +2351,12 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 62a2008649e936a41abf8a49960777f0, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: 034e4da4badb9bb4db264e776142373e, type: 2}
-  - m_RefCount: 1
-    m_Data: {fileID: 11400000, guid: d1f8dc1402653f84c91e33f38abdca7e, type: 2}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -2614,34 +2364,34 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 1
-    m_Data: {fileID: 1514738562, guid: c3663c741e86a2a49a4f6455440a4ccf, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -870715927, guid: c3663c741e86a2a49a4f6455440a4ccf, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: -1919244603, guid: c3663c741e86a2a49a4f6455440a4ccf, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   m_TileMatrixArray:
-  - m_RefCount: 3
+  - m_RefCount: 0
     m_Data:
-      e00: 1
+      e00: -2.3833383e-29
       e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
+      e02: -3.7500038
+      e03: -3.7500038
+      e10: 2.93e-43
+      e11: 0
+      e12: 8.72e-43
+      e13: 8.72e-43
+      e20: 3.1951373e+21
+      e21: 3.243191e+12
+      e22: 9.942984e-29
+      e23: 3.0927835e-29
+      e30: 4.5904e-41
+      e31: 8.76e-43
+      e32: 8.73e-43
+      e33: 8.76e-43
   m_TileColorArray:
-  - m_RefCount: 3
-    m_Data: {r: 1, g: 1, b: 1, a: 1}
+  - m_RefCount: 0
+    m_Data: {r: 2.23709e-40, g: 2.23709e-40, b: 2.23709e-40, a: 2.23709e-40}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -3770,8 +3520,6 @@ GameObject:
   - component: {fileID: 377188954}
   - component: {fileID: 377188953}
   - component: {fileID: 377188952}
-  - component: {fileID: 377188951}
-  - component: {fileID: 377188950}
   m_Layer: 6
   m_Name: Roofs (24)
   m_TagString: Untagged
@@ -3794,48 +3542,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &377188950
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 377188948}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &377188951
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 377188948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 377188950}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &377188952
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -4767,8 +4473,6 @@ GameObject:
   - component: {fileID: 429645360}
   - component: {fileID: 429645359}
   - component: {fileID: 429645358}
-  - component: {fileID: 429645357}
-  - component: {fileID: 429645356}
   m_Layer: 6
   m_Name: Roofs (11)
   m_TagString: Untagged
@@ -4791,48 +4495,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &429645356
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 429645354}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &429645357
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 429645354}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &429645358
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -5476,7 +5138,7 @@ Transform:
   m_GameObject: {fileID: 455350866}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4, y: -2, z: -10}
+  m_LocalPosition: {x: -5, y: -2, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5512,8 +5174,6 @@ GameObject:
   - component: {fileID: 486245848}
   - component: {fileID: 486245847}
   - component: {fileID: 486245846}
-  - component: {fileID: 486245845}
-  - component: {fileID: 486245844}
   m_Layer: 6
   m_Name: Roofs (10)
   m_TagString: Untagged
@@ -5536,48 +5196,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &486245844
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 486245842}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &486245845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 486245842}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &486245846
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -6217,8 +5835,6 @@ GameObject:
   - component: {fileID: 548503958}
   - component: {fileID: 548503957}
   - component: {fileID: 548503956}
-  - component: {fileID: 548503955}
-  - component: {fileID: 548503954}
   m_Layer: 6
   m_Name: Roofs (5)
   m_TagString: Untagged
@@ -6241,48 +5857,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &548503954
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 548503952}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &548503955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 548503952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &548503956
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -6873,8 +6447,6 @@ GameObject:
   - component: {fileID: 585708999}
   - component: {fileID: 585708998}
   - component: {fileID: 585708997}
-  - component: {fileID: 585708996}
-  - component: {fileID: 585708995}
   m_Layer: 6
   m_Name: Roofs (1)
   m_TagString: Untagged
@@ -6897,48 +6469,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &585708995
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 585708993}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &585708996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 585708993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &585708997
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -7194,8 +6724,6 @@ GameObject:
   - component: {fileID: 594154711}
   - component: {fileID: 594154710}
   - component: {fileID: 594154709}
-  - component: {fileID: 594154708}
-  - component: {fileID: 594154707}
   m_Layer: 6
   m_Name: Roofs (16)
   m_TagString: Untagged
@@ -7218,48 +6746,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &594154707
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 594154705}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &594154708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 594154705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 594154707}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &594154709
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -7769,8 +7255,6 @@ GameObject:
   - component: {fileID: 644202800}
   - component: {fileID: 644202799}
   - component: {fileID: 644202798}
-  - component: {fileID: 644202797}
-  - component: {fileID: 644202796}
   m_Layer: 6
   m_Name: Roofs (17)
   m_TagString: Untagged
@@ -7793,48 +7277,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &644202796
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 644202794}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &644202797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 644202794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 644202796}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &644202798
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -8064,8 +7506,6 @@ GameObject:
   - component: {fileID: 685095922}
   - component: {fileID: 685095921}
   - component: {fileID: 685095920}
-  - component: {fileID: 685095919}
-  - component: {fileID: 685095918}
   m_Layer: 6
   m_Name: Roofs (20)
   m_TagString: Untagged
@@ -8088,48 +7528,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &685095918
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 685095916}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &685095919
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 685095916}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 685095918}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &685095920
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -8336,6 +7734,88 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &694272423
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 936776317136955241, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093808009343410037, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 36.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093808009343410037, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093808009343410037, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093808009343410037, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093808009343410037, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093808009343410037, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093808009343410037, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093808009343410037, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093808009343410037, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093808009343410037, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8419824750144246493, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: nameText
+      value: 
+      objectReference: {fileID: 2134399308}
+    - target: {fileID: 8419824750144246493, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: dialogueData
+      value: 
+      objectReference: {fileID: 11400000, guid: 7c26823508ca7fe49a0e0bb55b47c426, type: 2}
+    - target: {fileID: 8419824750144246493, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 2134399309}
+    - target: {fileID: 8419824750144246493, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: dialoguePanel
+      value: 
+      objectReference: {fileID: 2134399310}
+    - target: {fileID: 8492129056548645041, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: m_Name
+      value: NpcGrandpa (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+--- !u!4 &694272424 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3093808009343410037, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+  m_PrefabInstance: {fileID: 694272423}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &710708341
 GameObject:
   m_ObjectHideFlags: 0
@@ -8431,8 +7911,6 @@ GameObject:
   - component: {fileID: 715139460}
   - component: {fileID: 715139459}
   - component: {fileID: 715139458}
-  - component: {fileID: 715139457}
-  - component: {fileID: 715139456}
   m_Layer: 6
   m_Name: Roofs (9)
   m_TagString: Untagged
@@ -8455,48 +7933,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &715139456
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 715139454}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &715139457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 715139454}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &715139458
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -8726,8 +8162,6 @@ GameObject:
   - component: {fileID: 729178679}
   - component: {fileID: 729178678}
   - component: {fileID: 729178677}
-  - component: {fileID: 729178676}
-  - component: {fileID: 729178675}
   m_Layer: 6
   m_Name: Roofs (29)
   m_TagString: Untagged
@@ -8750,48 +8184,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &729178675
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 729178673}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &729178676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 729178673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 729178675}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &729178677
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -11396,8 +10788,6 @@ GameObject:
   - component: {fileID: 1061997384}
   - component: {fileID: 1061997383}
   - component: {fileID: 1061997382}
-  - component: {fileID: 1061997381}
-  - component: {fileID: 1061997380}
   m_Layer: 6
   m_Name: Roofs (33)
   m_TagString: Untagged
@@ -11420,48 +10810,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1061997380
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1061997378}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &1061997381
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1061997378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1061997380}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &1061997382
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -11668,6 +11016,95 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &1069624041
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3093808009343410037, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093808009343410037, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093808009343410037, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.3518841
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093808009343410037, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093808009343410037, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093808009343410037, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093808009343410037, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093808009343410037, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093808009343410037, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3093808009343410037, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232322171577076142, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 1898940673}
+    - target: {fileID: 3232322171577076142, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: windowQuestPointer
+      value: 
+      objectReference: {fileID: 1182828075}
+    - target: {fileID: 3232322171577076142, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: questTargets.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3232322171577076142, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: questTargets.Array.data[1]
+      value: 
+      objectReference: {fileID: 694272424}
+    - target: {fileID: 8419824750144246493, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: nameText
+      value: 
+      objectReference: {fileID: 2134399308}
+    - target: {fileID: 8419824750144246493, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: dialogueData
+      value: 
+      objectReference: {fileID: 11400000, guid: 9f72815a5de36164fb0283fb52a5f545, type: 2}
+    - target: {fileID: 8419824750144246493, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 2134399309}
+    - target: {fileID: 8419824750144246493, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: dialoguePanel
+      value: 
+      objectReference: {fileID: 2134399310}
+    - target: {fileID: 8492129056548645041, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
+      propertyPath: m_Name
+      value: NpcGrandpa
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 38658e1cec07c6d4ab9805d574d334cf, type: 3}
 --- !u!1 &1070420281
 GameObject:
   m_ObjectHideFlags: 0
@@ -17680,6 +17117,83 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1075287941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1075287942}
+  - component: {fileID: 1075287943}
+  m_Layer: 0
+  m_Name: Left
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1075287942
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075287941}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -42.062366, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1907787928}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1075287943
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075287941}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -5.1392956}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 12.470308}
+  m_EdgeRadius: 0
 --- !u!1 &1083498679
 GameObject:
   m_ObjectHideFlags: 0
@@ -23952,8 +23466,6 @@ GameObject:
   - component: {fileID: 1130472997}
   - component: {fileID: 1130472996}
   - component: {fileID: 1130472995}
-  - component: {fileID: 1130472994}
-  - component: {fileID: 1130472993}
   m_Layer: 6
   m_Name: Roofs (23)
   m_TagString: Untagged
@@ -23976,48 +23488,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1130472993
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1130472991}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &1130472994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1130472991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1130472993}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &1130472995
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -24287,8 +23757,6 @@ GameObject:
   - component: {fileID: 1139173934}
   - component: {fileID: 1139173933}
   - component: {fileID: 1139173932}
-  - component: {fileID: 1139173931}
-  - component: {fileID: 1139173930}
   m_Layer: 6
   m_Name: Roofs (19)
   m_TagString: Untagged
@@ -24311,48 +23779,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1139173930
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1139173928}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &1139173931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1139173928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1139173930}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &1139173932
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -24937,6 +24363,17 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &1182828075 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5790021318568095176, guid: 9cff2a09d008e3742a03ccfd7de11078, type: 3}
+  m_PrefabInstance: {fileID: 2134399303}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f245fa3e41b3a54f8a450087a4ac5c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1192678048
 GameObject:
   m_ObjectHideFlags: 0
@@ -24950,8 +24387,6 @@ GameObject:
   - component: {fileID: 1192678054}
   - component: {fileID: 1192678053}
   - component: {fileID: 1192678052}
-  - component: {fileID: 1192678051}
-  - component: {fileID: 1192678050}
   m_Layer: 6
   m_Name: Roofs (32)
   m_TagString: Untagged
@@ -24974,48 +24409,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1192678050
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1192678048}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &1192678051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1192678048}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1192678050}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &1192678052
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -25616,8 +25009,6 @@ GameObject:
   - component: {fileID: 1245966755}
   - component: {fileID: 1245966754}
   - component: {fileID: 1245966753}
-  - component: {fileID: 1245966752}
-  - component: {fileID: 1245966751}
   m_Layer: 6
   m_Name: Roofs (27)
   m_TagString: Untagged
@@ -25640,48 +25031,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1245966751
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1245966749}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &1245966752
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1245966749}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1245966751}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &1245966753
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -25901,8 +25250,6 @@ GameObject:
   - component: {fileID: 1264872440}
   - component: {fileID: 1264872439}
   - component: {fileID: 1264872438}
-  - component: {fileID: 1264872437}
-  - component: {fileID: 1264872436}
   m_Layer: 6
   m_Name: Roofs (7)
   m_TagString: Untagged
@@ -25925,48 +25272,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1264872436
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264872434}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &1264872437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264872434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &1264872438
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -34457,8 +33762,6 @@ GameObject:
   - component: {fileID: 1359646204}
   - component: {fileID: 1359646203}
   - component: {fileID: 1359646202}
-  - component: {fileID: 1359646201}
-  - component: {fileID: 1359646200}
   m_Layer: 6
   m_Name: Roofs (14)
   m_TagString: Untagged
@@ -34481,48 +33784,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1359646200
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1359646198}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &1359646201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1359646198}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &1359646202
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -36006,8 +35267,6 @@ GameObject:
   - component: {fileID: 1495113317}
   - component: {fileID: 1495113316}
   - component: {fileID: 1495113315}
-  - component: {fileID: 1495113314}
-  - component: {fileID: 1495113313}
   m_Layer: 6
   m_Name: Roofs (35)
   m_TagString: Untagged
@@ -36030,48 +35289,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1495113313
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1495113311}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &1495113314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1495113311}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1495113313}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &1495113315
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -36297,8 +35514,6 @@ GameObject:
   - component: {fileID: 1505438154}
   - component: {fileID: 1505438153}
   - component: {fileID: 1505438152}
-  - component: {fileID: 1505438151}
-  - component: {fileID: 1505438150}
   m_Layer: 6
   m_Name: Roofs (34)
   m_TagString: Untagged
@@ -36321,48 +35536,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1505438150
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505438148}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &1505438151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505438148}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1505438150}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &1505438152
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -36582,8 +35755,6 @@ GameObject:
   - component: {fileID: 1510225459}
   - component: {fileID: 1510225458}
   - component: {fileID: 1510225457}
-  - component: {fileID: 1510225456}
-  - component: {fileID: 1510225455}
   m_Layer: 6
   m_Name: Roofs (28)
   m_TagString: Untagged
@@ -36606,48 +35777,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1510225455
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1510225453}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &1510225456
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1510225453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1510225455}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &1510225457
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -38586,8 +37715,6 @@ GameObject:
   - component: {fileID: 1615776965}
   - component: {fileID: 1615776964}
   - component: {fileID: 1615776963}
-  - component: {fileID: 1615776962}
-  - component: {fileID: 1615776961}
   m_Layer: 6
   m_Name: Roofs (4)
   m_TagString: Untagged
@@ -38610,48 +37737,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1615776961
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1615776959}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &1615776962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1615776959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &1615776963
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -39081,8 +38166,6 @@ GameObject:
   - component: {fileID: 1677952061}
   - component: {fileID: 1677952060}
   - component: {fileID: 1677952059}
-  - component: {fileID: 1677952058}
-  - component: {fileID: 1677952057}
   m_Layer: 6
   m_Name: Roofs (36)
   m_TagString: Untagged
@@ -39105,48 +38188,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1677952057
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1677952055}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &1677952058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1677952055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1677952057}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &1677952059
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -39471,8 +38512,6 @@ GameObject:
   - component: {fileID: 1681541879}
   - component: {fileID: 1681541878}
   - component: {fileID: 1681541877}
-  - component: {fileID: 1681541876}
-  - component: {fileID: 1681541875}
   m_Layer: 6
   m_Name: Roofs (13)
   m_TagString: Untagged
@@ -39495,48 +38534,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1681541875
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1681541873}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &1681541876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1681541873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &1681541877
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -39909,7 +38906,7 @@ MonoBehaviour:
   - 0.4
   - 0.5
   - 0.2
-  - 0
+  - 0.2
   ParallaxSpeed: 0.05
 --- !u!4 &1721942242
 Transform:
@@ -39948,8 +38945,6 @@ GameObject:
   - component: {fileID: 1722897557}
   - component: {fileID: 1722897556}
   - component: {fileID: 1722897555}
-  - component: {fileID: 1722897554}
-  - component: {fileID: 1722897553}
   m_Layer: 6
   m_Name: Roofs (22)
   m_TagString: Untagged
@@ -39972,48 +38967,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1722897553
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1722897551}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &1722897554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1722897551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1722897553}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &1722897555
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -40528,6 +39481,83 @@ MonoBehaviour:
   - {x: 1.2969818, y: -0.06294727, z: 0}
   - {x: 1.2841263, y: -0.41266823, z: 0}
   - {x: -0.92419815, y: -0.42552376, z: 0}
+--- !u!1 &1761553803
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1761553804}
+  - component: {fileID: 1761553805}
+  m_Layer: 0
+  m_Name: Left (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1761553804
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761553803}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 37.937634, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1907787928}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1761553805
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1761553803}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 3.575162}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 29.899221}
+  m_EdgeRadius: 0
 --- !u!1001 &1763510016
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41397,8 +40427,6 @@ GameObject:
   - component: {fileID: 1832223879}
   - component: {fileID: 1832223878}
   - component: {fileID: 1832223877}
-  - component: {fileID: 1832223876}
-  - component: {fileID: 1832223875}
   m_Layer: 6
   m_Name: Roofs (25)
   m_TagString: Untagged
@@ -41421,48 +40449,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1832223875
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1832223873}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &1832223876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1832223873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1832223875}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &1832223877
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -49885,8 +48871,6 @@ GameObject:
   - component: {fileID: 1869153017}
   - component: {fileID: 1869153016}
   - component: {fileID: 1869153015}
-  - component: {fileID: 1869153014}
-  - component: {fileID: 1869153013}
   m_Layer: 6
   m_Name: Roofs (21)
   m_TagString: Untagged
@@ -49909,48 +48893,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1869153013
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1869153011}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &1869153014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1869153011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1869153013}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &1869153015
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -50270,7 +49212,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 545699703183657017, guid: f7bf4f38334dabe48b295c7295b03e83, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 545699703183657017, guid: f7bf4f38334dabe48b295c7295b03e83, type: 3}
       propertyPath: m_LocalPosition.y
@@ -50308,6 +49250,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 566142902640943018, guid: f7bf4f38334dabe48b295c7295b03e83, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6647068550754192708, guid: f7bf4f38334dabe48b295c7295b03e83, type: 3}
       propertyPath: m_Name
       value: OlgaPlayer 1
@@ -50327,6 +49273,39 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 7692868016110839900, guid: 9cff2a09d008e3742a03ccfd7de11078, type: 3}
   m_PrefabInstance: {fileID: 2134399303}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1907787927
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1907787928}
+  m_Layer: 0
+  m_Name: Limits
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1907787928
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907787927}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 33.062366, y: 5.3139586, z: 1.2084439}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1075287942}
+  - {fileID: 1761553804}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1916379631
 GameObject:
   m_ObjectHideFlags: 0
@@ -50340,8 +49319,6 @@ GameObject:
   - component: {fileID: 1916379637}
   - component: {fileID: 1916379636}
   - component: {fileID: 1916379635}
-  - component: {fileID: 1916379634}
-  - component: {fileID: 1916379633}
   m_Layer: 6
   m_Name: Roofs (30)
   m_TagString: Untagged
@@ -50364,48 +49341,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1916379633
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1916379631}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &1916379634
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1916379631}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1916379633}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &1916379635
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -50721,8 +49656,6 @@ GameObject:
   - component: {fileID: 1925993345}
   - component: {fileID: 1925993344}
   - component: {fileID: 1925993343}
-  - component: {fileID: 1925993342}
-  - component: {fileID: 1925993341}
   m_Layer: 6
   m_Name: Roofs (31)
   m_TagString: Untagged
@@ -50745,48 +49678,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1925993341
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1925993339}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &1925993342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1925993339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1925993341}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &1925993343
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -51306,8 +50197,6 @@ GameObject:
   - component: {fileID: 1976174569}
   - component: {fileID: 1976174568}
   - component: {fileID: 1976174567}
-  - component: {fileID: 1976174566}
-  - component: {fileID: 1976174565}
   m_Layer: 6
   m_Name: Roofs (26)
   m_TagString: Untagged
@@ -51330,48 +50219,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1389883028}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &1976174565
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1976174563}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!114 &1976174566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1976174563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9e7bce93bd27e24ba27d2e60c703589, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 1976174565}
-  fallDelay: 2.5
-  respawnDelay: 2
 --- !u!251 &1976174567
 PlatformEffector2D:
   m_ObjectHideFlags: 0
@@ -53127,6 +51974,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4124585788017617349, guid: 9cff2a09d008e3742a03ccfd7de11078, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4124585788017617349, guid: 9cff2a09d008e3742a03ccfd7de11078, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4124585788017617349, guid: 9cff2a09d008e3742a03ccfd7de11078, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4124585788017617349, guid: 9cff2a09d008e3742a03ccfd7de11078, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4418114007389842735, guid: 9cff2a09d008e3742a03ccfd7de11078, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 112
@@ -53159,6 +52022,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5790021318568095176, guid: 9cff2a09d008e3742a03ccfd7de11078, type: 3}
+      propertyPath: crossSprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6456860965706518772, guid: 9cff2a09d008e3742a03ccfd7de11078, type: 3}
+      propertyPath: gameOverUI
+      value: 
+      objectReference: {fileID: 2134399307}
+    - target: {fileID: 6456860965706518772, guid: 9cff2a09d008e3742a03ccfd7de11078, type: 3}
+      propertyPath: startPosNivel1
+      value: 
+      objectReference: {fileID: 8157039270587706135, guid: e6969d362512e5d47a07269c70552e0c, type: 3}
+    - target: {fileID: 6456860965706518772, guid: 9cff2a09d008e3742a03ccfd7de11078, type: 3}
+      propertyPath: startPosNivel2
+      value: 
+      objectReference: {fileID: 1414407667249058723, guid: 57300bfe059d2d14780708a9e3ba2e6c, type: 3}
+    - target: {fileID: 6456860965706518772, guid: 9cff2a09d008e3742a03ccfd7de11078, type: 3}
+      propertyPath: startPosNivel3
+      value: 
+      objectReference: {fileID: 2221731640725074241, guid: a319953e8f844f9448457066e54130de, type: 3}
     - target: {fileID: 6456860965706518772, guid: 9cff2a09d008e3742a03ccfd7de11078, type: 3}
       propertyPath: fixedStartPosition
       value: 
@@ -53286,6 +52169,44 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1669328262148998417, guid: 9cff2a09d008e3742a03ccfd7de11078, type: 3}
   m_PrefabInstance: {fileID: 2134399303}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2134399307 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 164513325362131577, guid: 9cff2a09d008e3742a03ccfd7de11078, type: 3}
+  m_PrefabInstance: {fileID: 2134399303}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a489fff104cbd243b43de56a10b1d41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2134399308 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1564324416205659630, guid: 9cff2a09d008e3742a03ccfd7de11078, type: 3}
+  m_PrefabInstance: {fileID: 2134399303}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2134399309 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 341775073888283208, guid: 9cff2a09d008e3742a03ccfd7de11078, type: 3}
+  m_PrefabInstance: {fileID: 2134399303}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &2134399310 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 917550554437597232, guid: 9cff2a09d008e3742a03ccfd7de11078, type: 3}
+  m_PrefabInstance: {fileID: 2134399303}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2140380573
 GameObject:
   m_ObjectHideFlags: 0
@@ -53387,3 +52308,6 @@ SceneRoots:
   - {fileID: 1314616457}
   - {fileID: 1898940672}
   - {fileID: 1731891725}
+  - {fileID: 1069624041}
+  - {fileID: 694272423}
+  - {fileID: 1907787928}

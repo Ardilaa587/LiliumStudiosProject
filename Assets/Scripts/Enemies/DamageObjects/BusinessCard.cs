@@ -21,7 +21,7 @@ public class BusinessCard : MonoBehaviour
 
         rb.gravityScale = 0;
 
-        Destroy(gameObject, 2f);
+        Destroy(gameObject, 1f);
     }
 
     public void SetDirection(Vector2 direction)

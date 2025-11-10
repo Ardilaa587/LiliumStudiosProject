@@ -21,6 +21,8 @@ public class RespawnManager : MonoBehaviour
 
     private void Awake()
     {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+
         if (instance == null)
         {
             instance = this;
@@ -90,5 +92,27 @@ public class RespawnManager : MonoBehaviour
         itemAInteracted = true;
 
         CollectEffectRemovalItem(); 
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Solo reposicionamos si la escena es un nivel jugable y no el menú
+        if (scene.name != "Menu" && lastRespawnPosition != Vector2.zero)
+        {
+            GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+            if (playerObject != null)
+            {
+                // Mueve directamente al jugador a la posición que el MenuUI guardó.
+                playerObject.transform.position = lastRespawnPosition;
+
+                // Opcional: Si el jugador aparece en un estado muerto, 
+                // llama a la función de reinicio suave para restaurar la vida.
+                // PlayerController playerController = playerObject.GetComponent<PlayerController>();
+                // if (playerController != null)
+                // {
+                //     playerController.SoftRespawn(lastRespawnPosition);
+                // }
+            }
+        }
     }
 }

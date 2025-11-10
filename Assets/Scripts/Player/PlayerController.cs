@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 #if UNITY_EDITOR
 using UnityEditor.ShaderKeywordFilter;
@@ -224,7 +224,7 @@ public class PlayerController : MonoBehaviour
         if (canJump && playerAnimator != null)
         {
             // Llama al Trigger "Jump" en el Animator Controller.
-            // Esto iniciar� la transici�n de Idle/Run a Jump que configuramos.
+            // Esto iniciará la transición de Idle/Run a Jump que configuramos.
             playerAnimator.SetTrigger("Jump");
         }
     }
@@ -281,9 +281,9 @@ public class PlayerController : MonoBehaviour
                 if (playerAnimator != null)
                 {
                     playerAnimator.SetTrigger("LevJump");
-                    Debug.Log("[Levitate] Animaci�n LevJump activada (Estado Prime).");
+                    Debug.Log("[Levitate] Animación LevJump activada (Estado Prime).");
                 }
-                // Salimos aqu� para que NO llame al trigger "Jump" normal m�s abajo.
+                // Salimos aquí para que NO llame al trigger "Jump" normal más abajo.
                 return;
             }
         }
@@ -380,7 +380,7 @@ public class PlayerController : MonoBehaviour
     public void DisableMovement(bool disable)
     {
         canMove = !disable;
-        // Aseg�rate de que tu l�gica de movimiento en Update/FixedUpdate SOLO se ejecute si canMove es true.
+        // Asegúrate de que tu lógica de movimiento en Update/FixedUpdate SOLO se ejecute si canMove es true.
         if (!canMove)
         {
             // Detener la velocidad actual al ser deshabilitado
@@ -402,6 +402,42 @@ public class PlayerController : MonoBehaviour
     {
         isPrimeActive = activate;
         Debug.Log($"isPrimeActive establecido a: {activate}");
+    }
+
+    public void SoftRespawn(Vector2 respawnPosition)
+    {
+        // 1. Reiniciar la POSICIÓN
+        transform.position = respawnPosition;
+
+        // 2. Reiniciar la VIDA
+        health = maxHealth;
+        if (healthUI != null)
+        {
+            healthUI.UpdateHearts();
+        }
+
+        // 3. Limpiar variables de movimiento para evitar momentum residual
+        rb.velocity = Vector2.zero;
+        horizontal = 0f;
+
+        // Reiniciar variables temporales de movimiento si es necesario:
+        hitTime = 0f; // Asegurar que el knockback se detiene.
+        isDashing = false;
+        canDash = true; // Restaurar la capacidad de Dash.
+
+        // Detener el Levitate si estaba activo
+        if (isLevitating)
+        {
+            StopLevitate();
+        }
+
+        // 🌟 CLAVE: NO TOCAMOS 'isPrimeActive' NI EL ANIMATOR AQUÍ.
+        // El valor de isPrimeActive se mantendrá desde la última vez que fue establecido.
+
+        // Opcional: Si el jugador estaba deshabilitado (por Game Over), habilitar la física.
+        DisableMovement(false);
+
+        Debug.Log("✅ SoftRespawn completado. Vida y Posición actualizadas.");
     }
     #endregion
 }

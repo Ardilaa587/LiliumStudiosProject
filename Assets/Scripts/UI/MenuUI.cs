@@ -17,10 +17,15 @@ public class MenuUI : MonoBehaviour
     [SerializeField] public GameObject settingsPanel;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip buttonClickSound;
-    
+
     [Header("Punto de Reinicio Fijo")]
     public Transform fixedStartPosition;
 
+    [SerializeField] private GameOverUI gameOverUI;
+    [Header("Posiciones de Inicio por Nivel")]
+    public Transform startPosNivel1;
+    public Transform startPosNivel2;
+    public Transform startPosNivel3;
     void Awake()
     {
         if (audioSource == null)
@@ -118,19 +123,37 @@ public class MenuUI : MonoBehaviour
     }
     public void OnStart()
     {
+        if (RespawnManager.instance != null && startPosNivel1 != null)
+        {
+            RespawnManager.instance.SetCheckpoint(startPosNivel1.position);
+        }
+
+        // 2. Cargar la escena
         StartCoroutine(PlaySoundAndLoadScene("Nivel1"));
     }
 
     public void Level2()
     {
+        if (RespawnManager.instance != null && startPosNivel2 != null)
+        {
+            RespawnManager.instance.SetCheckpoint(startPosNivel2.position);
+        }
+
+        // 2. Cargar la escena
         StartCoroutine(PlaySoundAndLoadScene("Level2"));
     }
 
     public void Level3()
     {
+        if (RespawnManager.instance != null && startPosNivel3 != null)
+        {
+            RespawnManager.instance.SetCheckpoint(startPosNivel3.position);
+        }
+
+        // 2. Cargar la escena
         StartCoroutine(PlaySoundAndLoadScene("Level3"));
     }
- 
+
     public void OnSettings()
     {
         PlaySound();
@@ -154,34 +177,38 @@ public class MenuUI : MonoBehaviour
         StartCoroutine(PlaySoundAndLoadScene("Menu"));
     }
 
+    // Dentro de MenuUI.cs
+
     public void OnReStart()
     {
         PlaySound();
 
-        // 2. Encontrar al Jugador
+        // Reanudar el tiempo si estaba pausado por Game Over
+        Time.timeScale = 1f;
+
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
 
-        // 3. Verificar referencias
-        if (RespawnManager.instance != null && playerObject != null && fixedStartPosition != null)
+        if (playerObject != null && fixedStartPosition != null)
         {
-            // A. SOBREESCRIBIR la última posición de respawn con la posición del objeto fijo.
-            // Convertimos la posición de Transform (Vector3) a Vector2 para tu RespawnManager 2D.
             Vector2 fixedPos = fixedStartPosition.position;
-
-            RespawnManager.instance.SetCheckpoint(fixedPos);
-
-            // B. Mover al jugador usando la función del manager
-            // Usamos SoftRespawn si tenemos el PlayerController, ya que también cura y limpia la velocidad.
             PlayerController playerController = playerObject.GetComponent<PlayerController>();
 
             if (playerController != null)
             {
-                RespawnManager.instance.SoftRespawn(playerController);
-            }
-            else
-            {
-                RespawnManager.instance.RespawnPlayer(playerObject);
+                // 🌟 LLAMADA DIRECTA AL NUEVO SOFTRESPAWN DEL JUGADOR
+                playerController.SoftRespawn(fixedPos);
             }
         }
-     }
+
+        // Opcional: Ocultar el panel de Game Over o Pausa si es relevante
+        if (gameOverUI != null)
+        {
+            gameOverUI.gameObject.SetActive(false);
+        }
+    }
+
+    public void OnExit()
+    {
+        Application.Quit();
+    }
 }
