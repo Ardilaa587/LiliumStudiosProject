@@ -124,12 +124,19 @@ public class MenuUI : MonoBehaviour
     }
     public void OnStart()
     {
+        
+
+        // 2. Cargar la escena
+        StartCoroutine(PlaySoundAndLoadScene("Video"));
+    }
+
+    public void Level1()
+    {
         if (RespawnManager.instance != null && startPosNivel1 != null)
         {
             RespawnManager.instance.SetCheckpoint(startPosNivel1.position);
         }
 
-        // 2. Cargar la escena
         StartCoroutine(PlaySoundAndLoadScene("Nivel1"));
     }
 
