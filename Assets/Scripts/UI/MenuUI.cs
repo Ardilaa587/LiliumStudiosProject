@@ -120,6 +120,7 @@ public class MenuUI : MonoBehaviour
 
         // 3. Cambiar de escena
         SceneManager.LoadScene(sceneName);
+        
     }
     public void OnStart()
     {

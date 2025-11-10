@@ -36,11 +36,14 @@ public class Enemy2 : MonoBehaviour
     [SerializeField] private Image victoryImageComponent;
     [SerializeField] private Sprite victoryImage;
 
+    [SerializeField] private Animator boss2Animator;
     // Start is called before the first frame update
     void Start()
     {
         actualObjective = EnemyMovementPoints[0];
         enemyRb = GetComponent<Rigidbody2D>();
+
+        boss2Animator = GetComponent<Animator>();
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null)
@@ -131,6 +134,8 @@ public class Enemy2 : MonoBehaviour
             {
                 jumpStompCounter++;
                 Debug.Log("¡Salto detectado! Contador: " + jumpStompCounter);
+
+                boss2Animator.SetTrigger("Hit");
 
                 // Rebotar al jugador
                 if (playerRb != null)

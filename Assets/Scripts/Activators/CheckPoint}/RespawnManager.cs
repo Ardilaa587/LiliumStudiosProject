@@ -27,7 +27,10 @@ public class RespawnManager : MonoBehaviour
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-            
+
+            lastRespawnPosition = Vector2.zero;
+            isCameraEffectActive = true;
+
         }
         else
         {
@@ -36,8 +39,7 @@ public class RespawnManager : MonoBehaviour
 
         grampaGuide = FindObjectOfType<GrampaGuideMovement>();
 
-        lastRespawnPosition = Vector2.zero;
-        isCameraEffectActive = true;
+        
         //SceneManager.sceneLoaded += OnSceneLoaded;
     }
 

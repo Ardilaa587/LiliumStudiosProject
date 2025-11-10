@@ -5,7 +5,9 @@ using UnityEditor.ShaderKeywordFilter;
 #endif
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
+using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 
 public class PlayerController : MonoBehaviour
@@ -94,7 +96,7 @@ public class PlayerController : MonoBehaviour
             RespawnManager.instance.RespawnPlayer(gameObject);
         }
 
-        
+        CheckSceneForPrimeStatus();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -250,6 +252,11 @@ public class PlayerController : MonoBehaviour
     {
         canDash = false;
         isDashing = true;
+
+        if (playerAnimator != null)
+        {
+            playerAnimator.SetTrigger("Dash");
+        }
 
         Debug.Log("Dash");
 
@@ -438,6 +445,25 @@ public class PlayerController : MonoBehaviour
         DisableMovement(false);
 
         Debug.Log("✅ SoftRespawn completado. Vida y Posición actualizadas.");
+    }
+
+    private void CheckSceneForPrimeStatus()
+    {
+        // Obtiene el nombre de la escena actual
+        string currentSceneName = SceneManager.GetActiveScene().name;
+
+        // Definimos los nombres de las escenas que activan 'prime'
+        // 🌟 Reemplaza "Nombre_Nivel_2" y "Nombre_Nivel_3" con los nombres reales de tus escenas
+        if (currentSceneName == "Level2" || currentSceneName == "Level3")
+        {
+            isPrimeActive = true;
+            Debug.Log("PRIME activado debido a la escena: " + currentSceneName);
+        }
+        else
+        {
+            isPrimeActive = false; // O mantén el valor por defecto si es otro nivel
+            Debug.Log("PRIME desactivado en la escena: " + currentSceneName);
+        }
     }
     #endregion
 }

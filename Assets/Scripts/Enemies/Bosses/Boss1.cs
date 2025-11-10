@@ -49,8 +49,7 @@ public class Boss1 : MonoBehaviour, InteractableI
     [Header("Secuencia Final de Zanahoria")]
     [SerializeField] private Transform destinationPoint; // Punto de destino del movimiento
     [SerializeField] private float travelSpeed = 2f;
-    [SerializeField] private GameObject finalPanel; // Segundo panel (el de "Viaje")
-    [SerializeField] private float finalPanelDisplayTime = 5f;
+    
 
     private bool isSequenceRunning = false;
     private Transform playerMountPoint;
@@ -83,10 +82,7 @@ public class Boss1 : MonoBehaviour, InteractableI
         {
             victoryPanel.SetActive(false);
         }
-        if (finalPanel != null)
-        {
-            finalPanel.SetActive(false);
-        }
+        
 
         SetBossAnimation(true);
     }
@@ -380,46 +376,24 @@ public class Boss1 : MonoBehaviour, InteractableI
         }
 
         // Inicia el panel final
-        StartCoroutine(ShowFinalPanelAndLoadScene());
-    }
-
-    // Corrutina 3: Muestra Panel Final y Carga Escena
-    private IEnumerator ShowFinalPanelAndLoadScene()
-    {
-        // Oculta el Boss (ya llegó a su destino y termina la cinemática)
-        gameObject.SetActive(false);
-
         PlayerController playerController = playerMountPoint.GetComponent<PlayerController>();
-
-        if (playerDetector != null && playerDetector.InteractionIcon != null)
-        {
-            // Volver a hacer que el ícono sea hijo del transform del Jugador.
-            // Nota: playerMountPoint debe ser el Transform del GameObject Player.
-            playerDetector.InteractionIcon.transform.SetParent(playerMountPoint.transform);
-
-            // El ícono estará desactivado, listo para el próximo nivel.
-            // Si el ícono no se desactiva en Interact, asegúrate de desactivarlo aquí:
-            // playerDetector.InteractionIcon.SetActive(false);
-        }
-
         if (playerController != null)
         {
-            playerController.DisableMovement(false); // Llamar con 'false' para reactivar
+            playerController.DisableMovement(false); // Reactivar movimiento
         }
 
-        // Activa el segundo panel
-        if (finalPanel != null)
+        // Restaurar el ícono de interacción a la jerarquía del jugador
+        if (playerDetector != null && playerDetector.InteractionIcon != null)
         {
-            finalPanel.SetActive(true);
+            playerDetector.InteractionIcon.transform.SetParent(playerMountPoint.transform);
         }
 
-        // Espera el tiempo del panel final
-        yield return new WaitForSeconds(finalPanelDisplayTime);
-
-        // Carga la siguiente escena
+        // Carga la siguiente escena inmediatamente
         if (!string.IsNullOrEmpty(nextSceneName))
         {
             SceneManager.LoadScene(nextSceneName);
         }
     }
+
+   
 }
