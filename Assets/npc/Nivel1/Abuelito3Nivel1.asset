@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   npcName: Abuelo Florencio
   dialogueLines:
-  - "Haz llegado a la Piedra del Pe\xF1ol."
+  - "Has llegado a la Piedra del Pe\xF1ol."
   - "Tendr\xE1s que subirla para poder reconstruir mi antiguo desgranador de ma\xEDz."
   - "\xA1T\xFA puedes Olga!"
   autoProgressLines: 010101
