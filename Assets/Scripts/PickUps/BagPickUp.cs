@@ -7,18 +7,15 @@ using UnityEngine.Rendering;
 public class BagPickUp : MonoBehaviour, InteractableI
 {
     public bool isOpened { get; private set; }
-   // public bool isInteracted;
 
     [SerializeField]private GameObject itemPrefab;
 
     void Start()
     { 
         isOpened = false;
-        //isInteracted = false;
 
         if (RespawnManager.instance != null && RespawnManager.instance.itemAInteracted)
         {
-            //isInteracted = true;
             isOpened = true;
         }
     }

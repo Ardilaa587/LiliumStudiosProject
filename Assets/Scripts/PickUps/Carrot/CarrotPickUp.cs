@@ -12,7 +12,6 @@ public class CarrotPickUp : MonoBehaviour
     [SerializeField] private string carrotExplanation;
     [SerializeField] private Sprite carrotSprite;
 
-    // --- COMPONENTES DEL INVENTARIO ---
     [Header("Configuración de Inventario")]
     [SerializeField] private GameObject itemButtonPrefab;
 
@@ -38,7 +37,6 @@ public class CarrotPickUp : MonoBehaviour
     {
         if (collision.CompareTag("Player") && inventory != null && displayPanel != null)
         {
-            // Verificar si hay espacio ANTES de iniciar la animación y el sonido
             bool isInventoryFull = true;
             for (int i = 0; i < inventory.slots.Length; i++)
             {

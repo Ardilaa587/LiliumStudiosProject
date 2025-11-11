@@ -55,8 +55,6 @@ public class CarInteractable : MonoBehaviour, InteractableI
 
             if (objectToDestroy != null)
             {
-                // Opcional: añade un Log para verificar que se encontró el objeto correcto
-                // Debug.Log($"Objeto a destruir encontrado: {objectToDestroy.name}");
                 Destroy(objectToDestroy);
             }
 
@@ -104,7 +102,7 @@ public class CarInteractable : MonoBehaviour, InteractableI
 
     void FixedUpdate()
     {
-        if (!isMoving) // Solo comprueba la bandera de movimiento
+        if (!isMoving) 
         {
             return;
         }
@@ -112,7 +110,6 @@ public class CarInteractable : MonoBehaviour, InteractableI
         Vector2 direction = (actualObjective.position - transform.position).normalized;
         Vector2 moveStep = direction * speed * Time.fixedDeltaTime;
 
-        // Mueve la posición del Rigidbody
         rb.MovePosition(rb.position + moveStep);
         float distanceToObjective = Vector2.Distance(transform.position, actualObjective.position);
 
@@ -140,7 +137,7 @@ public class CarInteractable : MonoBehaviour, InteractableI
 
                     if (playerAnimator != null)
                     {
-                        playerAnimator.SetBool(ridingAnimationBool, false); // Vuelve a la animación normal
+                        playerAnimator.SetBool(ridingAnimationBool, false); 
                     }
 
                     playerObject.transform.position = transform.position + new Vector3(1f, 0f, 0f);

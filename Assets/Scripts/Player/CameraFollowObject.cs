@@ -31,11 +31,6 @@ public class CameraFollowObject : MonoBehaviour
         transform.position = playerTransform_.position;
     }
 
-    public void CallTurn()
-    {
-        
-    }
-
     private IEnumerator flipYLerp()
     {
         float startRotation = transform.localEulerAngles.y;

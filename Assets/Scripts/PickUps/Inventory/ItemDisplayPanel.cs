@@ -10,7 +10,7 @@ public class ItemDisplayPanel : MonoBehaviour
     [SerializeField] private Image displayImage;
     [SerializeField] private TMP_Text displayText;
     [SerializeField] private float typingDelay = 0.05f;
-    [SerializeField] public float displayDuration = 3f; // 💡 Lo hacemos público para calcular el tiempo
+    [SerializeField] public float displayDuration = 3f; 
 
     private void Start()
     {
@@ -33,7 +33,6 @@ public class ItemDisplayPanel : MonoBehaviour
 
     private IEnumerator TypeItemText(string itemName, string itemExplanation)
     {
-        // ... (Tu lógica de tecleo de nombre) ...
         displayText.text = "";
         for (int i = 0; i < itemName.Length; i++)
         {
@@ -43,7 +42,6 @@ public class ItemDisplayPanel : MonoBehaviour
 
         yield return new WaitForSeconds(displayDuration);
 
-        // ... (Tu lógica de tecleo de explicación) ...
         displayText.text = "";
         yield return new WaitForSeconds(0.2f);
 

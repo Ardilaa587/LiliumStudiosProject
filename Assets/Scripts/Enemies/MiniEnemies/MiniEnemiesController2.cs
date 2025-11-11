@@ -20,11 +20,10 @@ public class MiniEnemiesController2 : MonoBehaviour
 
     [SerializeField] private Animator miniEnemiesAnimator;
 
-    // 🌟🌟 NUEVAS VARIABLES PARA EL ATAQUE DE TARJETA 🌟🌟
     [Header("Ataque de Tarjeta")]
-    [SerializeField] private GameObject businessCardPrefab; // El prefab del BusinessCard
-    [SerializeField] private Transform attackPoint;         // Punto desde donde se dispara la tarjeta (objeto hijo)
-    [SerializeField] private float fireRate = 2f;           // Tiempo entre disparos
+    [SerializeField] private GameObject businessCardPrefab; 
+    [SerializeField] private Transform attackPoint;  
+    [SerializeField] private float fireRate = 2f; 
     private float nextFireTime;
 
     // Start is called before the first frame update
@@ -34,7 +33,6 @@ public class MiniEnemiesController2 : MonoBehaviour
         actualObjective = enemyMovementPoints[0];
         rb = GetComponent<Rigidbody2D>();
 
-        // Inicializa el tiempo para el primer disparo
         nextFireTime = Time.time;
     }
 
@@ -66,33 +64,25 @@ public class MiniEnemiesController2 : MonoBehaviour
         miniEnemiesAnimator.SetFloat("Direction", roundedDirection);
         rb.MovePosition(rb.position + movement * enemySpeed * Time.fixedDeltaTime);
 
-        // 🌟🌟 LÓGICA DE DISPARO 🌟🌟
-        // Comprueba si es hora de disparar
         if (Time.time >= nextFireTime)
         {
             ShootBusinessCard();
-            // Calcula el tiempo del próximo disparo
+
             nextFireTime = Time.time + 1f / fireRate;
         }
     }
 
-    // 🌟🌟 MÉTODO DE DISPARO 🌟🌟
     public void ShootBusinessCard()
     {
         if (businessCardPrefab == null || attackPoint == null)
         {
-            Debug.LogError("BusinessCard Prefab o Attack Point no asignado en MiniEnemiesController.");
             return;
         }
 
-        // Determinar la dirección basada en la escala (hacia donde mira el enemigo)
-        // Si localScale.x > 0, dispara a la derecha. Si es < 0, dispara a la izquierda.
         Vector2 direction = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
 
-        // 1. Instanciar la tarjeta.
         GameObject cardObject = Instantiate(businessCardPrefab, attackPoint.position, Quaternion.identity);
 
-        // 2. Obtener el script BusinessCard y configurarlo.
         BusinessCard card = cardObject.GetComponent<BusinessCard>();
 
         if (card != null)
@@ -100,8 +90,6 @@ public class MiniEnemiesController2 : MonoBehaviour
             card.SetDirection(direction);
         }
 
-        // Opcional: Puedes añadir aquí un Trigger para la animación de ataque a distancia.
-        // miniEnemiesAnimator.SetTrigger("RangedAttack");
     }
 
     private void Flip()

@@ -20,10 +20,8 @@ public class InteractionDetector : MonoBehaviour
 
     void Update()
     {
-        // 1. Si NO hay un objeto en rango, no hacer nada.
         if (InteractableInRange == null)
         {
-            // Asegurarse de que el icono está apagado si no hay nada en rango.
             if (InteractionIcon.activeSelf)
             {
                 InteractionIcon.SetActive(false);
@@ -31,18 +29,14 @@ public class InteractionDetector : MonoBehaviour
             return;
         }
 
-        // 2. Si HAY un objeto en rango, comprobar si actualmente se puede interactuar.
         bool canCurrentlyInteract = InteractableInRange.canInteract();
 
-        // 3. Sincronizar el ícono con el estado actual del objeto.
         if (canCurrentlyInteract && !InteractionIcon.activeSelf)
         {
-            // Si SÍ se puede interactuar y el ícono está apagado, ENCIÉNDELO.
             InteractionIcon.SetActive(true);
         }
         else if (!canCurrentlyInteract && InteractionIcon.activeSelf)
         {
-            // Si NO se puede interactuar y el ícono está encendido, APÁGALO.
             InteractionIcon.SetActive(false);
         }
     }

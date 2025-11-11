@@ -8,7 +8,6 @@ using UnityEngine;
 
 public class BusinessCard : MonoBehaviour
 {
-    //public GameObject target;
     [SerializeField] public float speed;
     [SerializeField] private Rigidbody2D rb;
     private Vector2 initialDirection;
@@ -46,13 +45,10 @@ public class BusinessCard : MonoBehaviour
             playerController.TakeDamage(damage);
         }
 
-        // Si queremos que la tarjeta desaparezca al tocar al jugador o cualquier cosa.
-        // Podrías añadir una comprobación si quieres que solo se destruya al tocar al jugador.
         if (playerController != null)
         {
             Destroy(gameObject);
         }
-        // Si quieres que se destruya al tocar cualquier cosa (pared, suelo, etc.):
-        // Destroy(gameObject); 
+
     }
 }

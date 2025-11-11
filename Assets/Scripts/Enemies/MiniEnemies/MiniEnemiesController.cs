@@ -14,8 +14,8 @@ public class MiniEnemiesController : MonoBehaviour
 
     Vector2 movement;
 
-    public float enemyDamage;                  // Daño que causa al jugador.
-    public float enemyHitForceX;               // Fuerza horizontal del golpe que recibe el jugador.
+    public float enemyDamage;
+    public float enemyHitForceX;  
     public float enemyHitForceY;
     public float enemyHitTime;
 

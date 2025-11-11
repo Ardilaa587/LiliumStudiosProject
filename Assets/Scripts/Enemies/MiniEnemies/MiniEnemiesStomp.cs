@@ -24,13 +24,10 @@ public class MiniEnemiesStomp : MonoBehaviour
 
     private IEnumerator DespawnAndRespawn(GameObject objectToHandle)
     {
-        // 1. Desactiva el objeto (simula la "destrucción")
         objectToHandle.SetActive(false);
 
-        // 2. Espera el tiempo de reaparición
         yield return new WaitForSeconds(respawnTime);
 
-        // 3. Reactiva el objeto (la "reaparición")
         objectToHandle.SetActive(true);
     }
 

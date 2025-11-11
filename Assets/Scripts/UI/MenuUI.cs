@@ -7,10 +7,10 @@ using UnityEngine.SceneManagement;
 public class MenuUI : MonoBehaviour
 {
     [Header("Menu Principal")]
-    [SerializeField] public GameObject mainMenuPanel; // **NUEVO: Renombrado/Añadido**
+    [SerializeField] public GameObject mainMenuPanel; 
 
     [Header("Animación de Intro")]
-    [SerializeField] private Animator introAnimator; // **NUEVO: El Animator del libro**
+    [SerializeField] private Animator introAnimator; 
     [SerializeField] private GameObject introPanel;
     [SerializeField] private AudioClip bookOpenSound;
 
@@ -36,15 +36,11 @@ public class MenuUI : MonoBehaviour
 
     void Start()
     {
-        // 🌟 LÓGICA DE INICIO:
-        // 1. Aseguramos que el menú principal está oculto al inicio.
         if (mainMenuPanel != null)
         {
             mainMenuPanel.SetActive(false);
         }
 
-        // 2. Si hay una animación de introducción, la mostramos.
-        // Asegúrate de que el estado inicial del Animator es la animación de "abrir libro".
         if (introPanel != null)
         {
             introPanel.SetActive(true);
@@ -64,11 +60,8 @@ public class MenuUI : MonoBehaviour
         if (introAnimator != null)
         {
             introAnimator.enabled = false;
-            // Opcional: Si el Animator está en el introPanel, podrías usar:
-            // introPanel.GetComponent<Animator>().enabled = false;
         }
 
-        // 3. Activar el panel del menú principal (los botones).
         if (mainMenuPanel != null)
         {
             mainMenuPanel.SetActive(true);
@@ -79,12 +72,11 @@ public class MenuUI : MonoBehaviour
     {
         if (audioSource != null)
         {
-            // Si tenemos un clip específico para el clic, lo asignamos y reproducimos.
             if (buttonClickSound != null)
             {
                 audioSource.PlayOneShot(buttonClickSound);
             }
-            // Si no, reproducimos el clip que esté asignado por defecto al AudioSource.
+
             else if (audioSource.clip != null)
             {
                 audioSource.Play();
@@ -97,22 +89,16 @@ public class MenuUI : MonoBehaviour
         float delay = 0f;
 
         if (audioSource != null)
-        {
-            // 1. Asignar y reproducir el sonido
             if (buttonClickSound != null)
             {
                 audioSource.PlayOneShot(buttonClickSound);
-                delay = buttonClickSound.length; // Usar la duración del clip
+                delay = buttonClickSound.length; 
             }
             else if (audioSource.clip != null)
             {
                 audioSource.Play();
-                delay = audioSource.clip.length; // Usar la duración del clip por defecto
-            }
+                delay = audioSource.clip.length; 
         }
-
-        // 2. Esperar la duración del sonido para que no se corte
-        // Solo esperamos si hay un sonido y su duración es mayor a 0
         if (delay > 0)
         {
             yield return new WaitForSeconds(delay);
@@ -124,9 +110,7 @@ public class MenuUI : MonoBehaviour
     }
     public void OnStart()
     {
-        
-
-        // 2. Cargar la escena
+       
         StartCoroutine(PlaySoundAndLoadScene("Video"));
     }
 
@@ -147,7 +131,6 @@ public class MenuUI : MonoBehaviour
             RespawnManager.instance.SetCheckpoint(startPosNivel2.position);
         }
 
-        // 2. Cargar la escena
         StartCoroutine(PlaySoundAndLoadScene("Level2"));
     }
 
@@ -191,7 +174,6 @@ public class MenuUI : MonoBehaviour
     {
         PlaySound();
 
-        // Reanudar el tiempo si estaba pausado por Game Over
         Time.timeScale = 1f;
 
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
@@ -203,12 +185,10 @@ public class MenuUI : MonoBehaviour
 
             if (playerController != null)
             {
-                // 🌟 LLAMADA DIRECTA AL NUEVO SOFTRESPAWN DEL JUGADOR
                 playerController.SoftRespawn(fixedPos);
             }
         }
 
-        // Opcional: Ocultar el panel de Game Over o Pausa si es relevante
         if (gameOverUI != null)
         {
             gameOverUI.gameObject.SetActive(false);

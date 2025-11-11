@@ -5,18 +5,18 @@ using UnityEngine;
 public class GrampaGuideMovement : MonoBehaviour
 {
     [Header("Ruta y Componentes")]
-    [SerializeField] private Transform[] waypoints; // Arreglo de puntos de la ruta (GameObjects vacíos)
-    [SerializeField] private Transform player;      // Referencia al Transform del jugador
+    [SerializeField] private Transform[] waypoints; 
+    [SerializeField] private Transform player; 
 
     [Header("Configuración de Movimiento")]
-    [SerializeField] private float movementSpeed = 5f;  // Velocidad general (afecta la rapidez del Lerp)
+    [SerializeField] private float movementSpeed = 5f;  
     [Range(0.1f, 10f)]
-    private float lerpFactor = 3f;     // Factor para la fluidez del Lerp (más bajo = más suave)
-    private float proximityThreshold = 0.5f; // Distancia para considerar que llegó al waypoint
+    private float lerpFactor = 3f; 
+    private float proximityThreshold = 0.5f; 
 
     [Header("Configuración de Espera")]
-    [SerializeField] private float waitDistance = 5f;   // Distancia máxima antes de que el guía espere
-    [SerializeField] private string waitPointTag = "WaitPoint"; // Tag para los waypoints donde debe esperar
+    [SerializeField] private float waitDistance = 5f;  
+    [SerializeField] private string waitPointTag = "WaitPoint"; 
 
     private int currentWaypointIndex = 0;
     private bool isWaiting = false;
@@ -33,14 +33,11 @@ public class GrampaGuideMovement : MonoBehaviour
     {
         if (currentWaypointIndex >= waypoints.Length)
         {
-            // Ruta completada. Puedes desactivar el script o destruir el objeto.
             return;
         }
 
-        // 1. Lógica de Espera (Prioridad: Verifica si debe esperar)
         CheckForWaiting();
 
-        // 2. Lógica de Movimiento
         if (!isWaiting)
         {
             MoveTowardsWaypoint();
@@ -51,7 +48,6 @@ public class GrampaGuideMovement : MonoBehaviour
     {
         Transform targetWaypoint = waypoints[currentWaypointIndex];
 
-        // Solo verifica la distancia al jugador si el waypoint actual tiene el tag de espera
         if (targetWaypoint.CompareTag(waitPointTag))
         {
             float distToPlayer = Vector2.Distance(transform.position, player.position);
@@ -59,17 +55,14 @@ public class GrampaGuideMovement : MonoBehaviour
             if (distToPlayer > waitDistance)
             {
                 isWaiting = true;
-                // Debug.Log("Guía esperando al jugador.");
             }
             else
             {
-                // Jugador cerca, reanuda el movimiento
                 isWaiting = false;
             }
         }
         else
         {
-            // El punto actual no es un punto de espera, el guía siempre se mueve
             isWaiting = false;
         }
     }
@@ -78,23 +71,18 @@ public class GrampaGuideMovement : MonoBehaviour
     {
         Transform targetWaypoint = waypoints[currentWaypointIndex];
 
-        // Movimiento muy fluido usando Lerp. 
-        // El movimiento es independiente del framerate gracias a Time.deltaTime.
         transform.position = Vector2.Lerp(
             transform.position,
             targetWaypoint.position,
             lerpFactor * Time.deltaTime
         );
 
-        // Comprobar si ha llegado lo suficientemente cerca
         if (Vector2.Distance(transform.position, targetWaypoint.position) < proximityThreshold)
         {
-            // Avanzar al siguiente punto en la ruta
             currentWaypointIndex++;
         }
     }
 
-    // Opcional: Dibuja la ruta en el editor para visualización
     private void OnDrawGizmos()
     {
         if (waypoints == null || waypoints.Length < 2) return;
@@ -120,7 +108,6 @@ public class GrampaGuideMovement : MonoBehaviour
         int nearestIndex = 0;
         float minDistance = float.MaxValue;
 
-        // 1. Encontrar el waypoint más cercano a la posición del checkpoint
         for (int i = 0; i < waypoints.Length; i++)
         {
             if (waypoints[i] == null) continue;
@@ -134,13 +121,10 @@ public class GrampaGuideMovement : MonoBehaviour
             }
         }
 
-        // 2. Mover el guía a la posición de ese waypoint
         transform.position = waypoints[nearestIndex].position;
 
-        // 3. Establecer el índice actual para que el guía continúe la ruta desde ese punto
         currentWaypointIndex = nearestIndex;
 
-        // 4. Asegurarse de que no esté en estado de espera
         isWaiting = false;
     }
 }

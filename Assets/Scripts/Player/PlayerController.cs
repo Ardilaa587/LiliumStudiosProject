@@ -380,17 +380,13 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    // Dentro de tu script PlayerController.cs (o el que controle el movimiento)
-
     private bool canMove = true;
 
     public void DisableMovement(bool disable)
     {
         canMove = !disable;
-        // Asegúrate de que tu lógica de movimiento en Update/FixedUpdate SOLO se ejecute si canMove es true.
         if (!canMove)
         {
-            // Detener la velocidad actual al ser deshabilitado
             GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         }
 
@@ -400,7 +396,7 @@ public class PlayerController : MonoBehaviour
 
             if (disable)
             {
-                rb.velocity = Vector2.zero; // Detener cualquier movimiento residual
+                rb.velocity = Vector2.zero; 
             }
         }
     }
@@ -413,47 +409,33 @@ public class PlayerController : MonoBehaviour
 
     public void SoftRespawn(Vector2 respawnPosition)
     {
-        // 1. Reiniciar la POSICIÓN
         transform.position = respawnPosition;
 
-        // 2. Reiniciar la VIDA
         health = maxHealth;
         if (healthUI != null)
         {
             healthUI.UpdateHearts();
         }
 
-        // 3. Limpiar variables de movimiento para evitar momentum residual
         rb.velocity = Vector2.zero;
         horizontal = 0f;
 
-        // Reiniciar variables temporales de movimiento si es necesario:
-        hitTime = 0f; // Asegurar que el knockback se detiene.
+        hitTime = 0f; 
         isDashing = false;
-        canDash = true; // Restaurar la capacidad de Dash.
+        canDash = true; 
 
-        // Detener el Levitate si estaba activo
         if (isLevitating)
         {
             StopLevitate();
         }
 
-        // 🌟 CLAVE: NO TOCAMOS 'isPrimeActive' NI EL ANIMATOR AQUÍ.
-        // El valor de isPrimeActive se mantendrá desde la última vez que fue establecido.
-
-        // Opcional: Si el jugador estaba deshabilitado (por Game Over), habilitar la física.
         DisableMovement(false);
-
-        Debug.Log("✅ SoftRespawn completado. Vida y Posición actualizadas.");
     }
 
     private void CheckSceneForPrimeStatus()
     {
-        // Obtiene el nombre de la escena actual
         string currentSceneName = SceneManager.GetActiveScene().name;
 
-        // Definimos los nombres de las escenas que activan 'prime'
-        // 🌟 Reemplaza "Nombre_Nivel_2" y "Nombre_Nivel_3" con los nombres reales de tus escenas
         if (currentSceneName == "Level2" || currentSceneName == "Level3")
         {
             isPrimeActive = true;
@@ -461,7 +443,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            isPrimeActive = false; // O mantén el valor por defecto si es otro nivel
+            isPrimeActive = false; 
             Debug.Log("PRIME desactivado en la escena: " + currentSceneName);
         }
     }

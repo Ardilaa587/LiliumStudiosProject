@@ -25,7 +25,6 @@ public class CoinCounter : MonoBehaviour
     // Método privado para actualizar el texto en la UI
     private void UpdateCoinUI()
     {
-        // El formato de la moneda se actualiza aquí (ej. "x 5")
         coinText.text = "x " + currentCoinsCount.ToString();
     }
 }

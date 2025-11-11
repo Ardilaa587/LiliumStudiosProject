@@ -10,13 +10,9 @@ public class BackgroundChanger : MonoBehaviour
 
     public bool activatesBackgroundB = true;
 
-
-
-    private void OnTriggerEnter2D(Collider2D other) // Usa OnTriggerEnter si es 3D
+    private void OnTriggerEnter2D(Collider2D other) 
 
     {
-
-        // 1. Verificar que el objeto que entró sea el jugador
 
         if (other.CompareTag(playerTag) && backgroundManager != null)
 
@@ -26,8 +22,6 @@ public class BackgroundChanger : MonoBehaviour
 
             {
 
-                // El jugador entró en la zona, activamos el Fondo B
-
                 backgroundManager.SwitchToBackgroundB();
 
             }
@@ -36,7 +30,6 @@ public class BackgroundChanger : MonoBehaviour
 
             {
 
-                // El jugador entró en la zona, activamos el Fondo A (si esta zona fuera para volver)
 
                 backgroundManager.SwitchToBackgroundA();
 
